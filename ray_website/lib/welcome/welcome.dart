@@ -11,6 +11,7 @@ class _welcomeState extends State<welcome> {
   double _screenWidth = 0;
   double _screenH = 0;
   int fontC = 600;
+  double fontSize = 22.8;
   String fontF = "show";
   @override
   void didChangeDependencies() {
@@ -40,11 +41,21 @@ class _welcomeState extends State<welcome> {
                         fit: BoxFit.cover)),
               )),
           Positioned(
+              top: _screenH / 10,
+              left: _screenWidth / 3,
+              child: RichText(
+                  text: TextSpan(
+                      text: "Greeting",
+                      style: TextStyle(
+                          fontFamily: "coms",
+                          fontSize: _screenH / 13,
+                          fontWeight: FontWeight.bold)))),
+          Positioned(
               top: _screenH / 30,
               left: _screenWidth / 1.65,
               child: Container(
                 constraints: BoxConstraints.expand(
-                    width: _screenWidth / 2.63, height: _screenH / 1.07),
+                    width: _screenWidth / 2.7, height: _screenH / 1.07),
                 child: SingleChildScrollView(
                   child: Column(
                     children: [
@@ -54,7 +65,7 @@ class _welcomeState extends State<welcome> {
                         style: TextStyle(
                             fontFamily: fontF,
                             color: Colors.grey[fontC],
-                            fontSize: _screenH / 21,
+                            fontSize: _screenH / fontSize,
                             fontWeight: FontWeight.w400),
                       ),
                       Text(
@@ -62,7 +73,7 @@ class _welcomeState extends State<welcome> {
                         style: TextStyle(
                             fontFamily: fontF,
                             color: Colors.grey[fontC],
-                            fontSize: _screenH / 21,
+                            fontSize: _screenH / fontSize,
                             fontWeight: FontWeight.w400),
                       ),
                       Text(
@@ -70,7 +81,7 @@ class _welcomeState extends State<welcome> {
                         style: TextStyle(
                             fontFamily: fontF,
                             color: Colors.grey[fontC],
-                            fontSize: _screenH / 21,
+                            fontSize: _screenH / fontSize,
                             fontWeight: FontWeight.w400),
                       ),
                       Text(
@@ -78,7 +89,7 @@ class _welcomeState extends State<welcome> {
                         style: TextStyle(
                             fontFamily: fontF,
                             color: Colors.grey[fontC],
-                            fontSize: _screenH / 21,
+                            fontSize: _screenH / fontSize,
                             fontWeight: FontWeight.w400),
                       ),
                       Text(
@@ -86,7 +97,7 @@ class _welcomeState extends State<welcome> {
                         style: TextStyle(
                             fontFamily: fontF,
                             color: Colors.grey[fontC],
-                            fontSize: _screenH / 21,
+                            fontSize: _screenH / fontSize,
                             fontWeight: FontWeight.w400),
                       ),
                       Text(
@@ -94,7 +105,7 @@ class _welcomeState extends State<welcome> {
                         style: TextStyle(
                             fontFamily: fontF,
                             color: Colors.grey[fontC],
-                            fontSize: _screenH / 21,
+                            fontSize: _screenH / fontSize,
                             fontWeight: FontWeight.w400),
                       ),
                       Text(
@@ -102,7 +113,7 @@ class _welcomeState extends State<welcome> {
                         style: TextStyle(
                             fontFamily: fontF,
                             color: Colors.grey[fontC],
-                            fontSize: _screenH / 21,
+                            fontSize: _screenH / fontSize,
                             fontWeight: FontWeight.w400),
                       ),
                       Text(
@@ -110,16 +121,16 @@ class _welcomeState extends State<welcome> {
                         style: TextStyle(
                             fontFamily: fontF,
                             color: Colors.grey[fontC],
-                            fontSize: _screenH / 21,
+                            fontSize: _screenH / fontSize,
                             fontWeight: FontWeight.w400),
                       ),
                       SizedBox(height: _screenH / 40),
                       Text(
-                        "   En  E  rgtic    ",
+                        "   En  E  rgetic   ",
                         style: TextStyle(
                             fontFamily: fontF,
                             color: Colors.white,
-                            fontSize: _screenH / 21,
+                            fontSize: _screenH / fontSize,
                             fontWeight: FontWeight.w400),
                       ),
                       Text(
@@ -127,7 +138,7 @@ class _welcomeState extends State<welcome> {
                         style: TextStyle(
                             fontFamily: fontF,
                             color: Colors.white,
-                            fontSize: _screenH / 21,
+                            fontSize: _screenH / fontSize,
                             fontWeight: FontWeight.w400),
                       ),
                       Text(
@@ -135,7 +146,7 @@ class _welcomeState extends State<welcome> {
                         style: TextStyle(
                             fontFamily: fontF,
                             color: Colors.white,
-                            fontSize: _screenH / 21,
+                            fontSize: _screenH / fontSize,
                             fontWeight: FontWeight.w400),
                       ),
                       Text(
@@ -143,7 +154,7 @@ class _welcomeState extends State<welcome> {
                         style: TextStyle(
                             fontFamily: fontF,
                             color: Colors.white,
-                            fontSize: _screenH / 21,
+                            fontSize: _screenH / fontSize,
                             fontWeight: FontWeight.w400),
                       ),
                       Text(
@@ -151,7 +162,7 @@ class _welcomeState extends State<welcome> {
                         style: TextStyle(
                             fontFamily: fontF,
                             color: Colors.white,
-                            fontSize: _screenH / 21,
+                            fontSize: _screenH / fontSize,
                             fontWeight: FontWeight.w400),
                       ),
                       Text(
@@ -159,7 +170,7 @@ class _welcomeState extends State<welcome> {
                         style: TextStyle(
                             fontFamily: fontF,
                             color: Colors.white,
-                            fontSize: _screenH / 21,
+                            fontSize: _screenH / fontSize,
                             fontWeight: FontWeight.w400),
                       ),
                       Text(
@@ -167,7 +178,7 @@ class _welcomeState extends State<welcome> {
                         style: TextStyle(
                             fontFamily: fontF,
                             color: Colors.white,
-                            fontSize: _screenH / 21,
+                            fontSize: _screenH / fontSize,
                             fontWeight: FontWeight.w400),
                       ),
                       Text(
@@ -175,7 +186,7 @@ class _welcomeState extends State<welcome> {
                         style: TextStyle(
                             fontFamily: fontF,
                             color: Colors.white,
-                            fontSize: _screenH / 21,
+                            fontSize: _screenH / fontSize,
                             fontWeight: FontWeight.w400),
                       ),
                     ],

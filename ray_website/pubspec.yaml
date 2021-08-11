@@ -52,6 +52,9 @@ flutter:
     - family:          show
       fonts:
       - asset:        font/SHOWG.TTF
+    - family:          coms
+      fonts:
+      - asset:        font/comsc.TTF
 
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
