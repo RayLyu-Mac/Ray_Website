@@ -40,17 +40,17 @@ class _welcomeState extends State<welcome> {
                         fit: BoxFit.cover)),
               )),
           Positioned(
-              top: _screenH / 25,
-              left: _screenWidth / 1.7,
+              top: _screenH / 30,
+              left: _screenWidth / 1.65,
               child: Container(
                 constraints: BoxConstraints.expand(
-                    width: _screenWidth / 2.6, height: _screenH / 1.07),
+                    width: _screenWidth / 2.63, height: _screenH / 1.07),
                 child: SingleChildScrollView(
                   child: Column(
                     children: [
-                      SizedBox(height: _screenH / 30),
+                      SizedBox(height: _screenH / 40),
                       Text(
-                        "         Bio M edical Eng",
+                        "         Bio  M  edical Eng",
                         style: TextStyle(
                             fontFamily: fontF,
                             color: Colors.grey[fontC],
@@ -58,7 +58,7 @@ class _welcomeState extends State<welcome> {
                             fontWeight: FontWeight.w400),
                       ),
                       Text(
-                        "    Phone A pp Developer",
+                        "         Phone  A  pp Developer",
                         style: TextStyle(
                             fontFamily: fontF,
                             color: Colors.grey[fontC],
@@ -66,7 +66,7 @@ class _welcomeState extends State<welcome> {
                             fontWeight: FontWeight.w400),
                       ),
                       Text(
-                        "   Da T a Analyst",
+                        "         Da  T  a Analyst",
                         style: TextStyle(
                             fontFamily: fontF,
                             color: Colors.grey[fontC],
@@ -74,7 +74,7 @@ class _welcomeState extends State<welcome> {
                             fontWeight: FontWeight.w400),
                       ),
                       Text(
-                        "Gam E Designer",
+                        "   Gam  E  Designer",
                         style: TextStyle(
                             fontFamily: fontF,
                             color: Colors.grey[fontC],
@@ -82,7 +82,7 @@ class _welcomeState extends State<welcome> {
                             fontWeight: FontWeight.w400),
                       ),
                       Text(
-                        "    GuitaR Player",
+                        "Guita  R  Player     ",
                         style: TextStyle(
                             fontFamily: fontF,
                             color: Colors.grey[fontC],
@@ -90,7 +90,7 @@ class _welcomeState extends State<welcome> {
                             fontWeight: FontWeight.w400),
                       ),
                       Text(
-                        "InternatIonal Student ",
+                        " Internat  I  onal Student",
                         style: TextStyle(
                             fontFamily: fontF,
                             color: Colors.grey[fontC],
@@ -98,7 +98,7 @@ class _welcomeState extends State<welcome> {
                             fontWeight: FontWeight.w400),
                       ),
                       Text(
-                        "                    C A D Modeler ",
+                        "               C  A  D Modeler ",
                         style: TextStyle(
                             fontFamily: fontF,
                             color: Colors.grey[fontC],
@@ -106,16 +106,16 @@ class _welcomeState extends State<welcome> {
                             fontWeight: FontWeight.w400),
                       ),
                       Text(
-                        "            L eader",
+                        "        L  eader",
                         style: TextStyle(
                             fontFamily: fontF,
                             color: Colors.grey[fontC],
                             fontSize: _screenH / 21,
                             fontWeight: FontWeight.w400),
                       ),
-                      SizedBox(height: _screenH / 30),
+                      SizedBox(height: _screenH / 40),
                       Text(
-                        "        En E rgtic    ",
+                        "   En  E  rgtic    ",
                         style: TextStyle(
                             fontFamily: fontF,
                             color: Colors.white,
@@ -123,7 +123,7 @@ class _welcomeState extends State<welcome> {
                             fontWeight: FontWeight.w400),
                       ),
                       Text(
-                        "Visio N er          ",
+                        "Visio  N  er                ",
                         style: TextStyle(
                             fontFamily: fontF,
                             color: Colors.white,
@@ -131,7 +131,7 @@ class _welcomeState extends State<welcome> {
                             fontWeight: FontWeight.w400),
                       ),
                       Text(
-                        "  Photo G rapher    ",
+                        "Photo  G  rapher       ",
                         style: TextStyle(
                             fontFamily: fontF,
                             color: Colors.white,
@@ -139,7 +139,7 @@ class _welcomeState extends State<welcome> {
                             fontWeight: FontWeight.w400),
                       ),
                       Text(
-                        "Creat I ve               ",
+                        "Creat  I  ve                  ",
                         style: TextStyle(
                             fontFamily: fontF,
                             color: Colors.white,
@@ -147,7 +147,7 @@ class _welcomeState extends State<welcome> {
                             fontWeight: FontWeight.w400),
                       ),
                       Text(
-                        "                     N ovel             ",
+                        "                  N  ovel             ",
                         style: TextStyle(
                             fontFamily: fontF,
                             color: Colors.white,
@@ -155,7 +155,7 @@ class _welcomeState extends State<welcome> {
                             fontWeight: FontWeight.w400),
                       ),
                       Text(
-                        "      Exp E rience    ",
+                        "  Exp  E  rience    ",
                         style: TextStyle(
                             fontFamily: fontF,
                             color: Colors.white,
@@ -163,7 +163,7 @@ class _welcomeState extends State<welcome> {
                             fontWeight: FontWeight.w400),
                       ),
                       Text(
-                        "McMast E r                     ",
+                        "McMast  E  r                         ",
                         style: TextStyle(
                             fontFamily: fontF,
                             color: Colors.white,
@@ -171,7 +171,7 @@ class _welcomeState extends State<welcome> {
                             fontWeight: FontWeight.w400),
                       ),
                       Text(
-                        "Teache R                        ",
+                        "Teache  R                            ",
                         style: TextStyle(
                             fontFamily: fontF,
                             color: Colors.white,
