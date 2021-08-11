@@ -11,6 +11,7 @@ class _welcomeState extends State<welcome> {
   double _screenWidth = 0;
   double _screenH = 0;
   int fontC = 600;
+  String fontF = "show";
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
@@ -39,42 +40,146 @@ class _welcomeState extends State<welcome> {
                         fit: BoxFit.cover)),
               )),
           Positioned(
-              top: _screenH / 20,
-              left: _screenWidth / 1.5,
+              top: _screenH / 25,
+              left: _screenWidth / 1.7,
               child: Container(
                 constraints: BoxConstraints.expand(
-                    width: _screenWidth / 4, height: _screenH / 1.2),
-                child: Column(
-                  children: [
-                    Text(
-                      "     Bio M edical Eng",
-                      style: TextStyle(
-                          color: Colors.grey[fontC],
-                          fontSize: _screenH / 30,
-                          fontWeight: FontWeight.bold),
-                    ),
-                    Text(
-                      "    Phone A pp Developer",
-                      style: TextStyle(
-                          color: Colors.grey[fontC],
-                          fontSize: _screenH / 30,
-                          fontWeight: FontWeight.bold),
-                    ),
-                    Text(
-                      "   Da T a Analyst",
-                      style: TextStyle(
-                          color: Colors.grey[fontC],
-                          fontSize: _screenH / 30,
-                          fontWeight: FontWeight.bold),
-                    ),
-                    Text(
-                      "Gam E Designer",
-                      style: TextStyle(
-                          color: Colors.grey[fontC],
-                          fontSize: _screenH / 30,
-                          fontWeight: FontWeight.bold),
-                    )
-                  ],
+                    width: _screenWidth / 2.6, height: _screenH / 1.07),
+                child: SingleChildScrollView(
+                  child: Column(
+                    children: [
+                      SizedBox(height: _screenH / 30),
+                      Text(
+                        "         Bio M edical Eng",
+                        style: TextStyle(
+                            fontFamily: fontF,
+                            color: Colors.grey[fontC],
+                            fontSize: _screenH / 21,
+                            fontWeight: FontWeight.w400),
+                      ),
+                      Text(
+                        "    Phone A pp Developer",
+                        style: TextStyle(
+                            fontFamily: fontF,
+                            color: Colors.grey[fontC],
+                            fontSize: _screenH / 21,
+                            fontWeight: FontWeight.w400),
+                      ),
+                      Text(
+                        "   Da T a Analyst",
+                        style: TextStyle(
+                            fontFamily: fontF,
+                            color: Colors.grey[fontC],
+                            fontSize: _screenH / 21,
+                            fontWeight: FontWeight.w400),
+                      ),
+                      Text(
+                        "Gam E Designer",
+                        style: TextStyle(
+                            fontFamily: fontF,
+                            color: Colors.grey[fontC],
+                            fontSize: _screenH / 21,
+                            fontWeight: FontWeight.w400),
+                      ),
+                      Text(
+                        "    GuitaR Player",
+                        style: TextStyle(
+                            fontFamily: fontF,
+                            color: Colors.grey[fontC],
+                            fontSize: _screenH / 21,
+                            fontWeight: FontWeight.w400),
+                      ),
+                      Text(
+                        "InternatIonal Student ",
+                        style: TextStyle(
+                            fontFamily: fontF,
+                            color: Colors.grey[fontC],
+                            fontSize: _screenH / 21,
+                            fontWeight: FontWeight.w400),
+                      ),
+                      Text(
+                        "                    C A D Modeler ",
+                        style: TextStyle(
+                            fontFamily: fontF,
+                            color: Colors.grey[fontC],
+                            fontSize: _screenH / 21,
+                            fontWeight: FontWeight.w400),
+                      ),
+                      Text(
+                        "            L eader",
+                        style: TextStyle(
+                            fontFamily: fontF,
+                            color: Colors.grey[fontC],
+                            fontSize: _screenH / 21,
+                            fontWeight: FontWeight.w400),
+                      ),
+                      SizedBox(height: _screenH / 30),
+                      Text(
+                        "        En E rgtic    ",
+                        style: TextStyle(
+                            fontFamily: fontF,
+                            color: Colors.white,
+                            fontSize: _screenH / 21,
+                            fontWeight: FontWeight.w400),
+                      ),
+                      Text(
+                        "Visio N er          ",
+                        style: TextStyle(
+                            fontFamily: fontF,
+                            color: Colors.white,
+                            fontSize: _screenH / 21,
+                            fontWeight: FontWeight.w400),
+                      ),
+                      Text(
+                        "  Photo G rapher    ",
+                        style: TextStyle(
+                            fontFamily: fontF,
+                            color: Colors.white,
+                            fontSize: _screenH / 21,
+                            fontWeight: FontWeight.w400),
+                      ),
+                      Text(
+                        "Creat I ve               ",
+                        style: TextStyle(
+                            fontFamily: fontF,
+                            color: Colors.white,
+                            fontSize: _screenH / 21,
+                            fontWeight: FontWeight.w400),
+                      ),
+                      Text(
+                        "                     N ovel             ",
+                        style: TextStyle(
+                            fontFamily: fontF,
+                            color: Colors.white,
+                            fontSize: _screenH / 21,
+                            fontWeight: FontWeight.w400),
+                      ),
+                      Text(
+                        "      Exp E rience    ",
+                        style: TextStyle(
+                            fontFamily: fontF,
+                            color: Colors.white,
+                            fontSize: _screenH / 21,
+                            fontWeight: FontWeight.w400),
+                      ),
+                      Text(
+                        "McMast E r                     ",
+                        style: TextStyle(
+                            fontFamily: fontF,
+                            color: Colors.white,
+                            fontSize: _screenH / 21,
+                            fontWeight: FontWeight.w400),
+                      ),
+                      Text(
+                        "Teache R                        ",
+                        style: TextStyle(
+                            fontFamily: fontF,
+                            color: Colors.white,
+                            fontSize: _screenH / 21,
+                            fontWeight: FontWeight.w400),
+                      ),
+                    ],
+                  ),
                 ),
                 decoration: BoxDecoration(
                     color: Colors.white.withAlpha(80),
