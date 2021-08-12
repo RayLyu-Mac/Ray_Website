@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:ray_website/danmu.dart';
+import 'package:ray_website/Barriage/b.dart';
+import 'package:ray_website/Barriage/douyu.dart';
+import 'dart:async';
+import 'dart:math';
 
 class welcome extends StatefulWidget {
   welcome({Key? key}) : super(key: key);
@@ -7,12 +12,30 @@ class welcome extends StatefulWidget {
   _welcomeState createState() => _welcomeState();
 }
 
+//Reference: https://juejin.cn/post/6844904126589960205
 class _welcomeState extends State<welcome> {
+  ScrollController sc = ScrollController();
+  int speedFactor = 18;
   double _screenWidth = 0;
   double _screenH = 0;
   int fontC = 600;
   double fontSize = 22.8;
   String fontF = "show";
+  int mills = 1200;
+  int showCount = 8;
+  var _barrageKey = GlobalKey<BarrageState>();
+  List<String> com = [
+    "学材料的搞那么多数据分析作甚",
+    "学材料的热动力学不学学好搞歪门邪道",
+    "学材料的搞什么App",
+    "别忘了你TM是个学材料的",
+    "Phase Diagram 会画了吗？Mechanical Test会做了吗？？",
+    "晶体结构记住了吗？FCC/BCC/HCP哪个更坚固？？",
+    "铁碳一共有几种形态？Alpha Phase是什么结构？？",
+    "科技树点歪了！到时候没公司要你",
+    "浪子回头吧"
+  ];
+  List<String> fontBase = ["coms", "show", "regular"];
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
@@ -22,7 +45,32 @@ class _welcomeState extends State<welcome> {
   }
 
   @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+
+    Timer _timer = Timer.periodic(Duration(milliseconds: mills), (timer) {
+      Random random = Random();
+      int _random = random.nextInt(com.length);
+      var text = com[_random];
+      var child;
+      if (_random == 1) {
+        child = HuyaBarrage.level_1(text);
+      } else if (_random == 2) {
+        child = HuyaBarrage.level_2(text);
+      } else if (_random == 3) {
+        child = HuyaBarrage.level_3(text, 20);
+      } else {
+        child = HuyaBarrage.normal(text);
+      }
+      _barrageKey.currentState?.addBarrage(child);
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
+    int mills = 500;
+    int showCount = 6;
     return Scaffold(
       body: SafeArea(
           child: Stack(
@@ -36,23 +84,46 @@ class _welcomeState extends State<welcome> {
                 decoration: BoxDecoration(
                     image: DecorationImage(
                         colorFilter: new ColorFilter.mode(
-                            Colors.black.withOpacity(0.8), BlendMode.dstATop),
+                            Colors.black.withOpacity(0.9), BlendMode.dstATop),
                         image: AssetImage("assest/personal.jpg"),
                         fit: BoxFit.cover)),
               )),
           Positioned(
-              top: _screenH / 10,
-              left: _screenWidth / 3,
-              child: RichText(
-                  text: TextSpan(
-                      text: "Greeting",
-                      style: TextStyle(
-                          fontFamily: "coms",
-                          fontSize: _screenH / 13,
-                          fontWeight: FontWeight.bold)))),
+            top: _screenH / 8,
+            left: _screenWidth / 4.5,
+            child: Column(
+              children: [
+                Text(
+                  "Greetings",
+                  style: TextStyle(
+                      fontFamily: "coms",
+                      fontSize: _screenH / 6,
+                      fontWeight: FontWeight.bold),
+                ),
+                SizedBox(
+                  height: _screenH / 20,
+                ),
+                Text("- I'm Ray Lyu -",
+                    style: TextStyle(
+                        color: Colors.grey[100],
+                        fontSize: _screenH / 12,
+                        fontWeight: FontWeight.bold)),
+                SizedBox(
+                  height: _screenH / 4.8,
+                ),
+                Text("Get to know me \nas -->",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        fontFamily: fontF,
+                        color: Colors.white,
+                        fontSize: _screenH / 15,
+                        fontWeight: FontWeight.bold)),
+              ],
+            ),
+          ),
           Positioned(
               top: _screenH / 30,
-              left: _screenWidth / 1.65,
+              left: _screenWidth / 1.63,
               child: Container(
                 constraints: BoxConstraints.expand(
                     width: _screenWidth / 2.7, height: _screenH / 1.07),
@@ -61,7 +132,7 @@ class _welcomeState extends State<welcome> {
                     children: [
                       SizedBox(height: _screenH / 40),
                       Text(
-                        "         Bio  M  edical Eng",
+                        "            Bio  M  ed Engineer",
                         style: TextStyle(
                             fontFamily: fontF,
                             color: Colors.grey[fontC],
@@ -158,7 +229,7 @@ class _welcomeState extends State<welcome> {
                             fontWeight: FontWeight.w400),
                       ),
                       Text(
-                        "                  N  ovel             ",
+                        "Challe  n  ger                  ",
                         style: TextStyle(
                             fontFamily: fontF,
                             color: Colors.white,
@@ -166,7 +237,7 @@ class _welcomeState extends State<welcome> {
                             fontWeight: FontWeight.w400),
                       ),
                       Text(
-                        "  Exp  E  rience    ",
+                        "     Res  E  archer    ",
                         style: TextStyle(
                             fontFamily: fontF,
                             color: Colors.white,
@@ -174,7 +245,7 @@ class _welcomeState extends State<welcome> {
                             fontWeight: FontWeight.w400),
                       ),
                       Text(
-                        "McMast  E  r                         ",
+                        "McMast  E  r Student   ",
                         style: TextStyle(
                             fontFamily: fontF,
                             color: Colors.white,
@@ -182,7 +253,7 @@ class _welcomeState extends State<welcome> {
                             fontWeight: FontWeight.w400),
                       ),
                       Text(
-                        "Teache  R                            ",
+                        "Teache  R                             ",
                         style: TextStyle(
                             fontFamily: fontF,
                             color: Colors.white,
@@ -199,7 +270,17 @@ class _welcomeState extends State<welcome> {
                       width: 2,
                       color: Colors.white.withOpacity(0.4),
                     )),
-              ))
+              )),
+          Positioned(
+              left: 0,
+              top: 0,
+              child: Container(
+                  height: _screenH,
+                  width: _screenWidth,
+                  child: Barrage(
+                    key: _barrageKey,
+                    showCount: showCount,
+                  )))
         ],
       )),
     );
