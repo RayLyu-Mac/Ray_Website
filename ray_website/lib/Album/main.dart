@@ -12,6 +12,7 @@ class album extends StatefulWidget {
 class _albumState extends State<album> {
   double _screenWidth = 0;
   double _screenH = 0;
+  double adjust = 1;
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
@@ -23,9 +24,10 @@ class _albumState extends State<album> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
+        body: SingleChildScrollView(
+      child: Container(
           width: _screenWidth,
-          height: _screenH,
+          height: _screenH * 1.2,
           decoration: BoxDecoration(
               image: DecorationImage(
                   colorFilter: ColorFilter.mode(
@@ -40,11 +42,12 @@ class _albumState extends State<album> {
                     "- Life is Art -",
                     style: TextStyle(
                         fontFamily: "coms",
-                        fontSize: _screenWidth / 13,
+                        color: Colors.black87,
+                        fontSize: _screenWidth / 10,
                         fontWeight: FontWeight.bold),
                   ),
                   Text(
-                      "                                                        Ray's Photo Gallery",
+                      "                                                            Ray's Photo Gallery",
                       style: TextStyle(
                           fontFamily: "coms", fontSize: _screenWidth / 25))
                 ],
@@ -73,6 +76,6 @@ class _albumState extends State<album> {
               ),
             ],
           )),
-    );
+    ));
   }
 }
