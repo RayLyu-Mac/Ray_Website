@@ -74,7 +74,7 @@ class _photoModeState extends State<photoMode> {
                       fontSize: _screenH / 30,
                       color: Colors.black45,
                       fontWeight: FontWeight.bold,
-                      fontFamily: "bank"),
+                      fontFamily: "yuan"),
                 ),
               )
             ]),

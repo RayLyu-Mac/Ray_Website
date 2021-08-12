@@ -12,7 +12,6 @@ class album extends StatefulWidget {
 class _albumState extends State<album> {
   double _screenWidth = 0;
   double _screenH = 0;
-  double adjust = 1;
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
