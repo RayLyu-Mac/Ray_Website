@@ -53,6 +53,15 @@ flutter:
   - assest/cloud.jpg
   - assest/nature.jpg
   - assest/city.jpg
+  - assest/citypic/hamilton/cover.jpg
+  - assest/citypic/jinhua/cover.jpg
+  - assest/citypic/hangzhou/cover.jpg
+  - assest/citypic/yunnan/cover.jpg
+  - assest/citypic/yunnan/1.jpg
+  - assest/citypic/yunnan/2.jpg
+  - assest/citypic/yunnan/3.jpg
+  - assest/citypic/yunnan/4.jpg
+  - assest/citypic/yunnan/5.jpg
 
   fonts:
     - family:          show
