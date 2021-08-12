@@ -4,6 +4,8 @@ import 'package:ray_website/Barriage/b.dart';
 import 'package:ray_website/Barriage/douyu.dart';
 import 'dart:async';
 import 'dart:math';
+import 'package:ray_website/Album/main.dart';
+import 'package:page_transition/page_transition.dart';
 
 class welcome extends StatefulWidget {
   welcome({Key? key}) : super(key: key);
@@ -83,7 +85,7 @@ class _welcomeState extends State<welcome> {
                     width: _screenWidth, height: _screenH),
                 decoration: BoxDecoration(
                     image: DecorationImage(
-                        colorFilter: new ColorFilter.mode(
+                        colorFilter: ColorFilter.mode(
                             Colors.black.withOpacity(0.9), BlendMode.dstATop),
                         image: AssetImage("assest/personal.jpg"),
                         fit: BoxFit.cover)),
@@ -212,13 +214,23 @@ class _welcomeState extends State<welcome> {
                             fontSize: _screenH / fontSize,
                             fontWeight: FontWeight.w400),
                       ),
-                      Text(
-                        "Photo  G  rapher       ",
-                        style: TextStyle(
-                            fontFamily: fontF,
-                            color: Colors.white,
-                            fontSize: _screenH / fontSize,
-                            fontWeight: FontWeight.w400),
+                      FlatButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              PageTransition(
+                                  duration: const Duration(milliseconds: 500),
+                                  child: album(),
+                                  type: PageTransitionType.rightToLeft));
+                        },
+                        child: Text(
+                          "Photo  G  rapher       ",
+                          style: TextStyle(
+                              fontFamily: fontF,
+                              color: Colors.white,
+                              fontSize: _screenH / fontSize,
+                              fontWeight: FontWeight.w400),
+                        ),
                       ),
                       Text(
                         "Creat  I  ve                  ",
