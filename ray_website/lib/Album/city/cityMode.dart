@@ -40,7 +40,7 @@ class _cityAlbumModeState extends State<cityAlbumMode> {
       body: SingleChildScrollView(
           child: Container(
         width: _screenWidth,
-        height: _screenH * 1.2,
+        height: _screenH * 1.4,
         decoration: BoxDecoration(
             image: DecorationImage(
                 colorFilter: ColorFilter.mode(

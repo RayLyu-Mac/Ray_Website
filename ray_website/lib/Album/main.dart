@@ -2,6 +2,7 @@ import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:flutter/material.dart';
 import 'mode.dart';
 import 'city/cityMode.dart';
+import 'city/cityAlbumMain.dart';
 
 class album extends StatefulWidget {
   album({Key? key}) : super(key: key);
@@ -59,19 +60,19 @@ class _albumState extends State<album> {
                   ),
                   photoMode(
                     title: "Cloud",
-                    pageTo: cityAlbumMode(),
+                    pageTo: cityAlblumMain(),
                     img: "assest/cloud.jpg",
                     content: "闲云无形\n火云炙空\n纤云随风\n彤云绵绵",
                   ),
                   photoMode(
                     title: "City",
-                    pageTo: cityAlbumMode(),
+                    pageTo: cityAlblumMain(),
                     img: "assest/city.jpg",
                     content: "在这被泪水\n淹没的城市中\n那里是我的归宿\n",
                   ),
                   photoMode(
                     title: "Nature",
-                    pageTo: cityAlbumMode(),
+                    pageTo: cityAlblumMain(),
                     img: "assest/nature.jpg",
                     content: "徐风盛夏行古道\n树影日光映微尘\n\n\n",
                   )

@@ -63,6 +63,18 @@ flutter:
   - assest/citypic/yunnan/4.jpg
   - assest/citypic/yunnan/5.jpg
   - assest/citypic/yunnan/6.jpg
+  - assest/citypic/jinhua/1.jpg
+  - assest/citypic/jinhua/2.jpg
+  - assest/citypic/jinhua/3.jpg
+  - assest/citypic/jinhua/4.jpg
+  - assest/citypic/jinhua/5.jpg
+  - assest/citypic/jinhua/6.jpg
+  - assest/citypic/hamilton/1.jpg
+  - assest/citypic/hamilton/2.jpg
+  - assest/citypic/hamilton/3.jpg
+  - assest/citypic/hamilton/4.jpg
+  - assest/citypic/hamilton/5.jpg
+  - assest/citypic/hamilton/6.jpg
 
   fonts:
     - family:          show
