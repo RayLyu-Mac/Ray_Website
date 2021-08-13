@@ -36,7 +36,7 @@ class cityAlblumMain extends StatefulWidget {
 }
 
 class _cityAlblumMainState extends State<cityAlblumMain> {
-  final PageController controller = PageController(initialPage: 0);
+  final PageController controller = PageController();
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
@@ -45,37 +45,44 @@ class _cityAlblumMainState extends State<cityAlblumMain> {
     _screenH = MediaQuery.of(context).size.height;
   }
 
+  List<Widget> cities = [
+    cityAlbumMode(
+      coverImg: "assest/citypic/yunnan/cover.jpg",
+      showImg: picsYN,
+      title: "彩云之南",
+      subtitle: "西南之珠，古色古香",
+      titleFont: "sw",
+      subFont: "yuan",
+    ),
+    cityAlbumMode(
+      coverImg: "assest/citypic/jinhua/cover.jpg",
+      showImg: picsJH,
+      title: "灿金华都",
+      subtitle: "浙中福地，火腿之乡",
+      titleFont: "yuan",
+      subFont: "nan",
+    ),
+    cityAlbumMode(
+      coverImg: "assest/citypic/hamilton/cover.jpg",
+      showImg: picsHT,
+      title: "Hamilton",
+      subtitle: "繁华终将褪去，旧城黯等重生",
+      titleFont: "bank",
+      subFont: "nan",
+    )
+  ];
+
   @override
   Widget build(BuildContext context) {
-    return PageView(
-      controller: controller,
-      scrollDirection: Axis.horizontal,
-      children: [
-        cityAlbumMode(
-          coverImg: "assest/citypic/yunnan/cover.jpg",
-          showImg: picsYN,
-          title: "彩云之南",
-          subtitle: "西南之珠，古色古香",
-          titleFont: "sw",
-          subFont: "yuan",
-        ),
-        cityAlbumMode(
-          coverImg: "assest/citypic/jinhua/cover.jpg",
-          showImg: picsJH,
-          title: "灿金华都",
-          subtitle: "浙中福地，火腿之乡",
-          titleFont: "yuan",
-          subFont: "nan",
-        ),
-        cityAlbumMode(
-          coverImg: "assest/citypic/hamilton/cover.jpg",
-          showImg: picsHT,
-          title: "Hamilton",
-          subtitle: "繁华终将褪去，旧城黯等重生",
-          titleFont: "bank",
-          subFont: "nan",
-        )
-      ],
-    );
+    return PageView.builder(
+        controller: controller,
+        itemCount: cities.length,
+        itemBuilder: (context, index) {
+          return GestureDetector(
+            onTap: () {
+              controller.jumpToPage(index);
+            },
+          );
+        });
   }
 }
