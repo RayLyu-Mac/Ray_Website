@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'cityMode.dart';
 
-double _screenWidth = 0;
-double _screenH = 0;
 List<String> picsYN = [
   "assest/citypic/yunnan/1.png",
   "assest/citypic/yunnan/2.png",
@@ -36,31 +34,23 @@ class cityAlblumMain extends StatefulWidget {
 }
 
 class _cityAlblumMainState extends State<cityAlblumMain> {
-  final PageController controller = PageController();
-  @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-
-    _screenWidth = MediaQuery.of(context).size.width;
-    _screenH = MediaQuery.of(context).size.height;
-  }
-
+  final PageController controller = PageController(initialPage: 0);
   List<Widget> cities = [
-    cityAlbumMode(
-      coverImg: "assest/citypic/jinhua/cover.png",
-      showImg: picsJH,
-      title: "灿金华都",
-      subtitle: "浙中福地，火腿之乡",
-      titleFont: "yuan",
-      subFont: "nan",
-    ),
     cityAlbumMode(
       coverImg: "assest/citypic/yunnan/cover.png",
       showImg: picsYN,
       title: "彩云之南",
       subtitle: "西南之珠，古色古香",
-      titleFont: "sw",
-      subFont: "yuan",
+      titleFont: "nan",
+      subFont: "nan",
+    ),
+    cityAlbumMode(
+      coverImg: "assest/citypic/jinhua/cover.png",
+      showImg: picsJH,
+      title: "灿金华都",
+      subtitle: "浙中福地，火腿之乡",
+      titleFont: "nan",
+      subFont: "nan",
     ),
     cityAlbumMode(
       coverImg: "assest/citypic/hamilton/cover.png",

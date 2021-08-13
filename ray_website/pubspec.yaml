@@ -81,19 +81,19 @@ flutter:
       - asset:        font/SHOWG.TTF
     - family:          coms
       fonts:
-      - asset:        font/comsc.TTF
+      - asset:        font/comsc.ttf
     - family:          bank
       fonts:
-      - asset:        font/bgothm.TTF
+      - asset:        font/bgothm.ttf
     - family:          nan
       fonts:
-      - asset:        font/nan.TTF
+      - asset:        font/nan.ttf
     - family:          yuan
       fonts:
-      - asset:        font/yuan.TTF
+      - asset:        font/yuan.ttf
     - family:          sw
       fonts:
-      - asset:        font/sw.TTF
+      - asset:        font/sw.ttf
 
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
