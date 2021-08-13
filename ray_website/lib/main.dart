@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'welcome/welcome.dart';
+import 'Album/city/xiangkuang.dart';
 import 'Album/city/cityAlbumMain.dart';
 
 void main() => runApp(mainp());
