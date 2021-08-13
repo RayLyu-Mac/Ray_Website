@@ -25,6 +25,7 @@ class cityAlbumMode extends StatefulWidget {
 class _cityAlbumModeState extends State<cityAlbumMode> {
   double _screenWidth = 0;
   double _screenH = 0;
+  int x = 1;
 
   @override
   void didChangeDependencies() {
@@ -37,8 +38,7 @@ class _cityAlbumModeState extends State<cityAlbumMode> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-          child: Container(
+      body: Container(
         width: _screenWidth,
         height: _screenH * 1.4,
         decoration: BoxDecoration(
@@ -81,11 +81,11 @@ class _cityAlbumModeState extends State<cityAlbumMode> {
                 SizedBox(
                   width: _screenWidth / 15,
                 ),
-                for (var i = 0; i < 3; i++)
+                for (var i = (x - 1) * 3; i < 3 * x; i++)
                   Container(
                     margin: EdgeInsets.fromLTRB(
                         _screenWidth / 20, 0, _screenWidth / 20, 0),
-                    height: _screenH / 4.5,
+                    height: _screenH / 3.5,
                     width: _screenWidth / 5,
                     decoration: BoxDecoration(
                         border: Border.all(width: 5, color: Colors.white60),
@@ -93,43 +93,27 @@ class _cityAlbumModeState extends State<cityAlbumMode> {
                         image: DecorationImage(
                             image: AssetImage(widget.showImg![i]),
                             fit: BoxFit.cover)),
-                  )
+                  ),
               ],
             )),
             SizedBox(
               height: _screenH / 15,
             ),
-            Row(
-                children: AnimationConfiguration.toStaggeredList(
-              duration: const Duration(milliseconds: 705),
-              childAnimationBuilder: (widget) => SlideAnimation(
-                child: FadeInAnimation(
-                  child: widget,
-                ),
-                horizontalOffset: 220,
-              ),
-              children: [
-                SizedBox(
-                  width: _screenWidth / 15,
-                ),
-                for (var i = 3; i < 6; i++)
-                  Container(
-                    margin: EdgeInsets.fromLTRB(
-                        _screenWidth / 20, 0, _screenWidth / 20, 0),
-                    height: _screenH / 4.5,
-                    width: _screenWidth / 5,
-                    decoration: BoxDecoration(
-                        border: Border.all(width: 5, color: Colors.white60),
-                        borderRadius: BorderRadius.circular(20),
-                        image: DecorationImage(
-                            image: AssetImage(widget.showImg![i]),
-                            fit: BoxFit.cover)),
-                  )
-              ],
-            ))
+            TextButton.icon(
+                onPressed: () {
+                  setState(() {
+                    if (x < 2) {
+                      x = x + 1;
+                    } else {
+                      x = 1;
+                    }
+                  });
+                },
+                icon: Icon(Icons.change_circle),
+                label: Text("Change a set"))
           ],
         ),
-      )),
+      ),
     );
   }
 }

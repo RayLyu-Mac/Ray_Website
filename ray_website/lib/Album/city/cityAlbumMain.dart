@@ -64,15 +64,10 @@ class _cityAlblumMainState extends State<cityAlblumMain> {
 
   @override
   Widget build(BuildContext context) {
-    return PageView.builder(
-        controller: controller,
-        itemCount: cities.length,
-        itemBuilder: (context, index) {
-          return GestureDetector(
-            onTap: () {
-              controller.jumpToPage(index);
-            },
-          );
-        });
+    return PageView(
+      scrollDirection: Axis.vertical,
+      controller: controller,
+      children: cities,
+    );
   }
 }
