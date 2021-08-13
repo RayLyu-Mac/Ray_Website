@@ -50,7 +50,7 @@ class _cityAlbumModeState extends State<cityAlbumMode> {
         child: Column(
           children: [
             SizedBox(
-              height: _screenH / 8.5,
+              height: _screenH / 8.8,
             ),
             Text(
               widget.title!,
@@ -102,7 +102,7 @@ class _cityAlbumModeState extends State<cityAlbumMode> {
             FlatButton.icon(
                 padding: EdgeInsets.symmetric(
                     vertical: _screenH / 40, horizontal: _screenWidth / 20),
-                color: Colors.grey[400]?.withAlpha(90),
+                color: Colors.grey[600]?.withAlpha(80),
                 onPressed: () {
                   setState(() {
                     if (x < 2) {
