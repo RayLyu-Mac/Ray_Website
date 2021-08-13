@@ -68,7 +68,7 @@ class _albumState extends State<album> {
                     title: "City",
                     pageTo: cityAlblumMain(),
                     img: "assest/city.jpg",
-                    content: "在这被泪水\n淹没的城市中\n那里是我的归宿\n",
+                    content: "在这被泪水\n淹没的城市中\n哪里是我的归宿\n",
                   ),
                   photoMode(
                     title: "Nature",
