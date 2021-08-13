@@ -40,7 +40,7 @@ class _cityAlbumModeState extends State<cityAlbumMode> {
     return Scaffold(
       body: Container(
         width: _screenWidth,
-        height: _screenH * 1.4,
+        height: _screenH * 1.3,
         decoration: BoxDecoration(
             image: DecorationImage(
                 colorFilter: ColorFilter.mode(
@@ -50,7 +50,7 @@ class _cityAlbumModeState extends State<cityAlbumMode> {
         child: Column(
           children: [
             SizedBox(
-              height: _screenH / 8,
+              height: _screenH / 8.5,
             ),
             Text(
               widget.title!,
@@ -75,7 +75,7 @@ class _cityAlbumModeState extends State<cityAlbumMode> {
                 child: FadeInAnimation(
                   child: widget,
                 ),
-                horizontalOffset: 220,
+                verticalOffset: 220,
               ),
               children: [
                 SizedBox(
@@ -99,7 +99,10 @@ class _cityAlbumModeState extends State<cityAlbumMode> {
             SizedBox(
               height: _screenH / 15,
             ),
-            TextButton.icon(
+            FlatButton.icon(
+                padding: EdgeInsets.symmetric(
+                    vertical: _screenH / 40, horizontal: _screenWidth / 20),
+                color: Colors.grey[400]?.withAlpha(90),
                 onPressed: () {
                   setState(() {
                     if (x < 2) {
@@ -110,7 +113,13 @@ class _cityAlbumModeState extends State<cityAlbumMode> {
                   });
                 },
                 icon: Icon(Icons.change_circle),
-                label: Text("Change a set"))
+                label: Text(
+                  "Change a set",
+                  style: TextStyle(
+                      fontSize: _screenH / 25,
+                      color: Colors.white,
+                      fontFamily: "show"),
+                ))
           ],
         ),
       ),
