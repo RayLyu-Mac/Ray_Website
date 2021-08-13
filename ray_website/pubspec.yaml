@@ -50,9 +50,9 @@ flutter:
   assets:
   - assest/personal.jpg
   - assest/show.jpg
-  - assest/cloud.jpg
-  - assest/nature.jpg
-  - assest/city.jpg
+  - assest/cloud.png
+  - assest/nature.png
+  - assest/city.png
   - assest/citypic/hamilton/cover.png
   - assest/citypic/jinhua/cover.png
   - assest/citypic/yunnan/cover.png
