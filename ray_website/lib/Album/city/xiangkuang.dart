@@ -2,7 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 
 class xiangKuang extends StatefulWidget {
-  xiangKuang({Key? key}) : super(key: key);
+  xiangKuang(
+      {@required this.content,
+      @required this.showPic,
+      @required this.title,
+      Key? key})
+      : super(key: key);
+  final String? title;
+  final String? content;
+  final String? showPic;
 
   @override
   _xiangKuangState createState() => _xiangKuangState();
@@ -25,7 +33,7 @@ class _xiangKuangState extends State<xiangKuang> {
     return Container(
       constraints: BoxConstraints.expand(
         width: _screenWidth / 1.35,
-        height: _screenH / 1.37,
+        height: _screenH / 1.3,
       ),
       decoration: BoxDecoration(
         image: DecorationImage(
@@ -49,7 +57,7 @@ class _xiangKuangState extends State<xiangKuang> {
                 height: _screenH / 20,
               ),
               Text(
-                "金华•冷夜",
+                widget.title!,
                 style: TextStyle(fontFamily: "nan", fontSize: _screenH / 14),
               ),
               SizedBox(
@@ -72,14 +80,14 @@ class _xiangKuangState extends State<xiangKuang> {
                       ]),
                   borderRadius: BorderRadius.circular(15),
                 ),
-                child: Image(image: AssetImage("assest/citypic/jinhua/1.png")),
+                child: Image(image: AssetImage(widget.showPic!)),
               ),
               SizedBox(
                 height: _screenH / 25,
               ),
               Container(
                 child: Text(
-                  "清冷的江面上，映着对岸的繁华",
+                  widget.content!,
                   style: TextStyle(fontFamily: "sw", fontSize: _screenH / 20),
                 ),
               )
