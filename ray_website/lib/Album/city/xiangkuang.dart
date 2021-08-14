@@ -10,7 +10,7 @@ class xiangKuang extends StatefulWidget {
       : super(key: key);
   final String? title;
   final String? content;
-  final String? showPic;
+  final List<String>? showPic;
 
   @override
   _xiangKuangState createState() => _xiangKuangState();
@@ -19,7 +19,7 @@ class xiangKuang extends StatefulWidget {
 class _xiangKuangState extends State<xiangKuang> {
   double _screenWidth = 0;
   double _screenH = 0;
-
+  int photos = 0;
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
@@ -63,24 +63,61 @@ class _xiangKuangState extends State<xiangKuang> {
               SizedBox(
                 height: _screenH / 25,
               ),
-              Container(
-                decoration: BoxDecoration(
-                  boxShadow: [
-                    BoxShadow(
-                        color: Colors.grey.shade400,
-                        blurRadius: 12.0,
-                        spreadRadius: 15.0),
-                  ],
-                  gradient: new LinearGradient(
-                      begin: Alignment.bottomCenter,
-                      end: Alignment.topCenter,
-                      colors: [
-                        Colors.grey.shade600,
-                        Colors.grey.shade50,
-                      ]),
-                  borderRadius: BorderRadius.circular(15),
-                ),
-                child: Image(image: AssetImage(widget.showPic!)),
+              Row(
+                children: [
+                  SizedBox(
+                    width: _screenWidth / 20,
+                  ),
+                  FloatingActionButton(
+                      backgroundColor: Colors.grey.shade700,
+                      onPressed: () {
+                        setState(() {
+                          if (photos < 0) {
+                            photos = photos + 0;
+                          } else {
+                            photos = photos - 1;
+                          }
+                        });
+                      },
+                      child: Icon(Icons.backspace)),
+                  SizedBox(
+                    width: _screenWidth / 20,
+                  ),
+                  Container(
+                    decoration: BoxDecoration(
+                      boxShadow: [
+                        BoxShadow(
+                            color: Colors.grey.shade400,
+                            blurRadius: 12.0,
+                            spreadRadius: 15.0),
+                      ],
+                      gradient: new LinearGradient(
+                          begin: Alignment.bottomCenter,
+                          end: Alignment.topCenter,
+                          colors: [
+                            Colors.grey.shade600,
+                            Colors.grey.shade50,
+                          ]),
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                    child: Image(image: AssetImage(widget.showPic![photos])),
+                  ),
+                  SizedBox(
+                    width: _screenWidth / 20,
+                  ),
+                  FloatingActionButton(
+                      backgroundColor: Colors.grey.shade700,
+                      onPressed: () {
+                        setState(() {
+                          if (photos == widget.showPic!.length - 1) {
+                            photos = 0;
+                          } else {
+                            photos = photos + 1;
+                          }
+                        });
+                      },
+                      child: Icon(Icons.forward)),
+                ],
               ),
               SizedBox(
                 height: _screenH / 25,

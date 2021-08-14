@@ -9,6 +9,7 @@ class cityAlbumMode extends StatefulWidget {
   final String? subtitle;
   final String? titleFont;
   final String? subFont;
+
   cityAlbumMode(
       {@required this.coverImg,
       @required this.showImg,
@@ -26,6 +27,7 @@ class cityAlbumMode extends StatefulWidget {
 class _cityAlbumModeState extends State<cityAlbumMode> {
   double _screenWidth = 0;
   double _screenH = 0;
+
   int x = 1;
 
   @override
@@ -106,7 +108,7 @@ class _cityAlbumModeState extends State<cityAlbumMode> {
                           border: Border.all(width: 5, color: Colors.white60),
                           borderRadius: BorderRadius.circular(20),
                           image: DecorationImage(
-                              image: AssetImage(widget.showImg![i][0]),
+                              image: AssetImage(widget.showImg![i][0][0]),
                               fit: BoxFit.cover)),
                     ),
                   )

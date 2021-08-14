@@ -21,6 +21,7 @@ class HuyaBarrage {
   static Widget level_2(String text) {
     return Center(
       child: Container(
+        width: 150,
         padding: EdgeInsets.only(left: 10, right: 10, top: 3, bottom: 3),
         decoration: BoxDecoration(
             color: Colors.red.withOpacity(.8),
@@ -36,6 +37,7 @@ class HuyaBarrage {
   static Widget level_3(String text, int count) {
     return Center(
       child: Container(
+        width: 150,
         padding: EdgeInsets.only(left: 10, right: 10, top: 3, bottom: 3),
         decoration: BoxDecoration(
             color: Colors.red.withOpacity(.8),
