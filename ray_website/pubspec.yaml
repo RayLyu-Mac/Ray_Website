@@ -75,6 +75,18 @@ flutter:
   - assest/citypic/hamilton/4.png
   - assest/citypic/hamilton/5.png
   - assest/citypic/hamilton/6.png
+  - assest/sky/day/cover.png
+  - assest/sky/day/1.png
+  - assest/sky/day/2.png
+  - assest/sky/day/3.png
+  - assest/sky/Eve/cover.png
+  - assest/sky/Eve/1.png
+  - assest/sky/Eve/2.png
+  - assest/sky/Eve/3.png
+  - assest/sky/twilight/cover.png
+  - assest/sky/twilight/1.png
+  - assest/sky/twilight/2.png
+  - assest/sky/twilight/3.png
 
   fonts:
     - family:          show
