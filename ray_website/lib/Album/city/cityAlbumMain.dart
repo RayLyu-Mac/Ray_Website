@@ -72,7 +72,7 @@ class _cityAlblumMainState extends State<cityAlblumMain> {
       coverImg: "assest/citypic/hamilton/cover.png",
       showImg: picsHT,
       title: "Hamilton",
-      subtitle: "繁华终将褪去，旧城黯等重生",
+      subtitle: "繁华终将褪去，如今只剩沧桑",
       titleFont: "bank",
       subFont: "nan",
     )

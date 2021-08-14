@@ -59,7 +59,7 @@ class _albumState extends State<album> {
                   photoMode(
                     title: "Cloud",
                     pageTo: cityAlblumMain(),
-                    img: "assest/cloud.png",
+                    img: "assest/sky.png",
                     content: "闲云无形\n火云炙空\n纤云随风\n彤云绵绵",
                   ),
                   photoMode(
