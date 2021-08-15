@@ -1,9 +1,18 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 
 class JourneyMode extends StatefulWidget {
-  JourneyMode({Key? key}) : super(key: key);
+  JourneyMode(
+      {@required this.content,
+      @required this.showImg,
+      @required this.title,
+      Key? key})
+      : super(key: key);
+  final String? content;
+  final String? title;
+  final String? showImg;
 
   @override
   _JourneyModeState createState() => _JourneyModeState();
@@ -26,16 +35,27 @@ class _JourneyModeState extends State<JourneyMode> {
     return Scaffold(
         body: Container(
       width: _screenWidth,
-      height: _screenH * 1.3,
+      height: _screenH * 1.1,
       decoration: BoxDecoration(
           image: DecorationImage(
               colorFilter: ColorFilter.mode(
-                  Colors.white.withOpacity(0.6), BlendMode.dstATop),
-              image: AssetImage("assest/Personal Pic/1.png"),
+                  Colors.white.withOpacity(0.9), BlendMode.dstATop),
+              image: AssetImage(widget.showImg!),
               fit: BoxFit.cover)),
       child: Center(
-        child: Column(
+          child: Column(
+        children: AnimationConfiguration.toStaggeredList(
+          duration: const Duration(milliseconds: 705),
+          childAnimationBuilder: (widget) => SlideAnimation(
+            child: FadeInAnimation(
+              child: widget,
+            ),
+            verticalOffset: 220,
+          ),
           children: [
+            SizedBox(
+              height: _screenH / 20,
+            ),
             Container(
               decoration: BoxDecoration(
                   border: Border(
@@ -44,16 +64,59 @@ class _JourneyModeState extends State<JourneyMode> {
               child: Text(
                 "May 2018",
                 style: TextStyle(
-                  fontSize: _screenH / 25,
+                  fontSize: _screenH / 12,
                   fontWeight: FontWeight.bold,
+                  color: Colors.grey.shade800,
                   fontFamily: "coms",
                 ),
                 textAlign: TextAlign.center,
               ),
-            )
+            ),
+            SizedBox(
+              height: _screenH / 2,
+            ),
+            Container(
+                padding: EdgeInsets.fromLTRB(
+                  _screenWidth / 20,
+                  _screenH / 40,
+                  _screenWidth / 20,
+                  _screenH / 40,
+                ),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(25),
+                  color: Colors.grey.shade50.withAlpha(70),
+                  gradient: new LinearGradient(
+                      begin: Alignment.bottomCenter,
+                      end: Alignment.topCenter,
+                      colors: [
+                        Colors.grey.shade200,
+                        Colors.grey.shade50,
+                      ]),
+                ),
+                child: Column(children: [
+                  Text(
+                    widget.title!,
+                    style: TextStyle(
+                      fontSize: _screenH / 17,
+                      fontWeight: FontWeight.bold,
+                      fontFamily: "yuan",
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                  Container(
+                    child: Text(
+                      widget.content!,
+                      style: TextStyle(
+                          fontSize: _screenH / 31,
+                          fontWeight: FontWeight.bold,
+                          fontFamily: "sw"),
+                      textAlign: TextAlign.center,
+                    ),
+                  )
+                ]))
           ],
         ),
-      ),
+      )),
     ));
   }
 }
