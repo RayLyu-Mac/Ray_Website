@@ -6,11 +6,13 @@ import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 class JourneyMode extends StatefulWidget {
   JourneyMode(
       {@required this.content,
+      @required this.date,
       @required this.showImg,
       @required this.title,
       Key? key})
       : super(key: key);
   final String? content;
+  final String? date;
   final String? title;
   final String? showImg;
 
@@ -62,7 +64,7 @@ class _JourneyModeState extends State<JourneyMode> {
                       bottom:
                           BorderSide(color: Colors.grey.shade100, width: 5))),
               child: Text(
-                "May 2018",
+                widget.date!,
                 style: TextStyle(
                   fontSize: _screenH / 12,
                   fontWeight: FontWeight.bold,
