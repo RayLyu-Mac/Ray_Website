@@ -76,7 +76,8 @@ List<List> picsJH = [
       "assest/citypic/jinhua/11.png",
       "assest/citypic/jinhua/12.png",
       "assest/citypic/jinhua/13.png",
-      "assest/citypic/jinhua/14.png"
+      "assest/citypic/jinhua/14.png",
+      "assest/citypic/jinhua/15.png"
     ],
     "金华•华灯初上",
     "交织的霓虹，与清冷的夜"
@@ -87,22 +88,49 @@ List<List> picsJH = [
     "夜幕下，地摊的灯火与悠然的人群"
   ],
   [
-    ["assest/citypic/jinhua/3.png"],
+    [
+      "assest/citypic/jinhua/3.png",
+      "assest/citypic/jinhua/31.png",
+      "assest/citypic/jinhua/32.png",
+      "assest/citypic/jinhua/33.png",
+    ],
+    "assest/citypic/jinhua/34.png",
+    "assest/citypic/jinhua/35.png",
+    "assest/citypic/jinhua/36.png",
     "金华•河滩",
     "盛夏，河滩底的石头都出来晒太阳了"
   ],
   [
-    ["assest/citypic/jinhua/4.png"],
-    "金华•孤云",
+    [
+      "assest/citypic/jinhua/4.png",
+      "assest/citypic/jinhua/41.png",
+      "assest/citypic/jinhua/42.png",
+      "assest/citypic/jinhua/43.png",
+      "assest/citypic/jinhua/44.png",
+      "assest/citypic/jinhua/45.png",
+    ],
+    "assest/citypic/jinhua/46.png",
+    "金华•天际线",
     "远眺，只有矗立的高楼和孤悬的白云"
   ],
   [
-    ["assest/citypic/jinhua/5.png"],
+    [
+      "assest/citypic/jinhua/5.png",
+      "assest/citypic/jinhua/53.png",
+      "assest/citypic/jinhua/54.png",
+      "assest/citypic/jinhua/55.png",
+      "assest/citypic/jinhua/56.png",
+      "assest/citypic/jinhua/57.png",
+    ],
     "金华•黄昏",
     "享受夜幕来临前的悠然"
   ],
   [
-    ["assest/citypic/jinhua/6.png"],
+    [
+      "assest/citypic/jinhua/6.png",
+      "assest/citypic/jinhua/61.png"
+          "assest/citypic/jinhua/62.png"
+    ],
     "金华•桥梁",
     "他用坚毅的身躯托起了，两边的交流"
   ]
