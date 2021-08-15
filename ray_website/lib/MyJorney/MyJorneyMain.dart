@@ -13,6 +13,7 @@ class _MyJournyState extends State<MyJourny> {
     "assest/Personal Pic/1.01.png",
     "assest/Personal Pic/1.png",
     "assest/Personal Pic/1.02.png",
+    "assest/Personal Pic/1.03.png",
     "assest/Personal Pic/2.png",
     "assest/Personal Pic/3.png",
     "assest/Personal Pic/4.png",
@@ -32,7 +33,7 @@ class _MyJournyState extends State<MyJourny> {
     "assest/Personal Pic/18.png",
     "assest/Personal Pic/19.png",
   ];
-  List<String> dates = [];
+  List<String> dates = ["Mar 2018", "May 2018", "June 2018", ""];
   List<String> titles = ["高中•戏剧"];
   PageController controller = PageController();
   @override
