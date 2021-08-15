@@ -151,6 +151,26 @@ flutter:
   - assest/sky/twilight/2.png
   - assest/sky/twilight/3.png
 
+  - assest/Personal Pic/1.png
+  - assest/Personal Pic/2.png
+  - assest/Personal Pic/3.png
+  - assest/Personal Pic/4.png
+  - assest/Personal Pic/5.png
+  - assest/Personal Pic/6.png
+  - assest/Personal Pic/7.png
+  - assest/Personal Pic/8.png
+  - assest/Personal Pic/9.png
+  - assest/Personal Pic/10.png
+  - assest/Personal Pic/11.png
+  - assest/Personal Pic/12.png
+  - assest/Personal Pic/13.png
+  - assest/Personal Pic/14.png
+  - assest/Personal Pic/15.png
+  - assest/Personal Pic/16.png
+  - assest/Personal Pic/17.png
+  - assest/Personal Pic/18.png
+  - assest/Personal Pic/19.png
+
   fonts:
     - family:          show
       fonts:
@@ -160,16 +180,16 @@ flutter:
       - asset:        font/comsc.TTf
     - family:          bank
       fonts:
-      - asset:        font/bgothm.ttf
+      - asset:        font/bgothm.TTF
     - family:          nan
       fonts:
       - asset:        font/nan.TTf
     - family:          yuan
       fonts:
-      - asset:        font/yuan.ttf
+      - asset:        font/yuan.TTF
     - family:          sw
       fonts:
-      - asset:        font/sw.ttf
+      - asset:        font/sw.TTF
 
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
