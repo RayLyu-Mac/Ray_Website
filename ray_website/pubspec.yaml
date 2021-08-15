@@ -56,6 +56,7 @@ flutter:
   - assest/back.png
   - assest/citypic/hamilton/cover.png
   - assest/citypic/jinhua/cover.png
+
   - assest/citypic/yunnan/cover.png
   - assest/citypic/yunnan/1.png
   - assest/citypic/yunnan/11.png
@@ -78,11 +79,16 @@ flutter:
   - assest/citypic/yunnan/44.png
   - assest/citypic/yunnan/45.png
   - assest/citypic/yunnan/46.png
+  - assest/citypic/yunnan/47.png
+  - assest/citypic/yunnan/48.png
   - assest/citypic/yunnan/5.png
   - assest/citypic/yunnan/51.png
   - assest/citypic/yunnan/52.png
   - assest/citypic/yunnan/53.png
   - assest/citypic/yunnan/54.png
+  - assest/citypic/yunnan/55.png
+  - assest/citypic/yunnan/56.png
+  - assest/citypic/yunnan/57.png
   - assest/citypic/yunnan/6.png
   - assest/citypic/yunnan/61.png
   - assest/citypic/yunnan/62.png
@@ -98,6 +104,7 @@ flutter:
   - assest/citypic/jinhua/34.png
   - assest/citypic/jinhua/35.png
   - assest/citypic/jinhua/36.png
+  - assest/citypic/jinhua/37.png
   - assest/citypic/jinhua/4.png
   - assest/citypic/jinhua/41.png
   - assest/citypic/jinhua/42.png

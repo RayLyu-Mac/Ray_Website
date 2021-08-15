@@ -41,6 +41,8 @@ List<List> picsYN = [
       "assest/citypic/yunnan/44.png",
       "assest/citypic/yunnan/45.png",
       "assest/citypic/yunnan/46.png",
+      "assest/citypic/yunnan/47.png",
+      "assest/citypic/yunnan/48.png",
     ],
     "云南•古街",
     "沧桑的青石板与远处的青山，映着街边木漆的招牌"
@@ -52,6 +54,9 @@ List<List> picsYN = [
       "assest/citypic/yunnan/52.png",
       "assest/citypic/yunnan/53.png",
       "assest/citypic/yunnan/54.png",
+      "assest/citypic/yunnan/55.png",
+      "assest/citypic/yunnan/56.png",
+      "assest/citypic/yunnan/57.png",
     ],
     "云南•溪傍",
     "水平若境，灯笼似火"
@@ -96,6 +101,7 @@ List<List> picsJH = [
       "assest/citypic/jinhua/34.png",
       "assest/citypic/jinhua/35.png",
       "assest/citypic/jinhua/36.png",
+      "assest/citypic/jinhua/37.png",
     ],
     "金华•河滩",
     "盛夏，河滩底的石头都出来晒太阳了"
@@ -109,6 +115,8 @@ List<List> picsJH = [
       "assest/citypic/jinhua/44.png",
       "assest/citypic/jinhua/45.png",
       "assest/citypic/jinhua/46.png",
+      "assest/citypic/jinhua/47.png",
+      "assest/citypic/jinhua/48.png",
     ],
     "金华•天际线",
     "远眺，只有矗立的高楼和孤悬的白云"
@@ -129,7 +137,11 @@ List<List> picsJH = [
     [
       "assest/citypic/jinhua/6.png",
       "assest/citypic/jinhua/61.png",
-      "assest/citypic/jinhua/62.png"
+      "assest/citypic/jinhua/62.png",
+      "assest/citypic/jinhua/63.png",
+      "assest/citypic/jinhua/64.png",
+      "assest/citypic/jinhua/65.png",
+      "assest/citypic/jinhua/66.png",
     ],
     "金华•桥梁",
     "他用坚毅的身躯托起了，两边的交流"
