@@ -3,7 +3,14 @@ import 'cityMode.dart';
 
 List<List> picsYN = [
   [
-    ["assest/citypic/yunnan/1.png"],
+    [
+      "assest/citypic/yunnan/1.png",
+      "assest/citypic/yunnan/11.png"
+          "assest/citypic/yunnan/12.png"
+          "assest/citypic/yunnan/13.png"
+          "assest/citypic/yunnan/14.png",
+      "assest/citypic/yunnan/15.png"
+    ],
     "云南•沐圣",
     "远处的大殿，静静的沐浴在漏下的阳光中"
   ],
@@ -13,24 +20,53 @@ List<List> picsYN = [
     "黄瓦与青砖，于碧空之下"
   ],
   [
-    ["assest/citypic/yunnan/3.png"],
-    "云南•黄昏",
-    "太阳离开后的集市，便只剩天边的金黄"
+    [
+      "assest/citypic/yunnan/3.png",
+      "assest/citypic/yunnan/31.png",
+      "assest/citypic/yunnan/32.png",
+    ],
+    "assest/citypic/yunnan/33.png",
+    "assest/citypic/yunnan/34.png",
+    "assest/citypic/yunnan/35.png",
+    "assest/citypic/yunnan/36.png",
+    "云南•云山",
+    "匿身于重云中的远山，其真面目又是何样"
   ],
   [
-    ["assest/citypic/yunnan/4.png"],
+    [
+      "assest/citypic/yunnan/4.png",
+      "assest/citypic/yunnan/41.png",
+      "assest/citypic/yunnan/42.png",
+      "assest/citypic/yunnan/43.png",
+      "assest/citypic/yunnan/44.png",
+      "assest/citypic/yunnan/45.png",
+      "assest/citypic/yunnan/46.png",
+    ],
     "云南•古街",
     "沧桑的青石板与远处的青山，映着街边木漆的招牌"
   ],
   [
-    ["assest/citypic/yunnan/5.png"],
+    [
+      "assest/citypic/yunnan/5.png",
+      "assest/citypic/yunnan/51.png",
+      "assest/citypic/yunnan/52.png",
+      "assest/citypic/yunnan/53.png",
+      "assest/citypic/yunnan/54.png",
+    ],
     "云南•溪傍",
     "水平若境，灯笼似火"
   ],
   [
-    ["assest/citypic/yunnan/6.png"],
-    "云南•角楼",
-    "剥落的红漆，诉说着旧时的辉煌"
+    [
+      "assest/citypic/yunnan/6.png",
+      "assest/citypic/yunnan/61.png",
+      "assest/citypic/yunnan/62.png",
+      "assest/citypic/yunnan/63.png",
+      "assest/citypic/yunnan/64.png",
+      "assest/citypic/yunnan/65.png",
+    ],
+    "云南•玉龙",
+    "着一身玉铠，栖身于迷雾之中"
   ]
 ];
 List<List> picsJH = [
