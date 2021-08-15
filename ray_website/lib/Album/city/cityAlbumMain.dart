@@ -79,7 +79,7 @@ List<List> picsJH = [
       "assest/citypic/jinhua/14.png"
     ],
     "金华•华灯初上",
-    "清冷的江面，浮现远处的灯火"
+    "交织的霓虹，与清冷的夜"
   ],
   [
     ["assest/citypic/jinhua/2.png"],
