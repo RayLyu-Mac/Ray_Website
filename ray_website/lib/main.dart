@@ -11,7 +11,7 @@ class mainp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Maintaince Mangament and Accessibility System',
-      home: cityAlblumMain(),
+      home: welcome(),
     );
   }
 }

@@ -5,10 +5,10 @@ List<List> picsYN = [
   [
     [
       "assest/citypic/yunnan/1.png",
-      "assest/citypic/yunnan/11.png"
-          "assest/citypic/yunnan/12.png"
-          "assest/citypic/yunnan/13.png"
-          "assest/citypic/yunnan/14.png",
+      "assest/citypic/yunnan/11.png",
+      "assest/citypic/yunnan/12.png",
+      "assest/citypic/yunnan/13.png",
+      "assest/citypic/yunnan/14.png",
       "assest/citypic/yunnan/15.png"
     ],
     "云南•沐圣",
@@ -24,11 +24,11 @@ List<List> picsYN = [
       "assest/citypic/yunnan/3.png",
       "assest/citypic/yunnan/31.png",
       "assest/citypic/yunnan/32.png",
+      "assest/citypic/yunnan/33.png",
+      "assest/citypic/yunnan/34.png",
+      "assest/citypic/yunnan/35.png",
+      "assest/citypic/yunnan/36.png"
     ],
-    "assest/citypic/yunnan/33.png",
-    "assest/citypic/yunnan/34.png",
-    "assest/citypic/yunnan/35.png",
-    "assest/citypic/yunnan/36.png",
     "云南•云山",
     "匿身于重云中的远山，其真面目又是何样"
   ],
@@ -93,10 +93,10 @@ List<List> picsJH = [
       "assest/citypic/jinhua/31.png",
       "assest/citypic/jinhua/32.png",
       "assest/citypic/jinhua/33.png",
+      "assest/citypic/jinhua/34.png",
+      "assest/citypic/jinhua/35.png",
+      "assest/citypic/jinhua/36.png",
     ],
-    "assest/citypic/jinhua/34.png",
-    "assest/citypic/jinhua/35.png",
-    "assest/citypic/jinhua/36.png",
     "金华•河滩",
     "盛夏，河滩底的石头都出来晒太阳了"
   ],
@@ -108,8 +108,8 @@ List<List> picsJH = [
       "assest/citypic/jinhua/43.png",
       "assest/citypic/jinhua/44.png",
       "assest/citypic/jinhua/45.png",
+      "assest/citypic/jinhua/46.png",
     ],
-    "assest/citypic/jinhua/46.png",
     "金华•天际线",
     "远眺，只有矗立的高楼和孤悬的白云"
   ],
@@ -128,8 +128,8 @@ List<List> picsJH = [
   [
     [
       "assest/citypic/jinhua/6.png",
-      "assest/citypic/jinhua/61.png"
-          "assest/citypic/jinhua/62.png"
+      "assest/citypic/jinhua/61.png",
+      "assest/citypic/jinhua/62.png"
     ],
     "金华•桥梁",
     "他用坚毅的身躯托起了，两边的交流"
