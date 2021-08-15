@@ -105,6 +105,8 @@ flutter:
   - assest/citypic/jinhua/44.png
   - assest/citypic/jinhua/45.png
   - assest/citypic/jinhua/46.png
+  - assest/citypic/jinhua/47.png
+  - assest/citypic/jinhua/48.png
   - assest/citypic/jinhua/5.png
   - assest/citypic/jinhua/53.png
   - assest/citypic/jinhua/54.png
@@ -114,6 +116,10 @@ flutter:
   - assest/citypic/jinhua/6.png
   - assest/citypic/jinhua/61.png
   - assest/citypic/jinhua/62.png
+  - assest/citypic/jinhua/63.png
+  - assest/citypic/jinhua/64.png
+  - assest/citypic/jinhua/65.png
+  - assest/citypic/jinhua/66.png
   - assest/citypic/jinhua/11.png
   - assest/citypic/jinhua/12.png
   - assest/citypic/jinhua/13.png
@@ -144,13 +150,13 @@ flutter:
       - asset:        font/SHOWG.TTF
     - family:          coms
       fonts:
-      - asset:        font/comsc.ttf
+      - asset:        font/comsc.TTf
     - family:          bank
       fonts:
       - asset:        font/bgothm.ttf
     - family:          nan
       fonts:
-      - asset:        font/nan.ttf
+      - asset:        font/nan.TTf
     - family:          yuan
       fonts:
       - asset:        font/yuan.ttf
