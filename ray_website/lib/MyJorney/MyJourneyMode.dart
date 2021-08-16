@@ -68,7 +68,7 @@ class _JourneyModeState extends State<JourneyMode> {
                 style: TextStyle(
                   fontSize: _screenH / 12,
                   fontWeight: FontWeight.bold,
-                  color: Colors.grey.shade800,
+                  color: Colors.grey.shade500,
                   fontFamily: "coms",
                 ),
                 textAlign: TextAlign.center,
@@ -86,7 +86,7 @@ class _JourneyModeState extends State<JourneyMode> {
                 ),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(25),
-                  color: Colors.grey.shade50.withAlpha(70),
+                  color: Colors.grey.shade50.withOpacity(0.8),
                   gradient: new LinearGradient(
                       begin: Alignment.bottomCenter,
                       end: Alignment.topCenter,

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'welcome/welcome.dart';
-import 'MyJorney/MyJourneyMode.dart';
+import 'MyJorney/MyJorneyMain.dart';
 
 void main() => runApp(mainp());
 
@@ -10,8 +10,8 @@ class mainp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Maintaince Mangament and Accessibility System',
-      home: JourneyMode(),
+      title: 'Ray Personal Website',
+      home: MyJourny(),
     );
   }
 }
