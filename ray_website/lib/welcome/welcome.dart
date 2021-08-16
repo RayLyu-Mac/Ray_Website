@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:ray_website/MyJorney/MyJorneyMain.dart';
-import 'package:ray_website/danmu.dart';
 import 'package:ray_website/Barriage/b.dart';
 import 'package:ray_website/Barriage/douyu.dart';
 import 'dart:async';
@@ -48,29 +47,6 @@ class _welcomeState extends State<welcome> {
   }
 
   @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-
-    Timer _timer = Timer.periodic(Duration(milliseconds: mills), (timer) {
-      Random random = Random();
-      int _random = random.nextInt(com.length);
-      var text = com[_random];
-      var child;
-      if (_random == 1) {
-        child = HuyaBarrage.level_1(text);
-      } else if (_random == 2) {
-        child = HuyaBarrage.level_2(text);
-      } else if (_random == 3) {
-        child = HuyaBarrage.level_3(text, 20);
-      } else {
-        child = HuyaBarrage.normal(text);
-      }
-      _barrageKey.currentState?.addBarrage(child);
-    });
-  }
-
-  @override
   Widget build(BuildContext context) {
     int mills = 500;
     int showCount = 6;
@@ -92,10 +68,10 @@ class _welcomeState extends State<welcome> {
                         fit: BoxFit.cover)),
               )),
           Positioned(
-              top: _screenH / 8,
-              left: _screenWidth / 15,
-              height: _screenH / 2,
-              width: _screenWidth / 4,
+              top: _screenH / 15,
+              left: _screenWidth / 20,
+              height: _screenH / 1.3,
+              width: _screenWidth / 2.5,
               child: GestureDetector(
                 onTap: () {
                   Navigator.push(

@@ -37,7 +37,7 @@ class _JourneyModeState extends State<JourneyMode> {
     return Scaffold(
         body: Center(
       child: Container(
-        width: _screenWidth / 1,
+        width: _screenWidth,
         height: _screenH * 1.1,
         decoration: BoxDecoration(
             image: DecorationImage(
