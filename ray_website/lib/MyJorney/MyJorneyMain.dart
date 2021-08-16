@@ -1,5 +1,6 @@
 import 'MyJourneyMode.dart';
 import 'package:flutter/material.dart';
+import 'MyjorneyCover.dart';
 
 class MyJourny extends StatefulWidget {
   MyJourny({Key? key}) : super(key: key);
@@ -113,6 +114,7 @@ class _MyJournyState extends State<MyJourny> {
         scrollDirection: Axis.vertical,
         controller: controller,
         children: [
+          mjCover(),
           for (var i = 0; i < content.length; i++)
             JourneyMode(
                 content: content[i],

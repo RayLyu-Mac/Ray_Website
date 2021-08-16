@@ -35,49 +35,51 @@ class _JourneyModeState extends State<JourneyMode> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Container(
-      width: _screenWidth,
-      height: _screenH * 1.1,
-      decoration: BoxDecoration(
-          image: DecorationImage(
-              colorFilter: ColorFilter.mode(
-                  Colors.white.withOpacity(0.9), BlendMode.dstATop),
-              image: AssetImage(widget.showImg!),
-              fit: BoxFit.cover)),
-      child: Center(
-          child: Column(
-        children: AnimationConfiguration.toStaggeredList(
-          duration: const Duration(milliseconds: 705),
-          childAnimationBuilder: (widget) => SlideAnimation(
-            child: FadeInAnimation(
-              child: widget,
-            ),
-            verticalOffset: 220,
-          ),
-          children: [
-            SizedBox(
-              height: _screenH / 20,
-            ),
-            Container(
-              decoration: BoxDecoration(
-                  border: Border(
-                      bottom:
-                          BorderSide(color: Colors.grey.shade100, width: 5))),
-              child: Text(
-                widget.date!,
-                style: TextStyle(
-                  fontSize: _screenH / 12,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.grey.shade500,
-                  fontFamily: "coms",
-                ),
-                textAlign: TextAlign.center,
+        body: Center(
+      child: Container(
+        width: _screenWidth / 1,
+        height: _screenH * 1.1,
+        decoration: BoxDecoration(
+            image: DecorationImage(
+                colorFilter: ColorFilter.mode(
+                    Colors.white.withOpacity(0.9), BlendMode.dstATop),
+                image: AssetImage(widget.showImg!),
+                fit: BoxFit.cover)),
+        child: Center(
+            child: Column(
+          children: AnimationConfiguration.toStaggeredList(
+            duration: const Duration(milliseconds: 705),
+            childAnimationBuilder: (widget) => SlideAnimation(
+              child: FadeInAnimation(
+                child: widget,
               ),
+              verticalOffset: 220,
             ),
-            SizedBox(
-              height: _screenH / 2,
-            ),
-            Container(
+            children: [
+              SizedBox(
+                height: _screenH / 20,
+              ),
+              Container(
+                decoration: BoxDecoration(
+                    border: Border(
+                        bottom:
+                            BorderSide(color: Colors.grey.shade100, width: 5))),
+                child: Text(
+                  widget.date!,
+                  style: TextStyle(
+                    fontSize: _screenH / 12,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.grey.shade500,
+                    fontFamily: "coms",
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+              SizedBox(
+                height: _screenH / 2,
+              ),
+              Container(
+                height: _screenH / 4,
                 padding: EdgeInsets.fromLTRB(
                   _screenWidth / 20,
                   _screenH / 40,
@@ -95,7 +97,8 @@ class _JourneyModeState extends State<JourneyMode> {
                         Colors.grey.shade50,
                       ]),
                 ),
-                child: Column(children: [
+                child: SingleChildScrollView(
+                    child: Column(children: [
                   Text(
                     widget.title!,
                     style: TextStyle(
@@ -115,10 +118,12 @@ class _JourneyModeState extends State<JourneyMode> {
                       textAlign: TextAlign.center,
                     ),
                   )
-                ]))
-          ],
-        ),
-      )),
+                ])),
+              )
+            ],
+          ),
+        )),
+      ),
     ));
   }
 }

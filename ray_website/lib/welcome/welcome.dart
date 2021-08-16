@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ray_website/MyJorney/MyJorneyMain.dart';
 import 'package:ray_website/danmu.dart';
 import 'package:ray_website/Barriage/b.dart';
 import 'package:ray_website/Barriage/douyu.dart';
@@ -89,6 +90,21 @@ class _welcomeState extends State<welcome> {
                             Colors.black.withOpacity(0.9), BlendMode.dstATop),
                         image: AssetImage("assest/personal.jpg"),
                         fit: BoxFit.cover)),
+              )),
+          Positioned(
+              top: _screenH / 8,
+              left: _screenWidth / 15,
+              height: _screenH / 2,
+              width: _screenWidth / 4,
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      PageTransition(
+                          duration: const Duration(milliseconds: 500),
+                          child: MyJourny(),
+                          type: PageTransitionType.rightToLeft));
+                },
               )),
           Positioned(
             top: _screenH / 8,
