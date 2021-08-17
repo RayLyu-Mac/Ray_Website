@@ -6,6 +6,8 @@ import 'dart:async';
 import 'dart:math';
 import 'package:ray_website/Album/main.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:sprung/sprung.dart';
+import 'hoverText.dart';
 
 class welcome extends StatefulWidget {
   welcome({Key? key}) : super(key: key);
@@ -23,6 +25,7 @@ class _welcomeState extends State<welcome> {
   int fontC = 600;
   double fontSize = 22.8;
   String fontF = "show";
+
   int mills = 1200;
   int showCount = 8;
   var _barrageKey = GlobalKey<BarrageState>();
@@ -50,6 +53,7 @@ class _welcomeState extends State<welcome> {
   Widget build(BuildContext context) {
     int mills = 500;
     int showCount = 6;
+
     return Scaffold(
       body: SafeArea(
           child: Stack(
@@ -206,24 +210,11 @@ class _welcomeState extends State<welcome> {
                             fontSize: _screenH / fontSize,
                             fontWeight: FontWeight.w400),
                       ),
-                      FlatButton(
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              PageTransition(
-                                  duration: const Duration(milliseconds: 500),
-                                  child: album(),
-                                  type: PageTransitionType.rightToLeft));
-                        },
-                        child: Text(
-                          "Photo  G  rapher       ",
-                          style: TextStyle(
-                              fontFamily: fontF,
-                              color: Colors.white,
-                              fontSize: _screenH / fontSize,
-                              fontWeight: FontWeight.w400),
-                        ),
-                      ),
+                      hoverTextMode(
+                          pageTo: album(),
+                          font: fontF,
+                          fontsize: fontSize,
+                          title: "Photo  G  rapher       "),
                       Text(
                         "Creat  I  ve                  ",
                         style: TextStyle(

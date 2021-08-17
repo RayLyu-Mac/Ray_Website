@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
+import 'package:ray_website/MyJorney/MyJorneyMain.dart';
 import 'package:ray_website/MyJorney/MyJourneyMode.dart';
+import 'package:page_transition/page_transition.dart';
 
 class CADMode extends StatefulWidget {
   CADMode({Key? key}) : super(key: key);
@@ -23,6 +25,7 @@ class _CADModeState extends State<CADMode> {
   ];
   @override
   Widget build(BuildContext context) {
+    bool moreInfo = false;
     return Scaffold(
         body: GridView.count(
       crossAxisCount: 3,
@@ -34,6 +37,30 @@ class _CADModeState extends State<CADMode> {
             child: ScaleAnimation(
                 child: FadeInAnimation(
                     child: InkWell(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    PageTransition(
+                        duration: const Duration(milliseconds: 500),
+                        child: JourneyMode(
+                            content: "CAD is a style",
+                            date: "May 2020",
+                            showImg: cadPics[index],
+                            title: "Gun Model"),
+                        type: PageTransitionType.rightToLeft));
+              },
+              onHover: (hover) {
+                if (hover) {
+                  setState(() {
+                    moreInfo = true;
+                    print(moreInfo);
+                  });
+                } else {
+                  setState(() {
+                    moreInfo = false;
+                  });
+                }
+              },
               child: Container(
                 decoration: BoxDecoration(
                     image: DecorationImage(
@@ -41,6 +68,7 @@ class _CADModeState extends State<CADMode> {
                             Colors.white.withOpacity(0.9), BlendMode.dstATop),
                         image: AssetImage(cadPics[index]),
                         fit: BoxFit.cover)),
+                child: Text(moreInfo ? "Yes" : "No"),
               ),
             ))));
       }),
