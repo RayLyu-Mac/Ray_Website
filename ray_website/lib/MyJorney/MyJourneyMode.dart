@@ -103,7 +103,7 @@ class _JourneyModeState extends State<JourneyMode> {
                   Text(
                     widget.title!,
                     style: TextStyle(
-                      fontSize: _screenH / 17,
+                      fontSize: _screenH / 15,
                       fontWeight: FontWeight.bold,
                       fontFamily: "yuan",
                     ),
@@ -113,7 +113,7 @@ class _JourneyModeState extends State<JourneyMode> {
                     child: Text(
                       widget.content!,
                       style: TextStyle(
-                          fontSize: _screenH / 31,
+                          fontSize: _screenH / 28,
                           fontWeight: FontWeight.bold,
                           fontFamily: "sw"),
                       textAlign: TextAlign.center,
