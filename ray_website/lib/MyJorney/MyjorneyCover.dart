@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
+import 'package:page_transition/page_transition.dart';
+import 'package:ray_website/welcome/welcome.dart';
 
 class mjCover extends StatefulWidget {
   mjCover({Key? key}) : super(key: key);
@@ -72,19 +74,36 @@ class _mjCoverState extends State<mjCover> {
             SizedBox(
               height: _screenH / 4,
             ),
-            Text(
-              "旅程总有一日会达到终点，不必匆忙                              ",
-              style: TextStyle(
-                  fontSize: _screenH / 16,
-                  color: Colors.grey.shade100,
-                  fontWeight: FontWeight.bold,
-                  fontFamily: "sw"),
-              textAlign: TextAlign.center,
+            Row(
+              children: [
+                SizedBox(
+                  width: _screenWidth / 15,
+                ),
+                FloatingActionButton(
+                    backgroundColor: Colors.grey.withAlpha(85),
+                    child: Icon(Icons.backspace_outlined),
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          PageTransition(
+                              duration: const Duration(milliseconds: 500),
+                              child: welcome(),
+                              type: PageTransitionType.rightToLeft));
+                    }),
+                Text(
+                  "           旅程总有一日会达到终点，不必匆忙",
+                  style: TextStyle(
+                      fontSize: _screenH / 16,
+                      color: Colors.grey.shade100,
+                      fontWeight: FontWeight.bold,
+                      fontFamily: "sw"),
+                ),
+              ],
             ),
             Icon(
               Icons.downhill_skiing_rounded,
               semanticLabel: "Lets Start!",
-            )
+            ),
           ],
         ),
       )),

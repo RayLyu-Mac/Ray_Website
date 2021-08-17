@@ -76,10 +76,11 @@ class _JourneyModeState extends State<JourneyMode> {
                 ),
               ),
               SizedBox(
-                height: _screenH / 2,
+                height: _screenH / 1.95,
               ),
               Container(
-                height: _screenH / 4,
+                height: _screenH / 3.5,
+                width: _screenWidth / 1.35,
                 padding: EdgeInsets.fromLTRB(
                   _screenWidth / 20,
                   _screenH / 40,

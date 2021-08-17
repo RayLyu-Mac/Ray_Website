@@ -68,10 +68,10 @@ class _welcomeState extends State<welcome> {
                         fit: BoxFit.cover)),
               )),
           Positioned(
-              top: _screenH / 15,
+              top: _screenH / 20,
               left: _screenWidth / 20,
-              height: _screenH / 1.3,
-              width: _screenWidth / 2.5,
+              height: _screenH / 1.1,
+              width: _screenWidth / 2.3,
               child: GestureDetector(
                 onTap: () {
                   Navigator.push(
