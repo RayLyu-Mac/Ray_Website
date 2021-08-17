@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'welcome/welcome.dart';
-import 'MyJorney/MyJorneyMain.dart';
+import 'Album/natureAlbum/waterFall.dart';
 
 void main() => runApp(mainp());
 

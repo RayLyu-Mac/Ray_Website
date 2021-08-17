@@ -187,6 +187,11 @@ flutter:
   - assest/Personal Pic/31.png
   - assest/Personal Pic/32.png
   - assest/Personal Pic/33.png
+  - assest/Personal Pic/34.png
+  - assest/nature/waterFall/spring.png
+  - assest/nature/waterFall/summer.png
+  - assest/nature/waterFall/fall.png
+  - assest/nature/waterFall/winter.png
 
   fonts:
     - family:          show

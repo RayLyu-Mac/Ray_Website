@@ -45,6 +45,7 @@ class _MyJournyState extends State<MyJourny> {
     "assest/Personal Pic/28.png",
     "assest/Personal Pic/29.png",
     "assest/Personal Pic/30.png",
+    "assest/Personal Pic/34.png",
     "assest/Personal Pic/31.png",
   ];
   List<String> dates = [
@@ -82,6 +83,7 @@ class _MyJournyState extends State<MyJourny> {
     "Nov 2020",
     "Dec 2020",
     "Jan 2021",
+    "Feb 2021",
     "Mar 2021"
   ];
   List<String> titles = [
@@ -119,6 +121,7 @@ class _MyJournyState extends State<MyJourny> {
     "生活•新帽子",
     "生活•新年",
     "生活•送友",
+    "大学•面试",
     "生活•瑜伽？"
   ];
   List<String> content = [
@@ -156,14 +159,12 @@ class _MyJournyState extends State<MyJourny> {
     "天气开始渐渐变得冷了，于是他拿出之前买的带系里标志的新帽子。\n“还挺暖和，也挺不错的”",
     "2020真的是一个糟糕的时候，但终于来到了它的最后一天。\n在这一天他把这个家都好好的拾掇了一番，以干干净净的姿态迎接新年。",
     "因为没来得及收到工签，在这里和他一起待了两年的小伙伴也坐不住了就打算回国了。\n接下来的几个月里就只能他自己一人对抗这里的一切了。",
+    "这是他第二次的面试，因为第一次不算太顺利，这一次他特意找了几个小伙伴特训了几次。\n现在他应该自信满满，做好了一切的准备来面对这一次的挑战了吧！",
     "日益繁重的课业以及找工作的烦恼让他觉得无所适从。\n但生活还得继续，那就做一个瑜伽放松放松吧"
   ];
   PageController controller = PageController();
   @override
   Widget build(BuildContext context) {
-    print(dates.length);
-    print(content.length);
-    print(titles.length);
     return Scaffold(
       body: PageView(
         scrollDirection: Axis.vertical,
