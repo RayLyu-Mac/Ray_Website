@@ -61,7 +61,7 @@ class _mjCoverState extends State<mjCover> {
               height: _screenH / 13,
             ),
             Text(
-              "                 < 2018-2019 >",
+              "                 < 2018-2021 >",
               style: TextStyle(
                   fontSize: _screenH / 16,
                   color: Colors.grey.shade100,

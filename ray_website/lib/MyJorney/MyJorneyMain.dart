@@ -33,6 +33,19 @@ class _MyJournyState extends State<MyJourny> {
     "assest/Personal Pic/18.png",
     "assest/Personal Pic/19.png",
     "assest/Personal Pic/20.png",
+    "assest/Personal Pic/21.png",
+    "assest/Personal Pic/22.png",
+    "assest/Personal Pic/23.png",
+    "assest/Personal Pic/24.png",
+    "assest/Personal Pic/25.png",
+    "assest/Personal Pic/26.png",
+    "assest/Personal Pic/27.png",
+    "assest/Personal Pic/32.png",
+    "assest/Personal Pic/33.png",
+    "assest/Personal Pic/28.png",
+    "assest/Personal Pic/29.png",
+    "assest/Personal Pic/30.png",
+    "assest/Personal Pic/31.png",
   ];
   List<String> dates = [
     "Mar 2018",
@@ -64,9 +77,12 @@ class _MyJournyState extends State<MyJourny> {
     "July 2020",
     "Aug 2020",
     "Sept 2020",
+    "Oct 2020",
+    "Oct 2020",
     "Nov 2020",
     "Dec 2020",
-    "Jan 2021"
+    "Jan 2021",
+    "Mar 2021"
   ];
   List<String> titles = [
     "生活•登峰",
@@ -98,6 +114,8 @@ class _MyJournyState extends State<MyJourny> {
     "生活•诗情",
     "生活•湖边",
     "生活•露台",
+    "生活•独立寒秋",
+    "生活•银瀑",
     "生活•新帽子",
     "生活•新年",
     "生活•送友",
@@ -133,6 +151,8 @@ class _MyJournyState extends State<MyJourny> {
     "这个暑假估计是太闲了，教授给的工作不足以满足他的生活。\n于是他便开始写诗，当然还有弹琴。这些给无聊的夏日以五彩缤纷之色。",
     "在家闷得太久了，去湖边吹吹湖风。",
     "他那一天受邀去参观他朋友的新家，他家是在一个公寓楼的顶楼有着一个开阔的露台。\n在这里能看见远处的森林。虽然租金有些贵，但还是好不惬意。",
+    "秋霜随风至，万木现萧瑟。\n独立寒秋面凉悲，万里之路吾独行",
+    "银色的水珠，随着飞湍，激在山石，荡在碧潭。\n飞起的水花，沾湿了我的袖口，洗去了我的烦躁。",
     "天气开始渐渐变得冷了，于是他拿出之前买的带系里标志的新帽子。\n“还挺暖和，也挺不错的”",
     "2020真的是一个糟糕的时候，但终于来到了它的最后一天。\n在这一天他把这个家都好好的拾掇了一番，以干干净净的姿态迎接新年。",
     "因为没来得及收到工签，在这里和他一起待了两年的小伙伴也坐不住了就打算回国了。\n接下来的几个月里就只能他自己一人对抗这里的一切了。",
@@ -141,6 +161,9 @@ class _MyJournyState extends State<MyJourny> {
   PageController controller = PageController();
   @override
   Widget build(BuildContext context) {
+    print(dates.length);
+    print(content.length);
+    print(titles.length);
     return Scaffold(
       body: PageView(
         scrollDirection: Axis.vertical,
