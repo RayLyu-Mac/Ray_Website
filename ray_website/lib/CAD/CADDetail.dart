@@ -1,0 +1,140 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
+import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+class cadMode extends StatefulWidget {
+  cadMode(
+      {@required this.content,
+      @required this.date,
+      @required this.showImg,
+      @required this.title,
+      Key? key})
+      : super(key: key);
+  final String? content;
+  final String? date;
+  final String? title;
+  final String? showImg;
+
+  @override
+  _cadModeState createState() => _cadModeState();
+}
+
+class _cadModeState extends State<cadMode> {
+  double _screenWidth = 0;
+  double _screenH = 0;
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+
+    _screenWidth = MediaQuery.of(context).size.width;
+    _screenH = MediaQuery.of(context).size.height;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Container(
+          width: _screenWidth / 1.4,
+          height: _screenH * 1.1,
+          decoration: BoxDecoration(
+              image: DecorationImage(
+                  colorFilter: ColorFilter.mode(
+                      Colors.white.withOpacity(0.9), BlendMode.dstATop),
+                  image: AssetImage(widget.showImg!),
+                  fit: BoxFit.fitWidth)),
+          child: Row(
+            children: [
+              SizedBox(
+                width: _screenWidth / 1.35,
+              ),
+              Column(
+                children: AnimationConfiguration.toStaggeredList(
+                  duration: const Duration(milliseconds: 705),
+                  childAnimationBuilder: (widget) => SlideAnimation(
+                    child: FadeInAnimation(
+                      child: widget,
+                    ),
+                    verticalOffset: 220,
+                  ),
+                  children: [
+                    SizedBox(
+                      height: _screenH / 2.3,
+                    ),
+                    Container(
+                      height: _screenH / 2,
+                      width: _screenWidth / 4,
+                      padding: EdgeInsets.fromLTRB(
+                        _screenWidth / 33,
+                        _screenH / 40,
+                        _screenWidth / 33,
+                        _screenH / 40,
+                      ),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(25),
+                        color: Colors.grey.shade50.withOpacity(0.8),
+                        gradient: new LinearGradient(
+                            begin: Alignment.bottomCenter,
+                            end: Alignment.topCenter,
+                            colors: [
+                              Colors.grey.shade200,
+                              Colors.grey.shade50,
+                            ]),
+                      ),
+                      child: SingleChildScrollView(
+                          child: Column(children: [
+                        Container(
+                            decoration: BoxDecoration(
+                                border: Border(
+                                    bottom: BorderSide(
+                                        color: Colors.grey.shade100,
+                                        width: 5))),
+                            child: Row(
+                              children: [
+                                Text(
+                                  "Created on:\n" + widget.date!,
+                                  style: TextStyle(
+                                    fontSize: _screenH / 16,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.grey.shade500,
+                                    fontFamily: "coms",
+                                  ),
+                                  textAlign: TextAlign.center,
+                                ),
+                                Icon(
+                                  FontAwesomeIcons.trophy,
+                                  size: _screenH / 18,
+                                )
+                              ],
+                            )),
+                        Text(
+                          widget.title!,
+                          style: TextStyle(
+                            fontSize: _screenH / 16,
+                            fontWeight: FontWeight.bold,
+                            fontFamily: "yuan",
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
+                        Container(
+                          child: Text(
+                            widget.content!,
+                            style: TextStyle(
+                                fontSize: _screenH / 30,
+                                fontWeight: FontWeight.bold,
+                                fontFamily: "sw"),
+                            textAlign: TextAlign.center,
+                          ),
+                        )
+                      ])),
+                    )
+                  ],
+                ),
+              )
+            ],
+          )),
+    );
+  }
+}

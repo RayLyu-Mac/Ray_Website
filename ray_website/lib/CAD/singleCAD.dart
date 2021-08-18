@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sprung/sprung.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:ray_website/MyJorney/MyJourneyMode.dart';
+import 'CADDetail.dart';
 
 class singleCAD extends StatefulWidget {
   singleCAD(
@@ -10,12 +10,14 @@ class singleCAD extends StatefulWidget {
       @required this.content,
       @required this.title,
       @required this.fontC,
+      @required this.date,
       Key? key})
       : super(key: key);
   final String? showPic;
   final Color? fontC;
   final String? content;
   final String? title;
+  final String? date;
   @override
   _singleCADState createState() => _singleCADState();
 }
@@ -109,11 +111,11 @@ class _singleCADState extends State<singleCAD> {
                                     PageTransition(
                                         duration:
                                             const Duration(milliseconds: 500),
-                                        child: JourneyMode(
-                                            content: "CAD is a style",
-                                            date: "May 2020",
+                                        child: cadMode(
+                                            content: widget.content!,
+                                            date: widget.date!,
                                             showImg: widget.showPic!,
-                                            title: "Gun Model"),
+                                            title: widget.title!),
                                         type: PageTransitionType.rightToLeft));
                               },
                               icon: Icon(
@@ -124,7 +126,7 @@ class _singleCADState extends State<singleCAD> {
                               label: Text(
                                 "Click and Check More!",
                                 style: TextStyle(
-                                    fontSize: _screenH / 17,
+                                    fontSize: _screenH / 35,
                                     color: _hovering1
                                         ? widget.fontC!
                                         : Colors.white),
