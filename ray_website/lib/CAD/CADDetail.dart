@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:ray_website/fancyButton.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class cadMode extends StatefulWidget {
   cadMode(
@@ -11,12 +11,14 @@ class cadMode extends StatefulWidget {
       @required this.date,
       @required this.showImg,
       @required this.title,
+      this.url,
       Key? key})
       : super(key: key);
   final String? content;
   final String? date;
   final String? title;
   final String? showImg;
+  final String? url;
 
   @override
   _cadModeState createState() => _cadModeState();
@@ -123,6 +125,14 @@ class _cadModeState extends State<cadMode> {
                         textAlign: TextAlign.center,
                       ),
                     ),
+                    SizedBox(
+                      height: _screenH / 40,
+                    ),
+                    FlatButton.icon(
+                        color: Colors.grey.shade300,
+                        onPressed: _launchURL,
+                        icon: Icon(Icons.web_asset),
+                        label: Text("Check more Info"))
                   ])),
                 )
               ],
@@ -131,5 +141,13 @@ class _cadModeState extends State<cadMode> {
         ],
       ),
     );
+  }
+
+  _launchURL() async {
+    if (await canLaunch(widget.url!)) {
+      await launch(widget.url!);
+    } else {
+      throw 'Could not launch $widget.url!';
+    }
   }
 }

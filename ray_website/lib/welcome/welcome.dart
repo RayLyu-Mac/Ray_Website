@@ -8,6 +8,7 @@ import 'package:ray_website/Album/main.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:sprung/sprung.dart';
 import 'hoverText.dart';
+import 'package:ray_website/CAD/CADCover.dart';
 
 class welcome extends StatefulWidget {
   welcome({Key? key}) : super(key: key);
@@ -177,14 +178,11 @@ class _welcomeState extends State<welcome> {
                             fontSize: _screenH / fontSize,
                             fontWeight: FontWeight.w400),
                       ),
-                      Text(
-                        "               C  A  D Modeler ",
-                        style: TextStyle(
-                            fontFamily: fontF,
-                            color: Colors.grey[fontC],
-                            fontSize: _screenH / fontSize,
-                            fontWeight: FontWeight.w400),
-                      ),
+                      hoverTextMode(
+                          pageTo: CADCover(),
+                          font: fontF,
+                          fontsize: fontSize,
+                          title: "               C  A  D Modeler "),
                       Text(
                         "        L  eader",
                         style: TextStyle(

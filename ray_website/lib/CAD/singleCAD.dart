@@ -11,6 +11,7 @@ class singleCAD extends StatefulWidget {
       @required this.title,
       @required this.fontC,
       @required this.date,
+      @required this.url,
       Key? key})
       : super(key: key);
   final String? showPic;
@@ -18,6 +19,7 @@ class singleCAD extends StatefulWidget {
   final String? content;
   final String? title;
   final String? date;
+  final String? url;
   @override
   _singleCADState createState() => _singleCADState();
 }
@@ -124,6 +126,7 @@ class _singleCADState extends State<singleCAD> {
                                               content: widget.content!,
                                               date: widget.date!,
                                               showImg: widget.showPic!,
+                                              url: widget.url!,
                                               title: widget.title!),
                                           type:
                                               PageTransitionType.rightToLeft));
