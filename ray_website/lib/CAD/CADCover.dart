@@ -1,5 +1,8 @@
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
+import 'package:ray_website/CAD/CADDetail.dart';
+import 'CADPage.dart';
 
 class CADCover extends StatefulWidget {
   CADCover({Key? key}) : super(key: key);
@@ -56,34 +59,59 @@ class _CADCoverState extends State<CADCover> {
           children: [
             for (var j = 0; j < coverImgs.length; j++)
               Container(
-                child: Center(
-                  child: Column(
-                    children: [
-                      SizedBox(
-                        height: _screenH / 15,
-                      ),
-                      Text("CAD is " + comment[j][0],
+                padding: EdgeInsets.symmetric(horizontal: _screenWidth / 15),
+                child: Stack(
+                  children: [
+                    Positioned(
+                      left: _screenWidth / 35,
+                      top: _screenH / 10,
+                      child: Text("3D Printing Gallery",
                           style: TextStyle(
-                            fontFamily: "coms",
-                            fontSize: _screenH / 15,
+                            color: Colors.grey.shade800,
+                            fontFamily: "bank",
+                            fontSize: _screenH / 8,
                             fontWeight: FontWeight.bold,
                           )),
-                      SizedBox(
-                        height: _screenH / 25,
-                      ),
-                      Text(comment[j][1],
+                    ),
+                    Positioned(
+                      left: _screenWidth / 35,
+                      top: _screenH / 2.5,
+                      child: Text("CAD is " + comment[j][0],
                           style: TextStyle(
                             fontFamily: "coms",
-                            fontSize: _screenH / 20,
+                            fontSize: _screenH / 13,
                             fontWeight: FontWeight.bold,
                           )),
-                    ],
-                  ),
+                    ),
+                    Positioned(
+                        left: _screenWidth / 35,
+                        top: _screenH / 2,
+                        child: Text(comment[j][1],
+                            style: TextStyle(
+                              fontFamily: "coms",
+                              fontSize: _screenH / 18,
+                              fontWeight: FontWeight.bold,
+                            ))),
+                    Positioned(
+                        left: _screenWidth / 1.2,
+                        top: _screenH / 1.9,
+                        child: FloatingActionButton(
+                            backgroundColor: Colors.grey.shade600,
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  PageTransition(
+                                      duration:
+                                          const Duration(milliseconds: 500),
+                                      child: CADMode(),
+                                      type: PageTransitionType.rightToLeft));
+                            }))
+                  ],
                 ),
                 decoration: BoxDecoration(
                     image: DecorationImage(
                         colorFilter: ColorFilter.mode(
-                            Colors.blueGrey.withOpacity(0.5),
+                            Colors.blueGrey.withOpacity(0.45),
                             BlendMode.dstATop),
                         image: AssetImage(coverImgs[j]),
                         fit: BoxFit.fitWidth)),

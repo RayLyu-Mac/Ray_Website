@@ -77,7 +77,7 @@ class _singleCADState extends State<singleCAD> {
           child: Container(
               padding: EdgeInsets.symmetric(
                   vertical: _screenH / 12, horizontal: _screenWidth / 22),
-              color: Colors.blueGrey.withAlpha(120),
+              color: widget.fontC!.withAlpha(120),
               child: Column(
                 children: [
                   Text(
