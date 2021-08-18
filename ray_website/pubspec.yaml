@@ -32,6 +32,7 @@ dependencies:
   page_transition: "^2.0.2"
   sprung: ^3.0.0
   font_awesome_flutter: ^9.1.0
+  flutter_image_slideshow: ^0.1.1
 
 dev_dependencies:
   flutter_test:
@@ -203,6 +204,12 @@ flutter:
   - assest/3Dprint/7.png
   - assest/3Dprint/8.png
   - assest/3Dprint/9.png
+  - assest/3Dprint/cover/1.png
+  - assest/3Dprint/cover/2.png
+  - assest/3Dprint/cover/3.png
+  - assest/3Dprint/cover/4.png
+  - assest/3Dprint/cover/5.png
+
   fonts:
     - family:          show
       fonts:
