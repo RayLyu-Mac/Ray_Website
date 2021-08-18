@@ -204,11 +204,11 @@ flutter:
   - assest/3Dprint/7.png
   - assest/3Dprint/8.png
   - assest/3Dprint/9.png
-  - assest/3Dprint/cover/1.png
-  - assest/3Dprint/cover/2.png
-  - assest/3Dprint/cover/3.png
-  - assest/3Dprint/cover/4.png
-  - assest/3Dprint/cover/5.png
+  - assest/3Dprint/cover/1.1.png
+  - assest/3Dprint/cover/1.2.png
+  - assest/3Dprint/cover/1.3.png
+  - assest/3Dprint/cover/1.4.png
+  - assest/3Dprint/cover/1.5.png
 
   fonts:
     - family:          show

@@ -76,62 +76,73 @@ class _singleCADState extends State<singleCAD> {
           transform: _hovering ? hoverTransform : nonHoverTransform,
           child: Container(
               padding: EdgeInsets.symmetric(
-                  vertical: _screenH / 12, horizontal: _screenWidth / 22),
-              color: widget.fontC!.withAlpha(120),
-              child: Column(
-                children: [
-                  Text(
-                    widget.title!,
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        fontSize: _screenH / 17,
+                  vertical: _screenH / 14, horizontal: _screenWidth / 26),
+              color: widget.fontC!.withAlpha(140),
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    Text(
+                      widget.title!,
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontSize: _screenH / 15,
+                          fontWeight: FontWeight.bold,
+                          fontFamily: "bank"),
+                    ),
+                    SizedBox(
+                      height: _screenH / 20,
+                    ),
+                    Text(
+                      widget.content!,
+                      style: TextStyle(
+                        fontSize: _screenH / 22,
+                        color: Colors.grey.shade800,
                         fontWeight: FontWeight.bold,
-                        fontFamily: "bank"),
-                  ),
-                  SizedBox(
-                    height: _screenH / 20,
-                  ),
-                  Text(widget.content!),
-                  SizedBox(
-                    height: _screenH / 20,
-                  ),
-                  MouseRegion(
-                      onEnter: (e) => _mouseEnter1(true),
-                      onExit: (e) => _mouseEnter1(false),
-                      cursor: SystemMouseCursors.click,
-                      child: AnimatedContainer(
-                          duration: Duration(milliseconds: 300),
-                          curve: Sprung.overDamped,
-                          transform:
-                              _hovering1 ? hoverTransform1 : nonHoverTransform1,
-                          child: FlatButton.icon(
-                              onPressed: () {
-                                Navigator.push(
-                                    context,
-                                    PageTransition(
-                                        duration:
-                                            const Duration(milliseconds: 500),
-                                        child: cadMode(
-                                            content: widget.content!,
-                                            date: widget.date!,
-                                            showImg: widget.showPic!,
-                                            title: widget.title!),
-                                        type: PageTransitionType.rightToLeft));
-                              },
-                              icon: Icon(
-                                Icons.follow_the_signs_rounded,
-                                color:
-                                    _hovering1 ? widget.fontC! : Colors.white,
-                              ),
-                              label: Text(
-                                "Click and Check More!",
-                                style: TextStyle(
-                                    fontSize: _screenH / 35,
-                                    color: _hovering1
-                                        ? widget.fontC!
-                                        : Colors.white),
-                              ))))
-                ],
+                      ),
+                    ),
+                    SizedBox(
+                      height: _screenH / 20,
+                    ),
+                    MouseRegion(
+                        onEnter: (e) => _mouseEnter1(true),
+                        onExit: (e) => _mouseEnter1(false),
+                        cursor: SystemMouseCursors.click,
+                        child: AnimatedContainer(
+                            duration: Duration(milliseconds: 300),
+                            curve: Sprung.overDamped,
+                            transform: _hovering1
+                                ? hoverTransform1
+                                : nonHoverTransform1,
+                            child: FlatButton.icon(
+                                onPressed: () {
+                                  Navigator.push(
+                                      context,
+                                      PageTransition(
+                                          duration:
+                                              const Duration(milliseconds: 500),
+                                          child: cadMode(
+                                              content: widget.content!,
+                                              date: widget.date!,
+                                              showImg: widget.showPic!,
+                                              title: widget.title!),
+                                          type:
+                                              PageTransitionType.rightToLeft));
+                                },
+                                icon: Icon(
+                                  Icons.follow_the_signs_rounded,
+                                  color:
+                                      _hovering1 ? widget.fontC! : Colors.white,
+                                ),
+                                label: Text(
+                                  "Click and Check More!",
+                                  style: TextStyle(
+                                      fontSize: _screenH / 33,
+                                      color: _hovering1
+                                          ? widget.fontC!
+                                          : Colors.white),
+                                ))))
+                  ],
+                ),
               )),
         ),
       ),

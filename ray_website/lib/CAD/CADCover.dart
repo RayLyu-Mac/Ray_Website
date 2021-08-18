@@ -15,11 +15,11 @@ class _CADCoverState extends State<CADCover> {
   double _screenWidth = 0;
   double _screenH = 0;
   List<String> coverImgs = [
-    "assest/3Dprint/cover/1.png",
-    "assest/3Dprint/cover/2.png",
-    "assest/3Dprint/cover/3.png",
-    "assest/3Dprint/cover/4.png",
-    "assest/3Dprint/cover/5.png",
+    "assest/3Dprint/cover/1.1.png",
+    "assest/3Dprint/cover/1.2.png",
+    "assest/3Dprint/cover/1.3.png",
+    "assest/3Dprint/cover/1.4.png",
+    "assest/3Dprint/cover/1.5.png",
   ];
   List<List> comment = [
     ["Fun", "Create your own toys, reviewing the fun back childhood"],
@@ -55,7 +55,7 @@ class _CADCoverState extends State<CADCover> {
           height: _screenH,
           indicatorColor: Colors.blue,
           initialPage: 0,
-          autoPlayInterval: 3000,
+          autoPlayInterval: 3500,
           children: [
             for (var j = 0; j < coverImgs.length; j++)
               Container(
@@ -93,19 +93,27 @@ class _CADCoverState extends State<CADCover> {
                               fontWeight: FontWeight.bold,
                             ))),
                     Positioned(
-                        left: _screenWidth / 1.2,
-                        top: _screenH / 1.9,
-                        child: FloatingActionButton(
-                            backgroundColor: Colors.grey.shade600,
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  PageTransition(
-                                      duration:
-                                          const Duration(milliseconds: 500),
-                                      child: CADMode(),
-                                      type: PageTransitionType.rightToLeft));
-                            }))
+                      left: _screenWidth / 1.45,
+                      top: _screenH / 1.6,
+                      child: Container(
+                          height: _screenH / 8.5,
+                          width: _screenWidth / 6.5,
+                          child: FloatingActionButton(
+                              child: Icon(
+                                Icons.forward,
+                                size: _screenH / 12,
+                              ),
+                              backgroundColor: Colors.grey.shade600,
+                              onPressed: () {
+                                Navigator.push(
+                                    context,
+                                    PageTransition(
+                                        duration:
+                                            const Duration(milliseconds: 500),
+                                        child: CADMode(),
+                                        type: PageTransitionType.rightToLeft));
+                              })),
+                    )
                   ],
                 ),
                 decoration: BoxDecoration(
