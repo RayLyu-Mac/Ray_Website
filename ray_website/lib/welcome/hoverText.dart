@@ -38,7 +38,9 @@ class _hoverTextModeState extends State<hoverTextMode> {
   }
 
   final nonHoverTransform = Matrix4.identity()..translate(0, 0, 0);
-  final hoverTransform = Matrix4.identity()..translate(3, -6, 0);
+  final hoverTransform = Matrix4.identity()
+    ..translate(3, -4, 0)
+    ..scale(1.15);
   @override
   Widget build(BuildContext context) {
     return FlatButton(
