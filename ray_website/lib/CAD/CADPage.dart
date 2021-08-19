@@ -154,6 +154,46 @@ class _CADModeState extends State<CADMode> {
       Colors.purpleAccent,
       "Sept 2020",
       "https://cults3d.com/en/3d-model/art/hg40-gemometry"
+    ],
+    [
+      "assest/3Dprint/19.png",
+      "Man-O-War Cardinal",
+      "MOW epic design by COD Mobile  2D gun model design with sophisicated surface detail, good for desk decoration",
+      Colors.purpleAccent,
+      "Nov 2020",
+      "https://cults3d.com/en/3d-model/art/hbra3-mobboss"
+    ],
+    [
+      "assest/3Dprint/20.png",
+      "Y20",
+      "Y20 transportation plane designed by China Air Force, 3D outlook design, nice desk decoration",
+      Colors.redAccent,
+      "Jan 2021",
+      "https://cults3d.com/en/3d-model/art/y20-q"
+    ],
+    [
+      "assest/3Dprint/21.png",
+      "Mask Holder Ray Edition",
+      "Customized mask holder, combined with fashion emoji, functionalized and user-friendly",
+      Colors.grey.shade200,
+      "Jan 2021"
+          "https://cults3d.com/en/3d-model/tool/ray-mask-holder"
+    ],
+    [
+      "assest/3Dprint/22.png",
+      "M21-EBR Politicitan",
+      "M21 EBR epic design by COD Mobile  2D gun model design with sophisicated surface detail, good for desk decoration",
+      Colors.brown.shade300,
+      "Oct 2020"
+          "https://cults3d.com/en/3d-model/art/cod-mobile-epic-sniper-bundle"
+    ],
+    [
+      "assest/3Dprint/23.png",
+      "LK-24 Royal Crimison",
+      "LK 24 epic design by COD Mobile  2D gun model design with sophisicated surface detail, good for desk decoration",
+      Colors.orangeAccent.shade100,
+      "Nov 2020",
+      "https://cults3d.com/en/3d-model/art/m16-fubar"
     ]
   ];
 
