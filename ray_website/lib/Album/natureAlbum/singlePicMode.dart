@@ -37,6 +37,8 @@ class _WaterFallModeState extends State<WaterFallMode> {
         onExit: (e) => _mouseEnter(false),
         child: Container(
           decoration: BoxDecoration(
+              border: Border.all(width: 6, color: Colors.grey.shade200),
+              borderRadius: BorderRadius.circular(25),
               image: DecorationImage(
                   colorFilter: ColorFilter.mode(
                       Colors.white.withOpacity(0.9), BlendMode.dstATop),
