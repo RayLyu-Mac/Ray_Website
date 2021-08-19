@@ -194,6 +194,69 @@ class _CADModeState extends State<CADMode> {
       Colors.orangeAccent.shade100,
       "Nov 2020",
       "https://cults3d.com/en/3d-model/art/m16-fubar"
+    ],
+    [
+      "assest/3Dprint/24.png",
+      "Yu Tu 2 Moon Lander",
+      "Yu Tu 2 Moon Lander designed and launched by China, first moon lander with camera and took a selfie on the moon",
+      Colors.grey.shade300,
+      "Jan 2021",
+      "https://cults3d.com/en/3d-model/art/2"
+    ],
+    [
+      "assest/3Dprint/25.png",
+      "KN 44 Black Gold",
+      "KN 44 epic design by COD Mobile  2D gun model design with sophisicated surface detail, good for desk decoration",
+      Colors.yellowAccent,
+      "Jan 2021",
+      "https://cults3d.com/en/3d-model/art/kn44-balck-gold"
+    ],
+    [
+      "assest/3Dprint/26.png",
+      "Card Holder",
+      "Customized card holder for Ray, can hold three card (student card, access card and anatomy card), stable and reliable",
+      Colors.greenAccent,
+      "Aug 2020",
+      "https://cults3d.com/en/3d-model/tool/card-holder-ray-d"
+    ],
+    [
+      "assest/3Dprint/27.png",
+      "AK-47 Steel Blue",
+      "AK-47 epic design by COD Mobile  2D gun model design with sophisicated surface detail, good for desk decoration",
+      Colors.blue.shade200,
+      "Sept 2020",
+      "https://cults3d.com/en/3d-model/art/m16-fubar"
+    ],
+    [
+      "assest/3Dprint/28.png",
+      "歼6B",
+      "歼6B, first gen fighter build by China Air Force, 3D outlook designed, Q version",
+      Colors.blueAccent.shade100,
+      "Dec 2020",
+      "https://cults3d.com/en/3d-model/art/fighter-q"
+    ],
+    [
+      "assest/3Dprint/29.png",
+      "Fish Boat Gen 1",
+      "Classic Fish boat, with a big chinmeny on the end",
+      Colors.lightBlueAccent,
+      "Aug 2020",
+      "https://cults3d.com/en/3d-model/art/fishing-model-m1"
+    ],
+    [
+      "assest/3Dprint/30.png",
+      "AK117- LimeStone",
+      "AK117 epic design by COD Mobile  2D gun model design with sophisicated surface detail, good for desk decoration",
+      Colors.limeAccent,
+      "Sept 2020",
+      "https://cults3d.com/en/3d-model/art/m16-fubar"
+    ],
+    [
+      "assest/3Dprint/31.png",
+      "J2000",
+      "J2000 Latest Gen AWACS designed by China Air Force, 3D outlook design",
+      Colors.teal.shade100,
+      "https://cults3d.com/en/3d-model/art/j2000"
     ]
   ];
 
@@ -206,10 +269,10 @@ class _CADModeState extends State<CADMode> {
         ),
         body: GridView.count(
           crossAxisCount: 3,
-          children: List.generate(23, (index) {
+          children: List.generate(32, (index) {
             return AnimationConfiguration.staggeredGrid(
                 position: index,
-                duration: const Duration(milliseconds: 900),
+                duration: const Duration(milliseconds: 800),
                 columnCount: 3,
                 child: ScaleAnimation(
                     child: FadeInAnimation(

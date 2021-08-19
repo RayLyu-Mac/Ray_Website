@@ -52,6 +52,7 @@ class _singleCADState extends State<singleCAD> {
   final nonHoverTransform = Matrix4.identity()
     ..translate(0, 0, 0)
     ..scale(0.01);
+
   final hoverTransform = Matrix4.identity()
     ..translate(0, 0, 0)
     ..scale(1.01);
@@ -87,7 +88,7 @@ class _singleCADState extends State<singleCAD> {
                       widget.title!,
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                          fontSize: _screenH / 15,
+                          fontSize: _screenH / 18,
                           fontWeight: FontWeight.bold,
                           fontFamily: "bank"),
                     ),
@@ -97,7 +98,7 @@ class _singleCADState extends State<singleCAD> {
                     Text(
                       widget.content!,
                       style: TextStyle(
-                        fontSize: _screenH / 22,
+                        fontSize: _screenH / 25,
                         color: Colors.grey.shade800,
                         fontWeight: FontWeight.bold,
                       ),
@@ -142,7 +143,7 @@ class _singleCADState extends State<singleCAD> {
                                 label: Text(
                                   "Click and Check More!",
                                   style: TextStyle(
-                                      fontSize: _screenH / 33,
+                                      fontSize: _screenH / 35,
                                       color: _hovering1
                                           ? widget.fontC!
                                           : Colors.white),
