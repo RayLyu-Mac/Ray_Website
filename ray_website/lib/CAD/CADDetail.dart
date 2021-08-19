@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -39,6 +40,19 @@ class _cadModeState extends State<cadMode> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          widget.title!,
+          style: TextStyle(
+            fontSize: _screenH / 16,
+            color: Colors.grey.shade50,
+            fontWeight: FontWeight.bold,
+            fontFamily: "yuan",
+          ),
+          textAlign: TextAlign.center,
+        ),
+        backgroundColor: Colors.grey.shade500,
+      ),
       body: Row(
         children: [
           Container(
@@ -101,18 +115,6 @@ class _cadModeState extends State<cadMode> {
                           ],
                         )),
                     SizedBox(
-                      height: _screenH / 15,
-                    ),
-                    Text(
-                      widget.title!,
-                      style: TextStyle(
-                        fontSize: _screenH / 14,
-                        fontWeight: FontWeight.bold,
-                        fontFamily: "yuan",
-                      ),
-                      textAlign: TextAlign.center,
-                    ),
-                    SizedBox(
                       height: _screenH / 40,
                     ),
                     Container(
@@ -129,10 +131,19 @@ class _cadModeState extends State<cadMode> {
                       height: _screenH / 40,
                     ),
                     FlatButton.icon(
+                        padding: EdgeInsets.symmetric(
+                            horizontal: _screenWidth / 30,
+                            vertical: _screenH / 40),
                         color: Colors.grey.shade300,
                         onPressed: _launchURL,
                         icon: Icon(Icons.web_asset),
-                        label: Text("Check more Info"))
+                        label: Text(
+                          "Check more Info",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontFamily: "coms",
+                              fontSize: _screenH / 25),
+                        ))
                   ])),
                 )
               ],

@@ -169,7 +169,7 @@ class _CADModeState extends State<CADMode> {
           children: List.generate(18, (index) {
             return AnimationConfiguration.staggeredGrid(
                 position: index,
-                duration: const Duration(milliseconds: 1005),
+                duration: const Duration(milliseconds: 900),
                 columnCount: 3,
                 child: ScaleAnimation(
                     child: FadeInAnimation(

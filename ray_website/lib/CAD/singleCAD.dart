@@ -116,6 +116,9 @@ class _singleCADState extends State<singleCAD> {
                                 ? hoverTransform1
                                 : nonHoverTransform1,
                             child: FlatButton.icon(
+                                padding: EdgeInsets.symmetric(
+                                    horizontal: _screenWidth / 30,
+                                    vertical: _screenH / 20),
                                 onPressed: () {
                                   Navigator.push(
                                       context,
