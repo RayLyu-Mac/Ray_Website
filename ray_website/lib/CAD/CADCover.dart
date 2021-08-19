@@ -49,13 +49,17 @@ class _CADCoverState extends State<CADCover> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text("3D printing show case"),
+        backgroundColor: Colors.grey.shade500,
+      ),
       body: ImageSlideshow(
           isLoop: true,
           width: double.infinity,
           height: _screenH,
           indicatorColor: Colors.blue,
           initialPage: 0,
-          autoPlayInterval: 3500,
+          autoPlayInterval: 3700,
           children: [
             for (var j = 0; j < coverImgs.length; j++)
               Container(

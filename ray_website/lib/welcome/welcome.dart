@@ -182,6 +182,7 @@ class _welcomeState extends State<welcome> {
                           pageTo: CADCover(),
                           font: fontF,
                           fontsize: fontSize,
+                          fontC: Colors.grey[fontC],
                           title: "               C  A  D Modeler "),
                       Text(
                         "        L  eader",
@@ -212,6 +213,7 @@ class _welcomeState extends State<welcome> {
                           pageTo: album(),
                           font: fontF,
                           fontsize: fontSize,
+                          fontC: Colors.white,
                           title: "Photo  G  rapher       "),
                       Text(
                         "Creat  I  ve                  ",

@@ -8,12 +8,14 @@ class hoverTextMode extends StatefulWidget {
       @required this.font,
       @required this.fontsize,
       @required this.title,
+      @required this.fontC,
       Key? key})
       : super(key: key);
 
   final Widget? pageTo;
   final String? title;
   final String? font;
+  final Color? fontC;
   final double? fontsize;
   @override
   _hoverTextModeState createState() => _hoverTextModeState();
@@ -39,7 +41,7 @@ class _hoverTextModeState extends State<hoverTextMode> {
 
   final nonHoverTransform = Matrix4.identity()..translate(0, 0, 0);
   final hoverTransform = Matrix4.identity()
-    ..translate(3, -4, 0)
+    ..translate(-4, -4, 0)
     ..scale(1.15);
   @override
   Widget build(BuildContext context) {
@@ -64,7 +66,7 @@ class _hoverTextModeState extends State<hoverTextMode> {
             widget.title!,
             style: TextStyle(
                 fontFamily: widget.font!,
-                color: Colors.white,
+                color: _hovering ? Colors.orangeAccent : widget.fontC,
                 fontSize: _screenH / widget.fontsize!,
                 fontWeight: FontWeight.w400),
           ),
