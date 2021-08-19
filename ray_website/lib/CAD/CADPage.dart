@@ -176,16 +176,16 @@ class _CADModeState extends State<CADMode> {
       "Mask Holder Ray Edition",
       "Customized mask holder, combined with fashion emoji, functionalized and user-friendly",
       Colors.grey.shade200,
-      "Jan 2021"
-          "https://cults3d.com/en/3d-model/tool/ray-mask-holder"
+      "Jan 2021",
+      "https://cults3d.com/en/3d-model/tool/ray-mask-holder"
     ],
     [
       "assest/3Dprint/22.png",
       "M21-EBR Politicitan",
       "M21 EBR epic design by COD Mobile  2D gun model design with sophisicated surface detail, good for desk decoration",
       Colors.brown.shade300,
-      "Oct 2020"
-          "https://cults3d.com/en/3d-model/art/cod-mobile-epic-sniper-bundle"
+      "Oct 2020",
+      "https://cults3d.com/en/3d-model/art/cod-mobile-epic-sniper-bundle"
     ],
     [
       "assest/3Dprint/23.png",
@@ -206,7 +206,7 @@ class _CADModeState extends State<CADMode> {
         ),
         body: GridView.count(
           crossAxisCount: 3,
-          children: List.generate(18, (index) {
+          children: List.generate(23, (index) {
             return AnimationConfiguration.staggeredGrid(
                 position: index,
                 duration: const Duration(milliseconds: 900),
