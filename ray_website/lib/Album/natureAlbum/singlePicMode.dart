@@ -1,9 +1,11 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:sprung/sprung.dart';
 
 class WaterFallMode extends StatefulWidget {
-  WaterFallMode({@required this.img, Key? key}) : super(key: key);
+  WaterFallMode({@required this.img, @required this.seas, Key? key})
+      : super(key: key);
   final String? img;
+  final String? seas;
 
   @override
   _WaterFallModeState createState() => _WaterFallModeState();
@@ -30,12 +32,22 @@ class _WaterFallModeState extends State<WaterFallMode> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: _screenWidth / (_hovering ? 2 : 8),
+      margin: EdgeInsets.symmetric(vertical: _screenH / 35, horizontal: 5),
+      width: _screenWidth / (_hovering ? 2 : 9),
       height: _screenH,
       child: MouseRegion(
         onEnter: (e) => _mouseEnter(true),
         onExit: (e) => _mouseEnter(false),
         child: Container(
+          child: Text(
+            widget.seas!,
+            textAlign: TextAlign.center,
+            style: TextStyle(
+                fontFamily: "coms",
+                fontSize: _screenH / 19,
+                fontWeight: FontWeight.bold,
+                color: Colors.grey.shade400),
+          ),
           decoration: BoxDecoration(
               border: Border.all(width: 6, color: Colors.grey.shade200),
               borderRadius: BorderRadius.circular(25),
