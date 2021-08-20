@@ -59,6 +59,7 @@ flutter:
   - assest/city.png
   - assest/background.png
   - assest/back.png
+  - assest/back2.png
   - assest/mj.jpg  #https://www.scottbharris.com.au/journal/my-journey/ (reference)
   - assest/citypic/hamilton/cover.png
   - assest/citypic/jinhua/cover.png
@@ -201,8 +202,8 @@ flutter:
   - assest/nature/waterFall/fall.png
   - assest/nature/waterFall/winter.png
   - assest/nature/lake/spring.png
-  - assest/nature/lake/summer.png
-  - assest/nature/lake/fall.png
+  - assest/nature/lake/Summer.png
+  - assest/nature/lake/Fall.png
   - assest/nature/lake/winter.png
   - assest/3Dprint/1.png
   - assest/3Dprint/2.png
