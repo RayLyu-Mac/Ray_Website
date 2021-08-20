@@ -13,6 +13,7 @@ class _NatureAlbState extends State<NatureAlb> {
   @override
   Widget build(BuildContext context) {
     return PageView(
+      scrollDirection: Axis.vertical,
       children: [lakeMain(), tiffiny()],
     );
   }

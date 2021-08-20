@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'mode.dart';
 import 'city/cityAlbumMain.dart';
+import 'natureAlbum/NatureMain.dart';
 
 class album extends StatefulWidget {
   album({Key? key}) : super(key: key);
@@ -70,7 +71,7 @@ class _albumState extends State<album> {
                   ),
                   photoMode(
                     title: "Nature",
-                    pageTo: cityAlblumMain(),
+                    pageTo: NatureAlb(),
                     img: "assest/nature.png",
                     content: "徐风盛夏行古道\n树影日光映微尘\n\n\n",
                   )

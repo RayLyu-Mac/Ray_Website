@@ -35,96 +35,90 @@ class _JourneyModeState extends State<JourneyMode> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Center(
-      child: Container(
-        width: _screenWidth,
-        height: _screenH * 1.1,
-        decoration: BoxDecoration(
-            image: DecorationImage(
-                colorFilter: ColorFilter.mode(
-                    Colors.white.withOpacity(0.9), BlendMode.dstATop),
-                image: AssetImage(widget.showImg!),
-                fit: BoxFit.cover)),
-        child: Center(
-            child: Column(
-          children: AnimationConfiguration.toStaggeredList(
-            duration: const Duration(milliseconds: 705),
-            childAnimationBuilder: (widget) => SlideAnimation(
-              child: FadeInAnimation(
-                child: widget,
-              ),
-              verticalOffset: 220,
+        appBar: AppBar(
+          centerTitle: true,
+          backgroundColor: Colors.lightBlue.shade200,
+          title: Text(
+            widget.date!,
+            style: TextStyle(
+              fontSize: _screenH / 14,
+              fontWeight: FontWeight.bold,
+              fontFamily: "coms",
             ),
-            children: [
-              SizedBox(
-                height: _screenH / 20,
-              ),
-              Container(
-                decoration: BoxDecoration(
-                    border: Border(
-                        bottom:
-                            BorderSide(color: Colors.grey.shade100, width: 5))),
-                child: Text(
-                  widget.date!,
-                  style: TextStyle(
-                    fontSize: _screenH / 12,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.grey.shade500,
-                    fontFamily: "coms",
+            textAlign: TextAlign.center,
+          ),
+        ),
+        body: Center(
+          child: Container(
+            width: _screenWidth,
+            height: _screenH * 1.1,
+            decoration: BoxDecoration(
+                image: DecorationImage(
+                    colorFilter: ColorFilter.mode(
+                        Colors.white.withOpacity(0.9), BlendMode.dstATop),
+                    image: AssetImage(widget.showImg!),
+                    fit: BoxFit.cover)),
+            child: Center(
+                child: Column(
+              children: AnimationConfiguration.toStaggeredList(
+                duration: const Duration(milliseconds: 705),
+                childAnimationBuilder: (widget) => SlideAnimation(
+                  child: FadeInAnimation(
+                    child: widget,
                   ),
-                  textAlign: TextAlign.center,
+                  verticalOffset: 220,
                 ),
-              ),
-              SizedBox(
-                height: _screenH / 1.95,
-              ),
-              Container(
-                height: _screenH / 3.5,
-                width: _screenWidth / 1.35,
-                padding: EdgeInsets.fromLTRB(
-                  _screenWidth / 20,
-                  _screenH / 40,
-                  _screenWidth / 20,
-                  _screenH / 40,
-                ),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(25),
-                  color: Colors.grey.shade50.withOpacity(0.8),
-                  gradient: new LinearGradient(
-                      begin: Alignment.bottomCenter,
-                      end: Alignment.topCenter,
-                      colors: [
-                        Colors.grey.shade200,
-                        Colors.grey.shade50,
-                      ]),
-                ),
-                child: SingleChildScrollView(
-                    child: Column(children: [
-                  Text(
-                    widget.title!,
-                    style: TextStyle(
-                      fontSize: _screenH / 14,
-                      fontWeight: FontWeight.bold,
-                      fontFamily: "yuan",
-                    ),
-                    textAlign: TextAlign.center,
+                children: [
+                  SizedBox(
+                    height: _screenH / 1.65,
                   ),
                   Container(
-                    child: Text(
-                      widget.content!,
-                      style: TextStyle(
-                          fontSize: _screenH / 26,
-                          fontWeight: FontWeight.bold,
-                          fontFamily: "sw"),
-                      textAlign: TextAlign.center,
+                    height: _screenH / 3.5,
+                    width: _screenWidth / 1.35,
+                    padding: EdgeInsets.fromLTRB(
+                      _screenWidth / 20,
+                      _screenH / 40,
+                      _screenWidth / 20,
+                      _screenH / 40,
                     ),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(25),
+                      color: Colors.grey.shade50.withOpacity(0.8),
+                      gradient: new LinearGradient(
+                          begin: Alignment.bottomCenter,
+                          end: Alignment.topCenter,
+                          colors: [
+                            Colors.grey.shade200,
+                            Colors.grey.shade50,
+                          ]),
+                    ),
+                    child: SingleChildScrollView(
+                        child: Column(children: [
+                      Text(
+                        widget.title!,
+                        style: TextStyle(
+                          fontSize: _screenH / 14,
+                          fontWeight: FontWeight.bold,
+                          fontFamily: "yuan",
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                      Container(
+                        child: Text(
+                          widget.content!,
+                          style: TextStyle(
+                              fontSize: _screenH / 26,
+                              fontWeight: FontWeight.bold,
+                              fontFamily: "sw"),
+                          textAlign: TextAlign.center,
+                        ),
+                      )
+                    ])),
                   )
-                ])),
-              )
-            ],
+                ],
+              ),
+            )),
           ),
-        )),
-      ),
-    ));
+        ));
   }
 }
