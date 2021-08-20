@@ -44,9 +44,9 @@ class _WaterFallModeState extends State<WaterFallMode> {
             textAlign: TextAlign.center,
             style: TextStyle(
                 fontFamily: "coms",
-                fontSize: _screenH / 19,
+                fontSize: _screenH / (_hovering ? 10 : 28),
                 fontWeight: FontWeight.bold,
-                color: Colors.grey.shade400),
+                color: Colors.grey.shade200),
           ),
           decoration: BoxDecoration(
               border: Border.all(width: 6, color: Colors.grey.shade200),

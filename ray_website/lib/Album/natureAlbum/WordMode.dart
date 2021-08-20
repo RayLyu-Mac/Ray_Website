@@ -48,7 +48,7 @@ class _wordModeState extends State<wordMode> {
                 "Tiffany Fall - Hamilton",
                 style: TextStyle(
                     fontFamily: "coms",
-                    fontSize: _screenH / 15,
+                    fontSize: _screenH / (_hovering ? 12 : 35),
                     fontWeight: FontWeight.bold),
               ),
               SizedBox(
@@ -57,7 +57,8 @@ class _wordModeState extends State<wordMode> {
               Text(
                 "Four Seasons, Four Scenes - Ray",
                 style: TextStyle(
-                    fontSize: _screenH / 25, fontWeight: FontWeight.bold),
+                    fontSize: _screenH / (_hovering ? 20 : 45),
+                    fontWeight: FontWeight.bold),
               ),
             ],
           ),

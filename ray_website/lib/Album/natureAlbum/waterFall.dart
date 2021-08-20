@@ -19,15 +19,23 @@ class _tiffinyState extends State<tiffiny> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Row(
-        children: [
-          for (var i = 0; i < pics.length; i++)
-            WaterFallMode(
-              img: pics[i][0],
-              seas: pics[i][1],
-            ),
-          wordMode()
-        ],
+      body: Container(
+        decoration: BoxDecoration(
+            image: DecorationImage(
+                colorFilter: ColorFilter.mode(
+                    Colors.white.withOpacity(0.4), BlendMode.dstATop),
+                image: AssetImage("assest/background.png"),
+                fit: BoxFit.cover)),
+        child: Row(
+          children: [
+            for (var i = 0; i < pics.length; i++)
+              WaterFallMode(
+                img: pics[i][0],
+                seas: pics[i][1],
+              ),
+            wordMode()
+          ],
+        ),
       ),
     );
   }
