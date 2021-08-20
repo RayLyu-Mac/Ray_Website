@@ -33,7 +33,10 @@ class _tiffinyState extends State<tiffiny> {
                 img: pics[i][0],
                 seas: pics[i][1],
               ),
-            wordMode()
+            wordMode(
+              title: "Tiffany Fall - Hamilton",
+              content: "Four Seasons, Four Scenes - Ray",
+            )
           ],
         ),
       ),

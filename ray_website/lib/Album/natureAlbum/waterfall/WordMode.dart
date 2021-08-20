@@ -2,7 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class wordMode extends StatefulWidget {
-  wordMode({Key? key}) : super(key: key);
+  wordMode({@required this.title, @required this.content, Key? key})
+      : super(key: key);
+  final String? title;
+  final String? content;
 
   @override
   _wordModeState createState() => _wordModeState();
@@ -45,7 +48,7 @@ class _wordModeState extends State<wordMode> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                "Tiffany Fall - Hamilton",
+                widget.title!,
                 style: TextStyle(
                     fontFamily: "coms",
                     fontSize: _screenH / (_hovering ? 12 : 35),
@@ -55,7 +58,7 @@ class _wordModeState extends State<wordMode> {
                 height: _screenH / 20,
               ),
               Text(
-                "Four Seasons, Four Scenes - Ray",
+                widget.content!,
                 style: TextStyle(
                     fontSize: _screenH / (_hovering ? 20 : 45),
                     fontWeight: FontWeight.bold),
