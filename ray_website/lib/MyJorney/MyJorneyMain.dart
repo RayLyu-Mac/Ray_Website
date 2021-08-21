@@ -50,6 +50,10 @@ class _MyJournyState extends State<MyJourny> {
     "assest/Personal Pic/30.png",
     "assest/Personal Pic/34.png",
     "assest/Personal Pic/31.png",
+    "assest/Personal Pic/35.png",
+    "assest/Personal Pic/36.png",
+    "assest/Personal Pic/37.png",
+    "assest/Personal Pic/38.png",
   ];
   List<String> dates = [
     "Mar 2018",
@@ -90,7 +94,11 @@ class _MyJournyState extends State<MyJourny> {
     "Dec 2020",
     "Jan 2021",
     "Feb 2021",
-    "Mar 2021"
+    "Mar 2021",
+    "Jun 2021",
+    "Jul 2021",
+    "Jul 2021",
+    "Aug 2021",
   ];
   List<String> titles = [
     "生活•登峰",
@@ -131,7 +139,11 @@ class _MyJournyState extends State<MyJourny> {
     "生活•新年",
     "生活•送友",
     "大学•面试",
-    "生活•瑜伽？"
+    "生活•瑜伽？",
+    "生活•出游",
+    "生活•瀑布",
+    "生活•远眺",
+    "生活•玉米地"
   ];
   List<String> content = [
     "尖峰山，已不知被我征服了几回，无论山道是否完善。\n山腰买卖玉米的老妪，山顶买水的老翁，音容笑貌仿若眼前\n不过能和老父亲一起却是不常，不知今后还有多少机会呢。",
@@ -172,7 +184,11 @@ class _MyJournyState extends State<MyJourny> {
     "2020真的是一个糟糕的时候，但终于来到了它的最后一天。\n在这一天他把这个家都好好的拾掇了一番，以干干净净的姿态迎接新年。",
     "因为没来得及收到工签，在这里和他一起待了两年的小伙伴也坐不住了就打算回国了。\n接下来的几个月里就只能他自己一人对抗这里的一切了。",
     "这是他第二次的面试，因为第一次不算太顺利，这一次他特意找了几个小伙伴特训了几次。\n现在他应该自信满满，做好了一切的准备来面对这一次的挑战了吧！",
-    "日益繁重的课业以及找工作的烦恼让他觉得无所适从。\n但生活还得继续，那就做一个瑜伽放松放松吧"
+    "日益繁重的课业以及找工作的烦恼让他觉得无所适从。\n但生活还得继续，那就做一个瑜伽放松放松吧",
+    "终于在疯狂他投简历和面试之后拿到了Offer,公司也挺合口，工作也还行。\n终于能安定下来了，于是他便叫上他的小伙伴去湖边兜兜风。\n‘我都憔悴了不少’他看着自己的照片说",
+    "这天他来到了大瀑布，这是他第三次来这里。天气很晴朗，瀑布还是那么壮观。\n他脸上的笑容也更轻松了。",
+    "登临高崖，远眺孤城。万山红遍，千山尽染。\n'这是朕为你打下的江山'",
+    "玉米在这边倒是很少见，可玉米地不是。这高挺的玉米都高过了我的个头，翠绿的玉米杆子映着他灿烂的笑容。\n‘生活很美好，他也很幸运’"
   ];
   PageController controller = PageController();
   @override
