@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'lake/lakeMain.dart';
 import 'waterfall/waterFall.dart';
+import 'JHE/JHEMain.dart';
 
 class NatureAlb extends StatefulWidget {
   NatureAlb({Key? key}) : super(key: key);
@@ -14,7 +15,7 @@ class _NatureAlbState extends State<NatureAlb> {
   Widget build(BuildContext context) {
     return PageView(
       scrollDirection: Axis.vertical,
-      children: [lakeMain(), tiffiny()],
+      children: [lakeMain(), tiffiny(), JHEMain()],
     );
   }
 }

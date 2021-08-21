@@ -20,7 +20,7 @@ class _JHEMainState extends State<JHEMain> {
     return fourSeason(
         backImg: "assest/back3.png",
         content:
-            "John Hodgins Engineering Building, The home for McMaster Engineer",
+            "John Hodgins Engineering Building\nThe home for McMaster Engineer",
         pics: cont,
         title: "JHE Four Seasons");
   }

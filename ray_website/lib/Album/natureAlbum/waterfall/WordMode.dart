@@ -32,6 +32,7 @@ class _wordModeState extends State<wordMode> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: EdgeInsets.symmetric(horizontal: 15),
       margin: EdgeInsets.symmetric(vertical: _screenH / 35, horizontal: 5),
       width: _screenWidth / (_hovering ? 2 : 9),
       height: _screenH,
