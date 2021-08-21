@@ -41,7 +41,6 @@ class _contentState extends State<content> {
   Widget build(BuildContext context) {
     return Text(
       widget.contents!,
-      textAlign: TextAlign.left,
       style: TextStyle(
         fontSize: widget.fontSize!,
         fontWeight: FontWeight.bold,

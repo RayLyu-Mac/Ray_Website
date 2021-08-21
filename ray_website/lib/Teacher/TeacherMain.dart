@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'style.dart';
+import 'package:page_transition/page_transition.dart';
+import 'Paragraph.dart';
 
 class teacherMain extends StatefulWidget {
   teacherMain({Key? key}) : super(key: key);
@@ -10,11 +12,11 @@ class teacherMain extends StatefulWidget {
 
 class _teacherMainState extends State<teacherMain> {
   List<String> bio = [
-    "• 2018.5-2018.7: XinXin Education, Teacher/Class Manager",
-    "• 2018.5-2018.7: Path Education, Class Manager",
-    "• 2019.7-2019.8: Path Education, Class Manager/Organizer",
-    "• 2018.9-2020.1: Let's Talk Science Volunteer",
-    "• 2020.9-2021.4: McMaster, Teaching Assistant Phy 1D/E03"
+    "• 2018.5-2018.7: XinXin Education, Teacher/Class Manager            ",
+    "• 2018.5-2018.7: Path Education, Class Manager                      ",
+    "• 2019.7-2019.8: Path Education, Class Manager/Organizer            ",
+    "• 2018.9-2020.1: McMaster, Let's Talk Science Volunteer             ",
+    "• 2020.9-2021.4: McMaster, Teaching Assistant Phy 1D/E03            "
   ];
   double _screenWidth = 0;
   double _screenH = 0;
@@ -35,28 +37,49 @@ class _teacherMainState extends State<teacherMain> {
         backgroundColor: Colors.lightBlueAccent,
       ),
       body: Container(
+        height: _screenH * 1.1,
+        width: _screenWidth,
         decoration: BoxDecoration(
             image: DecorationImage(
                 colorFilter: ColorFilter.mode(
-                    Colors.white.withOpacity(0.9), BlendMode.dstATop),
+                    Colors.white.withOpacity(0.4), BlendMode.dstATop),
                 image: AssetImage("assest/back4.png"),
-                fit: BoxFit.fitWidth)),
-        child: SingleChildScrollView(
-          child: Container(
-            padding: EdgeInsets.symmetric(horizontal: _screenWidth / 15),
-            decoration: BoxDecoration(
-                border: Border.all(width: 5, color: Colors.grey.shade100),
-                borderRadius: BorderRadius.circular(20)),
+                fit: BoxFit.cover)),
+        child: Container(
+          margin: EdgeInsets.symmetric(
+              horizontal: _screenWidth / 15, vertical: _screenH / 20),
+          padding: EdgeInsets.symmetric(
+              horizontal: _screenWidth / 14, vertical: _screenH / 20),
+          decoration: BoxDecoration(
+              color: Colors.blueGrey.withAlpha(89),
+              border: Border.all(width: 5, color: Colors.grey.shade100),
+              borderRadius: BorderRadius.circular(20)),
+          child: SingleChildScrollView(
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                title(content: "Teaching Profile", fontSize: _screenH / 15),
                 SizedBox(
-                  height: _screenH / 20,
+                  height: _screenH / 25,
+                ),
+                title(content: "Teaching Profile", fontSize: _screenH / 12),
+                SizedBox(
+                  height: _screenH / 30,
                 ),
                 for (var j = 0; j < bio.length; j++)
-                  content(contents: bio[j], fontSize: _screenH / 20)
+                  content(contents: bio[j], fontSize: _screenH / 20),
+                FloatingActionButton(
+                    child: Icon(
+                      Icons.forward,
+                      size: _screenH / 12,
+                    ),
+                    backgroundColor: Colors.grey.shade600,
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          PageTransition(
+                              duration: const Duration(milliseconds: 500),
+                              child: Paragraph(),
+                              type: PageTransitionType.rightToLeft));
+                    })
               ],
             ),
           ),
