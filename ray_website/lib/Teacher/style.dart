@@ -20,6 +20,7 @@ class _titleState extends State<title> {
       style: TextStyle(
           fontSize: widget.fontSize!,
           fontFamily: "coms",
+          color: Colors.grey.shade800,
           fontWeight: FontWeight.bold),
     );
   }
@@ -41,7 +42,11 @@ class _contentState extends State<content> {
     return Text(
       widget.contents!,
       textAlign: TextAlign.left,
-      style: TextStyle(fontSize: widget.fontSize!, fontWeight: FontWeight.bold),
+      style: TextStyle(
+        fontSize: widget.fontSize!,
+        fontWeight: FontWeight.bold,
+        color: Colors.grey.shade800,
+      ),
     );
   }
 }
