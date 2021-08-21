@@ -9,6 +9,7 @@ import 'package:page_transition/page_transition.dart';
 import 'package:sprung/sprung.dart';
 import 'hoverText.dart';
 import 'package:ray_website/CAD/CADCover.dart';
+import 'package:ray_website/Teacher/TeacherMain.dart';
 
 class welcome extends StatefulWidget {
   welcome({Key? key}) : super(key: key);
@@ -247,14 +248,12 @@ class _welcomeState extends State<welcome> {
                             fontSize: _screenH / fontSize,
                             fontWeight: FontWeight.w400),
                       ),
-                      Text(
-                        "Teache  R                             ",
-                        style: TextStyle(
-                            fontFamily: fontF,
-                            color: Colors.white,
-                            fontSize: _screenH / fontSize,
-                            fontWeight: FontWeight.w400),
-                      ),
+                      hoverTextMode(
+                          pageTo: teacherMain(),
+                          font: fontF,
+                          fontsize: fontSize,
+                          title: "Teache  R                             ",
+                          fontC: Colors.white)
                     ],
                   ),
                 ),
