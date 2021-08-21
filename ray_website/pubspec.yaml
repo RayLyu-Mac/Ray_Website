@@ -247,6 +247,11 @@ flutter:
   - assest/3Dprint/cover/1.5.png
   - assest/teacher/teac1.png
   - assest/teacher/teac2.png
+  - assest/nature/jhe/s1.png
+  - assest/nature/jhe/s2.png
+  - assest/nature/jhe/s3.png
+  - assest/nature/jhe/s4.png
+
 
   fonts:
     - family:          show
