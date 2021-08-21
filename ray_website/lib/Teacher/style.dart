@@ -45,3 +45,25 @@ class _contentState extends State<content> {
     );
   }
 }
+
+class picture extends StatefulWidget {
+  picture({@required this.img, Key? key}) : super(key: key);
+  final String? img;
+
+  @override
+  _pictureState createState() => _pictureState();
+}
+
+class _pictureState extends State<picture> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+          image: DecorationImage(
+              colorFilter: ColorFilter.mode(
+                  Colors.white.withOpacity(0.9), BlendMode.dstATop),
+              image: AssetImage(widget.img!),
+              fit: BoxFit.fitWidth)),
+    );
+  }
+}
