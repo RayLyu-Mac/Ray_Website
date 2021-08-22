@@ -12,6 +12,7 @@ class singleCAD extends StatefulWidget {
       @required this.fontC,
       @required this.date,
       @required this.url,
+      @optionalTypeArgs this.fontf,
       Key? key})
       : super(key: key);
   final String? showPic;
@@ -20,6 +21,7 @@ class singleCAD extends StatefulWidget {
   final String? title;
   final String? date;
   final String? url;
+  final String? fontf;
   @override
   _singleCADState createState() => _singleCADState();
 }
@@ -60,7 +62,7 @@ class _singleCADState extends State<singleCAD> {
   final nonHoverTransform1 = Matrix4.identity()..translate(0, 0, 0);
   final hoverTransform1 = Matrix4.identity()
     ..translate(2, -5, 0)
-    ..scale(1.05);
+    ..scale(1.1);
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -90,7 +92,7 @@ class _singleCADState extends State<singleCAD> {
                       style: TextStyle(
                           fontSize: _screenH / 18,
                           fontWeight: FontWeight.bold,
-                          fontFamily: "bank"),
+                          fontFamily: widget.fontf ?? "bank"),
                     ),
                     SizedBox(
                       height: _screenH / 20,
@@ -118,8 +120,8 @@ class _singleCADState extends State<singleCAD> {
                                 : nonHoverTransform1,
                             child: FlatButton.icon(
                                 padding: EdgeInsets.symmetric(
-                                    horizontal: _screenWidth / 30,
-                                    vertical: _screenH / 20),
+                                    horizontal: _screenWidth / 40,
+                                    vertical: _screenH / 30),
                                 onPressed: () {
                                   Navigator.push(
                                       context,
