@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'Teacher/TeacherMain.dart';
+import 'welcome/welcome.dart';
 
 void main() => runApp(mainp());
 
@@ -10,7 +10,7 @@ class mainp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Ray Personal Website',
-      home: teacherMain(),
+      home: welcome(),
     );
   }
 }

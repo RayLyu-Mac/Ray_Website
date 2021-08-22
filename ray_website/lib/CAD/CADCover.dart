@@ -1,7 +1,6 @@
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:ray_website/CAD/CADDetail.dart';
 import 'CADPage.dart';
 
 class CADCover extends StatefulWidget {

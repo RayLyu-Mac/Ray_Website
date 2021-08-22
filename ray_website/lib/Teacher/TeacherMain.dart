@@ -66,9 +66,12 @@ class _teacherMainState extends State<teacherMain> {
                 ),
                 for (var j = 0; j < bio.length; j++)
                   content(contents: bio[j], fontSize: _screenH / 20),
+                SizedBox(
+                  height: _screenH / 15,
+                ),
                 FloatingActionButton(
                     child: Icon(
-                      Icons.forward,
+                      Icons.arrow_downward_rounded,
                       size: _screenH / 12,
                     ),
                     backgroundColor: Colors.grey.shade600,
