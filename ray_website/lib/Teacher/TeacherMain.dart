@@ -43,7 +43,7 @@ class _teacherMainState extends State<teacherMain> {
             image: DecorationImage(
                 colorFilter: ColorFilter.mode(
                     Colors.white.withOpacity(0.4), BlendMode.dstATop),
-                image: AssetImage("assest/back4.png"),
+                image: AssetImage("assest/background/back4.png"),
                 fit: BoxFit.cover)),
         child: Container(
           margin: EdgeInsets.symmetric(

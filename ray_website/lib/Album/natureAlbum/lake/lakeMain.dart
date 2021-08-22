@@ -30,7 +30,7 @@ class _lakeMainState extends State<lakeMain> {
   @override
   Widget build(BuildContext context) {
     return fourSeason(
-        backImg: "assest/back2.png",
+        backImg: "assest/background/back2.png",
         content: "阔镜风止凝仙息，四季澹澹清客心",
         pics: cont,
         title: "McMaster Lake");

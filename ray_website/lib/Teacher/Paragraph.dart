@@ -36,7 +36,7 @@ class _ParagraphState extends State<Paragraph> {
             image: DecorationImage(
                 colorFilter: ColorFilter.mode(
                     Colors.white.withOpacity(0.4), BlendMode.dstATop),
-                image: AssetImage("assest/back3.png"),
+                image: AssetImage("assest/background/back3.png"),
                 fit: BoxFit.cover)),
         child: Container(
           margin: EdgeInsets.symmetric(

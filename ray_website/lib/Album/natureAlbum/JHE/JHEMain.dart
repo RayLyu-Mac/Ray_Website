@@ -18,7 +18,7 @@ class _JHEMainState extends State<JHEMain> {
   @override
   Widget build(BuildContext context) {
     return fourSeason(
-        backImg: "assest/back3.png",
+        backImg: "assest/background/back3.png",
         content:
             "John Hodgins Engineering Building\nThe home for McMaster Engineer",
         pics: cont,
