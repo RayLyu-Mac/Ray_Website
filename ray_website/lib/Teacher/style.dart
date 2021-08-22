@@ -27,10 +27,15 @@ class _titleState extends State<title> {
 }
 
 class content extends StatefulWidget {
-  content({@required this.contents, @required this.fontSize, Key? key})
+  content(
+      {@required this.contents,
+      @required this.fontSize,
+      @optionalTypeArgs this.fontf,
+      Key? key})
       : super(key: key);
   final String? contents;
   final double? fontSize;
+  final String? fontf;
 
   @override
   _contentState createState() => _contentState();
@@ -42,6 +47,7 @@ class _contentState extends State<content> {
     return Text(
       widget.contents!,
       style: TextStyle(
+        fontFamily: widget.fontf,
         fontSize: widget.fontSize!,
         fontWeight: FontWeight.bold,
         color: Colors.grey.shade800,
