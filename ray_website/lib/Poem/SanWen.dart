@@ -1,10 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:ray_website/Teacher/style.dart';
-import 'package:ray_website/backgroundPic.dart';
-import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
-import 'package:ray_website/Album/mode.dart';
-import 'package:ray_website/CAD/CADDetail.dart';
+
+import 'PoemMode.dart';
 
 class SanWen extends StatefulWidget {
   SanWen({Key? key}) : super(key: key);
@@ -14,17 +11,6 @@ class SanWen extends StatefulWidget {
 }
 
 class _SanWenState extends State<SanWen> {
-  double _screenWidth = 0;
-  double _screenH = 0;
-
-  @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-
-    _screenWidth = MediaQuery.of(context).size.width;
-    _screenH = MediaQuery.of(context).size.height;
-  }
-
   @override
   Widget build(BuildContext context) {
     List<List> contents = [
@@ -62,66 +48,15 @@ class _SanWenState extends State<SanWen> {
         "于山崖之间，看浓雾中的世界",
         "他来到山间，本想期待一个清澈的日出，没奈何浓雾的不请自来给太阳蒙上了厚厚的面纱...",
         "2020-08-07"
+      ],
+      [
+        "随着作者的文笔，享受生活中每一个美好的瞬间",
       ]
     ];
-    return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        title: Text(
-          "散文诗",
-          style: TextStyle(
-              fontSize: _screenH / 12,
-              fontWeight: FontWeight.bold,
-              fontFamily: "sw"),
-        ),
-        backgroundColor: Colors.lime,
-      ),
-      body: backGroundPic(
-          transp: 0.5,
-          child: SingleChildScrollView(
-              child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: AnimationConfiguration.toStaggeredList(
-                duration: const Duration(milliseconds: 705),
-                childAnimationBuilder: (widget) => SlideAnimation(
-                      child: FadeInAnimation(
-                        child: widget,
-                      ),
-                      verticalOffset: 220,
-                    ),
-                children: [
-                  SizedBox(
-                    height: _screenH / 12,
-                  ),
-                  Text(
-                    "随着作者的文笔，享受生活中每一个美好的瞬间",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        fontSize: _screenH / 12,
-                        fontWeight: FontWeight.bold,
-                        fontFamily: "nan"),
-                  ),
-                  SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(
-                      children: [
-                        for (var i = 0; i < contents.length; i++)
-                          photoMode(
-                              img: contents[i][0],
-                              title: contents[i][1],
-                              content: contents[i][2],
-                              pageTo: cadMode(
-                                  content: contents[i][3],
-                                  date: contents[i][4],
-                                  showImg: contents[i][0],
-                                  title: contents[i][1]))
-                      ],
-                    ),
-                  )
-                ]),
-          )),
-          pic: "assest/background/back7.png"),
-    );
+    return PoemMode(
+        backImg: "assest/background/back7.png",
+        contents: contents,
+        tiJi: "随着作者的文笔，享受生活中每一个美好的瞬间",
+        title: "散文诗");
   }
 }
