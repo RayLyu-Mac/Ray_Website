@@ -57,15 +57,15 @@ class _cadModeState extends State<cadMode> {
         children: [
           Container(
             width: _screenWidth / 1.4,
-            height: _screenH * 1.1,
             decoration: BoxDecoration(
                 image: DecorationImage(
                     colorFilter: ColorFilter.mode(
                         Colors.white.withOpacity(0.9), BlendMode.dstATop),
                     image: AssetImage(widget.showImg!),
-                    fit: BoxFit.fitWidth)),
+                    fit: BoxFit.fitHeight)),
           ),
-          Column(
+          SingleChildScrollView(
+              child: Column(
             children: AnimationConfiguration.toStaggeredList(
               duration: const Duration(milliseconds: 705),
               childAnimationBuilder: (widget) => SlideAnimation(
@@ -79,76 +79,76 @@ class _cadModeState extends State<cadMode> {
                   height: _screenH / 20,
                 ),
                 Container(
-                  width: _screenWidth / 3.5,
-                  padding: EdgeInsets.fromLTRB(
-                    _screenWidth / 40,
-                    _screenH / 40,
-                    _screenWidth / 40,
-                    _screenH / 40,
-                  ),
-                  child: SingleChildScrollView(
-                      child: Column(children: [
-                    Container(
-                        decoration: BoxDecoration(
-                            border: Border(
-                                bottom: BorderSide(
-                                    color: Colors.grey.shade100, width: 5))),
-                        child: Row(
-                          children: [
-                            Text(
-                              "Created on:\n" + widget.date!,
-                              style: TextStyle(
-                                fontSize: _screenH / 16,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.grey.shade500,
-                                fontFamily: "coms",
+                    width: _screenWidth / 3.5,
+                    padding: EdgeInsets.fromLTRB(
+                      _screenWidth / 40,
+                      _screenH / 40,
+                      _screenWidth / 40,
+                      _screenH / 40,
+                    ),
+                    child: Column(children: [
+                      Container(
+                          decoration: BoxDecoration(
+                              border: Border(
+                                  bottom: BorderSide(
+                                      color: Colors.grey.shade100, width: 5))),
+                          child: Row(
+                            children: [
+                              Text(
+                                "Created on:\n" + widget.date!,
+                                style: TextStyle(
+                                  fontSize: _screenH / 16,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.grey.shade500,
+                                  fontFamily: "coms",
+                                ),
+                                textAlign: TextAlign.center,
                               ),
-                              textAlign: TextAlign.center,
-                            ),
-                            SizedBox(
-                              width: _screenWidth / 32,
-                            ),
-                            Icon(
-                              FontAwesomeIcons.trophy,
-                              size: _screenH / 18,
-                            )
-                          ],
-                        )),
-                    SizedBox(
-                      height: _screenH / 40,
-                    ),
-                    Container(
-                      child: Text(
-                        widget.content!,
-                        style: TextStyle(
-                            fontSize: _screenH / 25,
-                            fontWeight: FontWeight.bold,
-                            fontFamily: "sw"),
-                        textAlign: TextAlign.center,
+                              SizedBox(
+                                width: _screenWidth / 32,
+                              ),
+                              Icon(
+                                FontAwesomeIcons.trophy,
+                                size: _screenH / 18,
+                              )
+                            ],
+                          )),
+                      SizedBox(
+                        height: _screenH / 40,
                       ),
-                    ),
-                    SizedBox(
-                      height: _screenH / 40,
-                    ),
-                    FlatButton.icon(
-                        padding: EdgeInsets.symmetric(
-                            horizontal: _screenWidth / 30,
-                            vertical: _screenH / 40),
-                        color: Colors.grey.shade300,
-                        onPressed: _launchURL,
-                        icon: Icon(Icons.web_asset),
-                        label: Text(
-                          "Check more Info",
+                      Container(
+                        child: Text(
+                          widget.content!,
                           style: TextStyle(
+                              fontSize: _screenH / 25,
                               fontWeight: FontWeight.bold,
-                              fontFamily: "coms",
-                              fontSize: _screenH / 25),
-                        ))
-                  ])),
-                )
+                              fontFamily: "sw"),
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                      SizedBox(
+                        height: _screenH / 40,
+                      ),
+                      widget.url != null
+                          ? FlatButton.icon(
+                              padding: EdgeInsets.symmetric(
+                                  horizontal: _screenWidth / 30,
+                                  vertical: _screenH / 40),
+                              color: Colors.grey.shade300,
+                              onPressed: _launchURL,
+                              icon: Icon(Icons.web_asset),
+                              label: Text(
+                                "Check more Info",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontFamily: "coms",
+                                    fontSize: _screenH / 25),
+                              ))
+                          : Container()
+                    ])),
               ],
             ),
-          )
+          ))
         ],
       ),
     );

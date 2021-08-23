@@ -55,7 +55,7 @@ class _CurtainLeftState extends State<CurtainLeft> {
   @override
   Widget build(BuildContext context) {
     final nonHoverTransform = Matrix4.identity()
-      ..translate(-(_screenWidth / 2.5), 0, 0);
+      ..translate(-(_screenWidth / 2.8), 0, 0);
     final hoverTransform = Matrix4.identity()..translate(0, 0, 0);
 
     final nonHoverTransform1 = Matrix4.identity()..translate(0, 0, 0);
