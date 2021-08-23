@@ -10,6 +10,7 @@ class singleCAD extends StatefulWidget {
       @required this.content,
       @required this.title,
       @required this.fontC,
+      @optionalTypeArgs this.pageTo,
       @required this.date,
       @required this.url,
       @optionalTypeArgs this.fontf,
@@ -22,6 +23,7 @@ class singleCAD extends StatefulWidget {
   final String? date;
   final String? url;
   final String? fontf;
+  final Widget? pageTo;
   @override
   _singleCADState createState() => _singleCADState();
 }
@@ -128,12 +130,14 @@ class _singleCADState extends State<singleCAD> {
                                       PageTransition(
                                           duration:
                                               const Duration(milliseconds: 500),
-                                          child: cadMode(
-                                              content: widget.content!,
-                                              date: widget.date!,
-                                              showImg: widget.showPic!,
-                                              url: widget.url!,
-                                              title: widget.title!),
+                                          child: widget.pageTo != null
+                                              ? widget.pageTo!
+                                              : cadMode(
+                                                  content: widget.content!,
+                                                  date: widget.date!,
+                                                  showImg: widget.showPic!,
+                                                  url: widget.url!,
+                                                  title: widget.title!),
                                           type:
                                               PageTransitionType.rightToLeft));
                                 },

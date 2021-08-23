@@ -4,6 +4,7 @@ import 'package:ray_website/backgroundPic.dart';
 import 'package:ray_website/Teacher/style.dart';
 import 'SanWen.dart';
 import 'package:ray_website/curtainRight.dart';
+import 'Guti.dart';
 
 class PoemMain extends StatefulWidget {
   PoemMain({Key? key}) : super(key: key);
@@ -70,7 +71,7 @@ class _PoemMainState extends State<PoemMain> {
                       content: "根据诗句的字数，分为四言，五言，七言不等。这篇诗集中收录了作者35篇古体诗。",
                       title: "古体诗",
                       fontC: Colors.blueAccent,
-                      pageTo: SanWen(),
+                      pageTo: GuTi(),
                       width: _screenWidth / 2.1,
                       height: _screenH / 1.55,
                       fontf: "yuan",

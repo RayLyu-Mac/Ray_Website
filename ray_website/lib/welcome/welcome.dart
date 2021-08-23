@@ -6,7 +6,7 @@ import 'dart:async';
 import 'dart:math';
 import 'package:ray_website/Album/main.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:sprung/sprung.dart';
+import 'package:ray_website/Poem/PoemMain.dart';
 import 'hoverText.dart';
 import 'package:ray_website/CAD/CADCover.dart';
 import 'package:ray_website/Teacher/TeacherMain.dart';
@@ -194,14 +194,12 @@ class _welcomeState extends State<welcome> {
                             fontWeight: FontWeight.w400),
                       ),
                       SizedBox(height: _screenH / 40),
-                      Text(
-                        "   En  E  rgetic   ",
-                        style: TextStyle(
-                            fontFamily: fontF,
-                            color: Colors.white,
-                            fontSize: _screenH / fontSize,
-                            fontWeight: FontWeight.w400),
-                      ),
+                      hoverTextMode(
+                          pageTo: PoemMain(),
+                          font: fontF,
+                          fontsize: fontSize,
+                          title: "   Po  E  T   ",
+                          fontC: Colors.white),
                       Text(
                         "Visio  N  er                ",
                         style: TextStyle(
