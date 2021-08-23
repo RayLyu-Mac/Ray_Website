@@ -198,7 +198,7 @@ class _welcomeState extends State<welcome> {
                           pageTo: PoemMain(),
                           font: fontF,
                           fontsize: fontSize,
-                          title: "   Po  E  T   ",
+                          title: "   Po  E  T               ",
                           fontC: Colors.white),
                       Text(
                         "Visio  N  er                ",
