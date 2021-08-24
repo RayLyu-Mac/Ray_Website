@@ -5,6 +5,7 @@ import 'package:ray_website/CAD/singleCAD.dart';
 import 'GuTiZhong/liMing.dart';
 import 'GuTiZhong/Shui.dart';
 import 'GuTiZhong/Yu.dart';
+import 'GuTiZhong/Xing.dart';
 
 class GuTi extends StatefulWidget {
   GuTi({Key? key}) : super(key: key);
@@ -42,6 +43,13 @@ class _GuTiState extends State<GuTi> {
       "描雨",
       Colors.blue.shade400,
       Yu()
+    ],
+    [
+      "assest/background/back13.png",
+      "行，万里路。观，千世景",
+      "绘行",
+      Colors.greenAccent,
+      Xing()
     ]
   ];
 
@@ -54,7 +62,7 @@ class _GuTiState extends State<GuTi> {
         ),
         body: GridView.count(
             crossAxisCount: 2,
-            children: List.generate(3, (index) {
+            children: List.generate(4, (index) {
               return AnimationConfiguration.staggeredGrid(
                   position: index,
                   duration: const Duration(milliseconds: 800),
