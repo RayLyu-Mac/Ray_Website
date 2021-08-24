@@ -9,17 +9,6 @@ class huangHun extends StatefulWidget {
 }
 
 class _huangHunState extends State<huangHun> {
-  double _screenWidth = 0;
-  double _screenH = 0;
-
-  @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-
-    _screenWidth = MediaQuery.of(context).size.width;
-    _screenH = MediaQuery.of(context).size.height;
-  }
-
   @override
   Widget build(BuildContext context) {
     List<List> contents = [
