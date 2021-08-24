@@ -3,6 +3,7 @@ import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'GuTiZhong/huangHun.dart';
 import 'package:ray_website/CAD/singleCAD.dart';
 import 'GuTiZhong/liMing.dart';
+import 'GuTiZhong/Shui.dart';
 
 class GuTi extends StatefulWidget {
   GuTi({Key? key}) : super(key: key);
@@ -26,18 +27,15 @@ class _GuTiState extends State<GuTi> {
       "黎明",
       Colors.indigo.shade200,
       LiMing()
+    ],
+    [
+      "assest/background/back15.png",
+      "上善若水，愿清泉涤去内心的骄躁",
+      "临水",
+      Colors.lightBlue.shade200,
+      Shui()
     ]
   ];
-  double _screenWidth = 0;
-  double _screenH = 0;
-
-  @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-
-    _screenWidth = MediaQuery.of(context).size.width;
-    _screenH = MediaQuery.of(context).size.height;
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -47,8 +45,8 @@ class _GuTiState extends State<GuTi> {
           backgroundColor: Colors.amber,
         ),
         body: GridView.count(
-            crossAxisCount: 3,
-            children: List.generate(2, (index) {
+            crossAxisCount: 2,
+            children: List.generate(3, (index) {
               return AnimationConfiguration.staggeredGrid(
                   position: index,
                   duration: const Duration(milliseconds: 800),
