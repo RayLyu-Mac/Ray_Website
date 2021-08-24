@@ -6,6 +6,7 @@ import 'GuTiZhong/liMing.dart';
 import 'GuTiZhong/Shui.dart';
 import 'GuTiZhong/Yu.dart';
 import 'GuTiZhong/Xing.dart';
+import 'GuTiZhong/ZaJi.dart';
 
 class GuTi extends StatefulWidget {
   GuTi({Key? key}) : super(key: key);
@@ -50,6 +51,13 @@ class _GuTiState extends State<GuTi> {
       "绘行",
       Colors.greenAccent,
       Xing()
+    ],
+    [
+      "assest/background/back10.png",
+      "生活是多彩的，也是值得纪念的",
+      "杂记",
+      Colors.pinkAccent,
+      Zaji()
     ]
   ];
 
