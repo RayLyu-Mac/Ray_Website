@@ -4,6 +4,7 @@ import 'GuTiZhong/huangHun.dart';
 import 'package:ray_website/CAD/singleCAD.dart';
 import 'GuTiZhong/liMing.dart';
 import 'GuTiZhong/Shui.dart';
+import 'GuTiZhong/Yu.dart';
 
 class GuTi extends StatefulWidget {
   GuTi({Key? key}) : super(key: key);
@@ -34,6 +35,13 @@ class _GuTiState extends State<GuTi> {
       "临水",
       Colors.lightBlue.shade200,
       Shui()
+    ],
+    [
+      "assest/background/back12.png",
+      "雨，总是不期而至。但，又不会突然",
+      "描雨",
+      Colors.blue.shade400,
+      Yu()
     ]
   ];
 
