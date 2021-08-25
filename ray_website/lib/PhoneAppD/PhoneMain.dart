@@ -11,6 +11,16 @@ class PhoneAppDeveloper extends StatefulWidget {
 }
 
 class _PhoneAppDeveloperState extends State<PhoneAppDeveloper> {
+  double _screenWidth = 0;
+  double _screenH = 0;
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+
+    _screenWidth = MediaQuery.of(context).size.width;
+    _screenH = MediaQuery.of(context).size.height;
+  }
+
   bool _hovering = false;
   void _mouseEnter(bool hover) {
     setState(() {
@@ -20,16 +30,6 @@ class _PhoneAppDeveloperState extends State<PhoneAppDeveloper> {
 
   @override
   Widget build(BuildContext context) {
-    double _screenWidth = 0;
-    double _screenH = 0;
-    @override
-    void didChangeDependencies() {
-      super.didChangeDependencies();
-
-      _screenWidth = MediaQuery.of(context).size.width;
-      _screenH = MediaQuery.of(context).size.height;
-    }
-
     return Scaffold(
       appBar: AppBar(
         title: Text("As a phone developer"),
@@ -38,7 +38,7 @@ class _PhoneAppDeveloperState extends State<PhoneAppDeveloper> {
         child: Column(
           children: [
             SizedBox(
-              height: _screenH / 15,
+              height: _screenH / 25,
             ),
             Row(
               children: [
@@ -50,8 +50,8 @@ class _PhoneAppDeveloperState extends State<PhoneAppDeveloper> {
             )
           ],
         ),
-        pic: "assest/background/back17.png",
-        transp: 0.3,
+        pic: "assest/background/back16.png",
+        transp: 0.45,
       ),
     );
   }

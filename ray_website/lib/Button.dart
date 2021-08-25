@@ -18,6 +18,16 @@ class Button extends StatefulWidget {
 }
 
 class _ButtonState extends State<Button> {
+  double _screenWidth = 0;
+  double _screenH = 0;
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+
+    _screenWidth = MediaQuery.of(context).size.width;
+    _screenH = MediaQuery.of(context).size.height;
+  }
+
   bool _hovering = false;
   void _mouseEnter(bool hover) {
     setState(() {
@@ -31,11 +41,13 @@ class _ButtonState extends State<Button> {
       onEnter: (e) => _mouseEnter(true),
       onExit: (e) => _mouseEnter(false),
       child: Container(
+        padding: EdgeInsets.symmetric(
+            vertical: _screenH / 35, horizontal: _screenWidth / 45),
         decoration: BoxDecoration(
             color: _hovering ? Colors.grey.shade300 : Colors.transparent,
             border: _hovering
-                ? Border(bottom: BorderSide(width: 10, color: Colors.white))
-                : Border.all(width: 0)),
+                ? Border(bottom: BorderSide(width: 7, color: Colors.white))
+                : Border.all(width: 0, color: Colors.transparent)),
         child: FlatButton.icon(
             onPressed: () {
               Navigator.push(
@@ -51,6 +63,7 @@ class _ButtonState extends State<Button> {
               style: TextStyle(
                   color: Colors.grey.shade200,
                   fontWeight: FontWeight.bold,
+                  fontSize: _screenH / 15,
                   fontFamily: "show"),
             )),
       ),
