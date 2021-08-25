@@ -1,17 +1,16 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 
 class Button extends StatefulWidget {
   Button(
-      {@required this.buttonColor,
-      @required this.buttonIcon,
+      {@required this.buttonIcon,
       @required this.pageTo,
       @required this.title,
       Key? key})
       : super(key: key);
   final Widget? pageTo;
   final String? title;
-  final Colors? buttonColor;
   final IconData? buttonIcon;
 
   @override
@@ -47,7 +46,13 @@ class _ButtonState extends State<Button> {
                       type: PageTransitionType.rightToLeft));
             },
             icon: Icon(widget.buttonIcon!),
-            label: Text(widget.title!)),
+            label: Text(
+              widget.title!,
+              style: TextStyle(
+                  color: Colors.grey.shade200,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: "show"),
+            )),
       ),
     );
   }
