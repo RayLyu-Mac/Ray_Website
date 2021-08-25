@@ -70,7 +70,7 @@ class _GuTiState extends State<GuTi> {
         ),
         body: GridView.count(
             crossAxisCount: 2,
-            children: List.generate(4, (index) {
+            children: List.generate(6, (index) {
               return AnimationConfiguration.staggeredGrid(
                   position: index,
                   duration: const Duration(milliseconds: 800),

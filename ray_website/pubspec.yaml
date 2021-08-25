@@ -73,6 +73,10 @@ flutter:
   - assest/background/back13.png
   - assest/background/back14.png
   - assest/background/back15.png
+  - assest/background/back16.png
+  - assest/background/back17.png
+  - assest/background/back18.png
+  - assest/background/back19.png
   - assest/mj.jpg  #https://www.scottbharris.com.au/journal/my-journey/ (reference)
   - assest/citypic/hamilton/cover.png
   - assest/citypic/jinhua/cover.png
@@ -289,6 +293,7 @@ flutter:
   - assest/poem/guTi/o9.png
   - assest/poem/guTi/o10.png
   - assest/poem/guTi/o11.png
+  - assest/poem/guTi/o12.png
   - assest/poem/guTi/x1.png
   - assest/poem/guTi/x2.png
   - assest/poem/guTi/x3.png

@@ -55,11 +55,11 @@ class _singleCADState extends State<singleCAD> {
 
   final nonHoverTransform = Matrix4.identity()
     ..translate(0, 0, 0)
-    ..scale(0.01);
+    ..scale(0.001);
 
   final hoverTransform = Matrix4.identity()
     ..translate(0, 0, 0)
-    ..scale(1.01);
+    ..scale(1);
 
   final nonHoverTransform1 = Matrix4.identity()..translate(0, 0, 0);
   final hoverTransform1 = Matrix4.identity()
@@ -101,6 +101,7 @@ class _singleCADState extends State<singleCAD> {
                     ),
                     Text(
                       widget.content!,
+                      textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: _screenH / 25,
                         color: Colors.grey.shade800,

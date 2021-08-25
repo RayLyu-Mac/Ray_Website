@@ -62,7 +62,7 @@ class _cadModeState extends State<cadMode> {
                     colorFilter: ColorFilter.mode(
                         Colors.white.withOpacity(0.9), BlendMode.dstATop),
                     image: AssetImage(widget.showImg!),
-                    fit: BoxFit.fitHeight)),
+                    fit: BoxFit.cover)),
           ),
           SingleChildScrollView(
               child: Column(
