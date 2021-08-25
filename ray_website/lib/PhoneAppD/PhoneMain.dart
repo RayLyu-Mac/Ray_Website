@@ -20,6 +20,16 @@ class _PhoneAppDeveloperState extends State<PhoneAppDeveloper> {
 
   @override
   Widget build(BuildContext context) {
+    double _screenWidth = 0;
+    double _screenH = 0;
+    @override
+    void didChangeDependencies() {
+      super.didChangeDependencies();
+
+      _screenWidth = MediaQuery.of(context).size.width;
+      _screenH = MediaQuery.of(context).size.height;
+    }
+
     return Scaffold(
       appBar: AppBar(
         title: Text("As a phone developer"),
@@ -27,8 +37,16 @@ class _PhoneAppDeveloperState extends State<PhoneAppDeveloper> {
       body: backGroundPic(
         child: Column(
           children: [
+            SizedBox(
+              height: _screenH / 15,
+            ),
             Row(
-              children: [],
+              children: [
+                SizedBox(
+                  width: _screenWidth / 8,
+                ),
+                Button(buttonIcon: Icons.work, pageTo: About(), title: "About")
+              ],
             )
           ],
         ),

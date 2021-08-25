@@ -10,6 +10,7 @@ import 'package:ray_website/Poem/PoemMain.dart';
 import 'hoverText.dart';
 import 'package:ray_website/CAD/CADCover.dart';
 import 'package:ray_website/Teacher/TeacherMain.dart';
+import 'package:ray_website/PhoneAppD/PhoneMain.dart';
 
 class welcome extends StatefulWidget {
   welcome({Key? key}) : super(key: key);
@@ -139,13 +140,12 @@ class _welcomeState extends State<welcome> {
                             fontSize: _screenH / fontSize,
                             fontWeight: FontWeight.w400),
                       ),
-                      Text(
-                        "         Phone  A  pp Developer",
-                        style: TextStyle(
-                            fontFamily: fontF,
-                            color: Colors.grey[fontC],
-                            fontSize: _screenH / fontSize,
-                            fontWeight: FontWeight.w400),
+                      hoverTextMode(
+                        pageTo: PhoneAppDeveloper(),
+                        font: fontF,
+                        fontsize: fontSize,
+                        title: "         Phone  A  pp Developer",
+                        fontC: Colors.grey[fontC],
                       ),
                       Text(
                         "         Da  T  a Analyst",
