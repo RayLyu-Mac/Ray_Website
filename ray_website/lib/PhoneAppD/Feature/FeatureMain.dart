@@ -82,6 +82,7 @@ class _FeaturePhoneState extends State<FeaturePhone> {
                       Button(
                           buttonIcon: FontAwesomeIcons.tools,
                           pageTo: AppTool(),
+                          titleColor: Colors.red.shade300,
                           title: "App Tools"),
                       Button(
                           buttonIcon: FontAwesomeIcons.skull,

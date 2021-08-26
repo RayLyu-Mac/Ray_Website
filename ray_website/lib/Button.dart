@@ -7,11 +7,13 @@ class Button extends StatefulWidget {
       {@required this.buttonIcon,
       @required this.pageTo,
       @required this.title,
+      @optionalTypeArgs this.titleColor,
       Key? key})
       : super(key: key);
   final Widget? pageTo;
   final String? title;
   final IconData? buttonIcon;
+  final Color? titleColor;
 
   @override
   _ButtonState createState() => _ButtonState();
@@ -62,7 +64,7 @@ class _ButtonState extends State<Button> {
               widget.title!,
               textAlign: TextAlign.left,
               style: TextStyle(
-                  color: Colors.grey.shade200,
+                  color: _hovering ? widget.titleColor! : Colors.grey.shade200,
                   fontWeight: FontWeight.bold,
                   fontSize: _screenH / 20,
                   fontFamily: "show"),
