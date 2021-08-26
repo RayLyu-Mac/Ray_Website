@@ -37,17 +37,17 @@ class _ButtonState extends State<Button> {
 
   @override
   Widget build(BuildContext context) {
-    return MouseRegion(
-      onEnter: (e) => _mouseEnter(true),
-      onExit: (e) => _mouseEnter(false),
-      child: Container(
-        padding: EdgeInsets.symmetric(
-            vertical: _screenH / 35, horizontal: _screenWidth / 45),
-        decoration: BoxDecoration(
-            color: _hovering ? Colors.grey.shade300 : Colors.transparent,
-            border: _hovering
-                ? Border(bottom: BorderSide(width: 7, color: Colors.white))
-                : Border.all(width: 0, color: Colors.transparent)),
+    return Container(
+      padding: EdgeInsets.symmetric(
+          vertical: _screenH / 50, horizontal: _screenWidth / 50),
+      decoration: BoxDecoration(
+        color:
+            _hovering ? Colors.grey.shade300.withAlpha(85) : Colors.transparent,
+        borderRadius: BorderRadius.circular(25),
+      ),
+      child: MouseRegion(
+        onEnter: (e) => _mouseEnter(true),
+        onExit: (e) => _mouseEnter(false),
         child: FlatButton.icon(
             onPressed: () {
               Navigator.push(
@@ -60,10 +60,11 @@ class _ButtonState extends State<Button> {
             icon: Icon(widget.buttonIcon!),
             label: Text(
               widget.title!,
+              textAlign: TextAlign.left,
               style: TextStyle(
                   color: Colors.grey.shade200,
                   fontWeight: FontWeight.bold,
-                  fontSize: _screenH / 15,
+                  fontSize: _screenH / 20,
                   fontFamily: "show"),
             )),
       ),

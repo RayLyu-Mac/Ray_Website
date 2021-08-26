@@ -1,7 +1,9 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:ray_website/backgroundPic.dart';
 import 'About.dart';
 import 'package:ray_website/Button.dart';
+import 'Feature/FeatureMain.dart';
 
 class PhoneAppDeveloper extends StatefulWidget {
   PhoneAppDeveloper({Key? key}) : super(key: key);
@@ -38,15 +40,39 @@ class _PhoneAppDeveloperState extends State<PhoneAppDeveloper> {
         child: Column(
           children: [
             SizedBox(
-              height: _screenH / 25,
+              height: _screenH / 30,
             ),
             Row(
               children: [
                 SizedBox(
                   width: _screenWidth / 8,
                 ),
-                Button(buttonIcon: Icons.work, pageTo: About(), title: "About")
+                Button(buttonIcon: Icons.work, pageTo: About(), title: "Team"),
+                Button(
+                    buttonIcon: Icons.content_copy_outlined,
+                    pageTo: FeaturePhone(),
+                    title: "Features")
               ],
+            ),
+            SizedBox(
+              height: _screenH / 4.5,
+            ),
+            Text(
+              "Managment Maintaince  Accessbility",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  fontFamily: "bank",
+                  fontSize: _screenH / 13,
+                  fontWeight: FontWeight.bold),
+            ),
+            SizedBox(
+              height: _screenH / 20,
+            ),
+            Text(
+              "< Phone App for Malts Student in McMaster >",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  fontSize: _screenH / 20, fontWeight: FontWeight.bold),
             )
           ],
         ),
