@@ -1,9 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:ray_website/backgroundPic.dart';
 import 'About.dart';
 import 'package:ray_website/Button.dart';
 import 'Feature/FeatureMain.dart';
+import 'Motivation.dart';
 
 class PhoneAppDeveloper extends StatefulWidget {
   PhoneAppDeveloper({Key? key}) : super(key: key);
@@ -47,6 +49,11 @@ class _PhoneAppDeveloperState extends State<PhoneAppDeveloper> {
                 SizedBox(
                   width: _screenWidth / 8,
                 ),
+                Button(
+                    buttonIcon: FontAwesomeIcons.thumbsUp,
+                    pageTo: Motivation(),
+                    titleColor: Colors.red.shade300,
+                    title: "Motivation"),
                 Button(
                   buttonIcon: Icons.work,
                   pageTo: About(),
