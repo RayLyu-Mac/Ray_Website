@@ -4,6 +4,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:ray_website/PhoneAppD/Feature/AppTools.dart';
 import 'package:ray_website/backgroundPic.dart';
 import 'package:ray_website/Button.dart';
+import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 
 class FeaturePhone extends StatefulWidget {
   FeaturePhone({Key? key}) : super(key: key);
@@ -30,7 +31,15 @@ class _FeaturePhoneState extends State<FeaturePhone> {
         title: Text("Feature"),
       ),
       body: backGroundPic(
-          child: Column(
+        child: Column(
+          children: AnimationConfiguration.toStaggeredList(
+            duration: const Duration(milliseconds: 705),
+            childAnimationBuilder: (widget) => SlideAnimation(
+              child: FadeInAnimation(
+                child: widget,
+              ),
+              verticalOffset: 250,
+            ),
             children: [
               SizedBox(
                 height: _screenH / 25,
@@ -50,11 +59,11 @@ class _FeaturePhoneState extends State<FeaturePhone> {
               Row(
                 children: [
                   SizedBox(
-                    width: _screenWidth / 12,
+                    width: _screenWidth / 10,
                   ),
                   Container(
-                    height: _screenH / 1.5,
-                    width: _screenWidth / 4,
+                    height: _screenH / 1.6,
+                    width: _screenWidth / 4.2,
                     decoration: BoxDecoration(
                         image: DecorationImage(
                             image: AssetImage("assest/Phone/cover.png"),
@@ -63,7 +72,12 @@ class _FeaturePhoneState extends State<FeaturePhone> {
                         border:
                             Border.all(width: 7, color: Colors.grey.shade300)),
                   ),
+                  SizedBox(
+                    width: _screenWidth / 6,
+                  ),
                   Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Button(
                           buttonIcon: FontAwesomeIcons.tools,
@@ -91,7 +105,10 @@ class _FeaturePhoneState extends State<FeaturePhone> {
               )
             ],
           ),
-          pic: "assest/background/back8.png"),
+        ),
+        pic: "assest/background/back8.png",
+        transp: 0.45,
+      ),
     );
   }
 }
