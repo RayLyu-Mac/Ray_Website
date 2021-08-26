@@ -47,10 +47,16 @@ class _PhoneAppDeveloperState extends State<PhoneAppDeveloper> {
                 SizedBox(
                   width: _screenWidth / 8,
                 ),
-                Button(buttonIcon: Icons.work, pageTo: About(), title: "Team"),
+                Button(
+                  buttonIcon: Icons.work,
+                  pageTo: About(),
+                  title: "Team",
+                  titleColor: Colors.orange,
+                ),
                 Button(
                     buttonIcon: Icons.content_copy_outlined,
                     pageTo: FeaturePhone(),
+                    titleColor: Colors.lightBlueAccent,
                     title: "Features")
               ],
             ),

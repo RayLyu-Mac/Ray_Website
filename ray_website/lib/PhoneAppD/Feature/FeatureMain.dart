@@ -26,6 +26,23 @@ class _FeaturePhoneState extends State<FeaturePhone> {
 
   @override
   Widget build(BuildContext context) {
+    List<List> Buttons = [
+      ["App Tools", AppTool(), Colors.redAccent, FontAwesomeIcons.tools],
+      ["App Safety Guidence", AppTool(), Colors.amber, FontAwesomeIcons.skull],
+      [
+        "Equipment Managment",
+        AppTool(),
+        Colors.lightGreenAccent.shade400,
+        FontAwesomeIcons.microscope
+      ],
+      [
+        "Guidence Mode",
+        AppTool(),
+        Colors.lightBlueAccent,
+        FontAwesomeIcons.map
+      ],
+      ["Other Tools", AppTool(), Colors.pinkAccent, FontAwesomeIcons.infoCircle]
+    ];
     return Scaffold(
       appBar: AppBar(
         title: Text("Feature"),
@@ -79,27 +96,13 @@ class _FeaturePhoneState extends State<FeaturePhone> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Button(
-                          buttonIcon: FontAwesomeIcons.tools,
-                          pageTo: AppTool(),
-                          titleColor: Colors.red.shade300,
-                          title: "App Tools"),
-                      Button(
-                          buttonIcon: FontAwesomeIcons.skull,
-                          pageTo: AppTool(),
-                          title: "App Safety Guidence"),
-                      Button(
-                          buttonIcon: Icons.stairs,
-                          pageTo: AppTool(),
-                          title: "Guide Mode"),
-                      Button(
-                          buttonIcon: FontAwesomeIcons.microscope,
-                          pageTo: AppTool(),
-                          title: "Equipment Managment"),
-                      Button(
-                          buttonIcon: FontAwesomeIcons.info,
-                          pageTo: AppTool(),
-                          title: "Other Tools"),
+                      for (var j = 0; j < Buttons.length; j++)
+                        Button(
+                          buttonIcon: Buttons[j][3],
+                          pageTo: Buttons[j][1],
+                          title: Buttons[j][0],
+                          titleColor: Buttons[j][2],
+                        )
                     ],
                   )
                 ],
