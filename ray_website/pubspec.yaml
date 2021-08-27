@@ -310,6 +310,25 @@ flutter:
   - assest/poem/guTi/y1.png
   - assest/poem/guTi/y2.png
   - assest/poem/guTi/y3.png
+  - assest/App/E1.png
+  - assest/App/E2.png
+  - assest/App/E3.png
+  - assest/App/E4.png
+  - assest/App/E5.png
+  - assest/App/E6.png
+  - assest/App/E7.png
+  - assest/App/s1.png
+  - assest/App/s2.png
+  - assest/App/s3.png
+  - assest/App/s4.png
+  - assest/App/s5.png
+  - assest/App/t1.png
+  - assest/App/t2.png
+  - assest/App/t3.png
+  - assest/App/t4.png
+  - assest/App/t5.png
+  - assest/App/t6.png
+
 
 
 
@@ -321,13 +340,13 @@ flutter:
       - asset:        font/SHOWG.TTF
     - family:          coms
       fonts:
-      - asset:        font/comsc.TTf
+      - asset:        font/comsc.TTF
     - family:          bank
       fonts:
       - asset:        font/bgothm.TTF
     - family:          nan
       fonts:
-      - asset:        font/nan.TTf
+      - asset:        font/nan.TTF
     - family:          yuan
       fonts:
       - asset:        font/yuan.TTF
