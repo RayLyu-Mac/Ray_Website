@@ -61,7 +61,7 @@ class _ButtonState extends State<Button> {
             },
             icon: Icon(widget.buttonIcon!),
             label: Text(
-              widget.title!,
+              '  ' + widget.title!,
               textAlign: TextAlign.left,
               style: TextStyle(
                   color: _hovering ? widget.titleColor! : Colors.grey.shade200,
