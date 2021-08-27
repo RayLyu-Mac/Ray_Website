@@ -12,7 +12,7 @@ class singleCAD extends StatefulWidget {
       @required this.fontC,
       @optionalTypeArgs this.pageTo,
       @required this.date,
-      @required this.url,
+      @optionalTypeArgs this.url,
       @optionalTypeArgs this.fontf,
       Key? key})
       : super(key: key);

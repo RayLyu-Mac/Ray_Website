@@ -7,7 +7,7 @@ class Button extends StatefulWidget {
       {@required this.buttonIcon,
       @required this.pageTo,
       @required this.title,
-      @optionalTypeArgs this.titleColor,
+      @required this.titleColor,
       Key? key})
       : super(key: key);
   final Widget? pageTo;

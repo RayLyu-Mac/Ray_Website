@@ -12,6 +12,7 @@ class cadMode extends StatefulWidget {
       @required this.date,
       @required this.showImg,
       @required this.title,
+      @optionalTypeArgs this.fit,
       this.url,
       Key? key})
       : super(key: key);
@@ -20,6 +21,7 @@ class cadMode extends StatefulWidget {
   final String? title;
   final String? showImg;
   final String? url;
+  final bool? fit;
 
   @override
   _cadModeState createState() => _cadModeState();
@@ -56,13 +58,13 @@ class _cadModeState extends State<cadMode> {
       body: Row(
         children: [
           Container(
-            width: _screenWidth / 1.4,
+            width: widget.fit != null ? _screenWidth / 2 : _screenWidth / 1.4,
             decoration: BoxDecoration(
                 image: DecorationImage(
                     colorFilter: ColorFilter.mode(
                         Colors.white.withOpacity(0.9), BlendMode.dstATop),
                     image: AssetImage(widget.showImg!),
-                    fit: BoxFit.cover)),
+                    fit: widget.fit != null ? BoxFit.fitHeight : BoxFit.cover)),
           ),
           SingleChildScrollView(
               child: Column(
@@ -79,7 +81,14 @@ class _cadModeState extends State<cadMode> {
                   height: _screenH / 20,
                 ),
                 Container(
-                    width: _screenWidth / 3.5,
+                    decoration: BoxDecoration(
+                        color: Colors.grey.shade200,
+                        borderRadius: BorderRadius.circular(25),
+                        border:
+                            Border.all(width: 10, color: Colors.grey.shade600)),
+                    width: widget.fit != null
+                        ? _screenWidth / 2.2
+                        : _screenWidth / 3.7,
                     padding: EdgeInsets.fromLTRB(
                       _screenWidth / 40,
                       _screenH / 40,
@@ -95,7 +104,7 @@ class _cadModeState extends State<cadMode> {
                           child: Row(
                             children: [
                               Text(
-                                "Created on:\n" + widget.date!,
+                                "Created on:" + widget.date!,
                                 style: TextStyle(
                                   fontSize: _screenH / 16,
                                   fontWeight: FontWeight.bold,

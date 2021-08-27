@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:ray_website/backgroundPic.dart';
 import 'package:ray_website/Button.dart';
+import 'package:ray_website/CAD/CADDetail.dart';
 
 class AppTool extends StatefulWidget {
   AppTool({Key? key}) : super(key: key);
@@ -56,6 +58,21 @@ class _AppToolState extends State<AppTool> {
                         border:
                             Border.all(width: 7, color: Colors.grey.shade300)),
                   ),
+                  Column(
+                    children: [
+                      Button(
+                          buttonIcon: FontAwesomeIcons.exchangeAlt,
+                          titleColor: Colors.blueGrey.shade300,
+                          pageTo: cadMode(
+                              fit: true,
+                              content:
+                                  "Quick check for hardness test value, convert the experimental value to MPa",
+                              date: "2021 Summer",
+                              showImg: "assest/App/t2.png",
+                              title: "Hardness Conversion Sheet"),
+                          title: "Hardness Conversion Sheet")
+                    ],
+                  )
                 ],
               )
             ],
