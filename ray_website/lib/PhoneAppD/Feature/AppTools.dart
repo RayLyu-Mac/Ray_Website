@@ -60,6 +60,13 @@ class _AppToolState extends State<AppTool> {
         "Unit conversion tool, can be used for quick convert for different unit, including Pressure, thermal, temeperature, length, volume, weight unit",
         FontAwesomeIcons.dollarSign,
         Colors.lightBlue.shade300
+      ],
+      [
+        "assest/App/t6.png",
+        "Erf Function",
+        "Calculate the erf value from x, can be used in Matls 3E04",
+        Icons.error,
+        Colors.limeAccent.shade400
       ]
     ];
     return Scaffold(
