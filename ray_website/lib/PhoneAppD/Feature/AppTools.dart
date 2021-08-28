@@ -38,14 +38,28 @@ class _AppToolState extends State<AppTool> {
         "Phase Diagram Check",
         "Quick check for several phase diagram used most frequently in material eng, knowing the phase change after heat treatment",
         FontAwesomeIcons.projectDiagram,
-        Colors.redAccent.shade100
+        Colors.orange.shade200
       ],
       [
-        "assest/App/t3.png",
+        "assest/App/t4.png",
         "Stats Tool",
         "Several useful tool can be used in statistics",
         FontAwesomeIcons.calculator,
         Colors.greenAccent
+      ],
+      [
+        "assest/App/t5.png",
+        "Enthalpy Calculation",
+        "Calculator for enthalpy, this can be used in Matls 3F03 for calculating the enthalpy for elements. The constant and formula used in this section is listed on the table which can be accessed through the blue button",
+        FontAwesomeIcons.fire,
+        Colors.red.shade400
+      ],
+      [
+        "assest/App/t6.png",
+        "Unit Conversion Tool",
+        "Unit conversion tool, can be used for quick convert for different unit, including Pressure, thermal, temeperature, length, volume, weight unit",
+        FontAwesomeIcons.dollarSign,
+        Colors.lightBlue.shade300
       ]
     ];
     return Scaffold(
@@ -104,7 +118,7 @@ class _AppToolState extends State<AppTool> {
               )
             ],
           ),
-          pic: "assest/background/back19.png"),
+          pic: "assest/background/back31.png"),
     );
   }
 }
