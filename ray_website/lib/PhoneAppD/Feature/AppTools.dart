@@ -62,7 +62,7 @@ class _AppToolState extends State<AppTool> {
         Colors.lightBlue.shade300
       ],
       [
-        "assest/App/t6.png",
+        "assest/App/t7.png",
         "Erf Function",
         "Calculate the erf value from x, can be used in Matls 3E04",
         Icons.error,
@@ -96,8 +96,8 @@ class _AppToolState extends State<AppTool> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
-                      height: _screenH / 1.6,
-                      width: _screenWidth / 4.2,
+                      height: _screenH / 1.2,
+                      width: _screenWidth / 3.7,
                       decoration: BoxDecoration(
                           image: DecorationImage(
                               image: AssetImage("assest/App/t1.png"),
@@ -106,8 +106,11 @@ class _AppToolState extends State<AppTool> {
                           border: Border.all(
                               width: 7, color: Colors.grey.shade300)),
                     ),
+                    SizedBox(
+                      width: _screenWidth / 15,
+                    ),
                     Column(
-                      crossAxisAlignment: CrossAxisAlignment.baseline,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         for (var i = 0; i < con.length; i++)
