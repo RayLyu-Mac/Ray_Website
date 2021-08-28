@@ -73,13 +73,13 @@ class _AppSafetyState extends State<AppSafety> {
             child: Column(
               children: [
                 SizedBox(
-                  height: _screenH / 15,
+                  height: _screenH / 20,
                 ),
                 Text(
                   "Matls Eng Safety Guidence",
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
-                      fontSize: _screenH / 12,
+                      fontSize: _screenH / 10,
                       fontFamily: "bank"),
                 ),
                 SizedBox(
@@ -117,12 +117,24 @@ class _AppSafetyState extends State<AppSafety> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          Text(
-                            "Items",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: _screenH / 15),
+                          Container(
+                            decoration: BoxDecoration(
+                                border: Border(
+                                    bottom: BorderSide(
+                              color: Colors.black87,
+                              width: 6,
+                            ))),
+                            child: Text(
+                              "Items",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontFamily: "bank",
+                                  fontSize: _screenH / 14),
+                            ),
+                          ),
+                          SizedBox(
+                            height: _screenH / 25,
                           ),
                           for (var i = 0; i < con.length; i++)
                             Button(

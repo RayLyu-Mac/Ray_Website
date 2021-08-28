@@ -4,7 +4,6 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:ray_website/backgroundPic.dart';
 import 'package:ray_website/Button.dart';
 import 'package:ray_website/CAD/CADDetail.dart';
-import 'package:ray_website/CAD/singleCAD.dart';
 
 class AppTool extends StatefulWidget {
   AppTool({Key? key}) : super(key: key);
@@ -110,24 +109,53 @@ class _AppToolState extends State<AppTool> {
                     SizedBox(
                       width: _screenWidth / 15,
                     ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        for (var i = 0; i < con.length; i++)
-                          Button(
-                              buttonIcon: con[i][3],
-                              titleColor: con[i][4],
-                              fontSize: _screenH / 17,
-                              pageTo: cadMode(
-                                  fit: true,
-                                  content: con[i][2],
-                                  date: "2021 Summer",
-                                  showImg: con[i][0],
-                                  title: con[i][1]),
-                              title: con[i][1])
-                      ],
-                    )
+                    Container(
+                        padding: EdgeInsets.symmetric(
+                            horizontal: _screenWidth / 25,
+                            vertical: _screenH / 25),
+                        decoration: BoxDecoration(
+                          color: Colors.grey.shade200
+                              .withOpacity(0.6)
+                              .withAlpha(145),
+                          borderRadius: BorderRadius.circular(25),
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Container(
+                              decoration: BoxDecoration(
+                                  border: Border(
+                                      bottom: BorderSide(
+                                color: Colors.black87,
+                                width: 6,
+                              ))),
+                              child: Text(
+                                "Items",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontFamily: "bank",
+                                    fontSize: _screenH / 14),
+                              ),
+                            ),
+                            SizedBox(
+                              height: _screenH / 25,
+                            ),
+                            for (var i = 0; i < con.length; i++)
+                              Button(
+                                  buttonIcon: con[i][3],
+                                  titleColor: con[i][4],
+                                  fontSize: _screenH / 17,
+                                  pageTo: cadMode(
+                                      fit: true,
+                                      content: con[i][2],
+                                      date: "2021 Summer",
+                                      showImg: con[i][0],
+                                      title: con[i][1]),
+                                  title: con[i][1])
+                          ],
+                        ))
                   ],
                 )
               ],
