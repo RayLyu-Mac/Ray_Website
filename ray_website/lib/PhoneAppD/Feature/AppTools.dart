@@ -117,6 +117,7 @@ class _AppToolState extends State<AppTool> {
                           Button(
                               buttonIcon: con[i][3],
                               titleColor: con[i][4],
+                              fontSize: _screenH / 17,
                               pageTo: cadMode(
                                   fit: true,
                                   content: con[i][2],

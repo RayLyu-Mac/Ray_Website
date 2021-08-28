@@ -8,12 +8,14 @@ class Button extends StatefulWidget {
       @required this.pageTo,
       @required this.title,
       @required this.titleColor,
+      @optionalTypeArgs this.fontSize,
       Key? key})
       : super(key: key);
   final Widget? pageTo;
   final String? title;
   final IconData? buttonIcon;
   final Color? titleColor;
+  final double? fontSize;
 
   @override
   _ButtonState createState() => _ButtonState();
@@ -66,7 +68,7 @@ class _ButtonState extends State<Button> {
               style: TextStyle(
                   color: _hovering ? widget.titleColor! : Colors.grey.shade300,
                   fontWeight: FontWeight.bold,
-                  fontSize: _screenH / 20,
+                  fontSize: widget.fontSize ?? _screenH / 20,
                   fontFamily: "show"),
             )),
       ),
