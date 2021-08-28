@@ -5,6 +5,7 @@ import 'package:ray_website/PhoneAppD/Feature/AppTools.dart';
 import 'package:ray_website/backgroundPic.dart';
 import 'package:ray_website/Button.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
+import 'Safety.dart';
 
 class FeaturePhone extends StatefulWidget {
   FeaturePhone({Key? key}) : super(key: key);
@@ -28,7 +29,12 @@ class _FeaturePhoneState extends State<FeaturePhone> {
   Widget build(BuildContext context) {
     List<List> Buttons = [
       ["App Tools", AppTool(), Colors.redAccent, FontAwesomeIcons.tools],
-      ["App Safety Guidence", AppTool(), Colors.amber, FontAwesomeIcons.skull],
+      [
+        "App Safety Guidence",
+        AppSafety(),
+        Colors.amber,
+        FontAwesomeIcons.skull
+      ],
       [
         "Equipment Managment",
         AppTool(),

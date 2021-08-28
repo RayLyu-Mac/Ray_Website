@@ -4,7 +4,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:ray_website/backgroundPic.dart';
 import 'package:ray_website/Button.dart';
 import 'package:ray_website/CAD/CADDetail.dart';
-import 'package:ray_website/CurtainLeft.dart';
+import 'package:ray_website/CAD/singleCAD.dart';
 
 class AppTool extends StatefulWidget {
   AppTool({Key? key}) : super(key: key);
@@ -96,13 +96,6 @@ class _AppToolState extends State<AppTool> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    CurtainLeft(
-                        width: _screenWidth / 3,
-                        showPic: "assest/background/back31.png",
-                        content:
-                            "Here in MSE McMaster, I realize there are lots of repetitive calculations in assignments and projects, which students spend too much time on those but overlook the significance of optimizing the process.\n\nTherefore, a tool kit that can help material students deal with those calculations is essential to improve efficiency at work and focus on finding a better solution. Additionally, tools like phase diagram check and hardness conversion table will benefit the student during the experiment.\n\nFrankly, there is still a long way to improve students; efficiency in both study and work, but a handy tool on the phone app will be a step forward",
-                        title: "Tool Section Intro",
-                        fontC: Colors.grey.shade600),
                     Container(
                       height: _screenH / 1.2,
                       width: _screenWidth / 3.7,

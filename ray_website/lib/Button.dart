@@ -66,7 +66,7 @@ class _ButtonState extends State<Button> {
               '  ' + widget.title!,
               textAlign: TextAlign.left,
               style: TextStyle(
-                  color: _hovering ? widget.titleColor! : Colors.grey.shade300,
+                  color: _hovering ? widget.titleColor! : Colors.grey.shade800,
                   fontWeight: FontWeight.bold,
                   fontSize: widget.fontSize ?? _screenH / 20,
                   fontFamily: "show"),
