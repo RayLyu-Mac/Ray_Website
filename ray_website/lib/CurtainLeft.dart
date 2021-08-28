@@ -9,7 +9,7 @@ class CurtainLeft extends StatefulWidget {
       @required this.content,
       @required this.title,
       @required this.fontC,
-      @required this.pageTo,
+      @optionalTypeArgs this.pageTo,
       @optionalTypeArgs this.height,
       @optionalTypeArgs this.width,
       @optionalTypeArgs this.fontf,
@@ -108,44 +108,46 @@ class _CurtainLeftState extends State<CurtainLeft> {
                         SizedBox(
                           height: _screenH / 20,
                         ),
-                        MouseRegion(
-                            onEnter: (e) => _mouseEnter1(true),
-                            onExit: (e) => _mouseEnter1(false),
-                            cursor: SystemMouseCursors.click,
-                            child: AnimatedContainer(
-                                duration: Duration(milliseconds: 300),
-                                curve: Sprung.overDamped,
-                                transform: _hovering1
-                                    ? hoverTransform1
-                                    : nonHoverTransform1,
-                                child: FlatButton.icon(
-                                    padding: EdgeInsets.symmetric(
-                                        horizontal: _screenWidth / 40,
-                                        vertical: _screenH / 30),
-                                    onPressed: () {
-                                      Navigator.push(
-                                          context,
-                                          PageTransition(
-                                              duration: const Duration(
-                                                  milliseconds: 500),
-                                              child: widget.pageTo!,
-                                              type: PageTransitionType
-                                                  .rightToLeft));
-                                    },
-                                    icon: Icon(
-                                      Icons.follow_the_signs_rounded,
-                                      color: _hovering1
-                                          ? widget.fontC!
-                                          : Colors.white,
-                                    ),
-                                    label: Text(
-                                      "Click and Check More!",
-                                      style: TextStyle(
-                                          fontSize: _screenH / 35,
+                        widget.pageTo != null
+                            ? MouseRegion(
+                                onEnter: (e) => _mouseEnter1(true),
+                                onExit: (e) => _mouseEnter1(false),
+                                cursor: SystemMouseCursors.click,
+                                child: AnimatedContainer(
+                                    duration: Duration(milliseconds: 300),
+                                    curve: Sprung.overDamped,
+                                    transform: _hovering1
+                                        ? hoverTransform1
+                                        : nonHoverTransform1,
+                                    child: FlatButton.icon(
+                                        padding: EdgeInsets.symmetric(
+                                            horizontal: _screenWidth / 40,
+                                            vertical: _screenH / 30),
+                                        onPressed: () {
+                                          Navigator.push(
+                                              context,
+                                              PageTransition(
+                                                  duration: const Duration(
+                                                      milliseconds: 500),
+                                                  child: widget.pageTo!,
+                                                  type: PageTransitionType
+                                                      .rightToLeft));
+                                        },
+                                        icon: Icon(
+                                          Icons.follow_the_signs_rounded,
                                           color: _hovering1
                                               ? widget.fontC!
-                                              : Colors.white),
-                                    ))))
+                                              : Colors.white,
+                                        ),
+                                        label: Text(
+                                          "Click and Check More!",
+                                          style: TextStyle(
+                                              fontSize: _screenH / 35,
+                                              color: _hovering1
+                                                  ? widget.fontC!
+                                                  : Colors.white),
+                                        ))))
+                            : Container()
                       ],
                     ),
                   )
