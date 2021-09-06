@@ -8,6 +8,8 @@ import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'GuideMode.dart';
 import 'EquipmentM.dart';
 import 'Safety.dart';
+import 'OtherTool.dart';
+import 'Floation.dart';
 
 class FeaturePhone extends StatefulWidget {
   FeaturePhone({Key? key}) : super(key: key);
@@ -49,7 +51,18 @@ class _FeaturePhoneState extends State<FeaturePhone> {
         Colors.lightBlueAccent,
         FontAwesomeIcons.map
       ],
-      ["Other Tools", AppTool(), Colors.pinkAccent, FontAwesomeIcons.infoCircle]
+      [
+        "Other Tools",
+        OtherTool(),
+        Colors.pinkAccent,
+        FontAwesomeIcons.infoCircle
+      ],
+      [
+        "Floation Panel",
+        FloationPanel(),
+        Colors.purpleAccent,
+        FontAwesomeIcons.expandAlt
+      ]
     ];
     return Scaffold(
       appBar: AppBar(
