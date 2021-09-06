@@ -38,7 +38,7 @@ class _FloationPanelState extends State<FloationPanel> {
         "assest/App/F5.png",
         "Function: Note System",
         "This tab is avaible on equipment page, by clicking the tab you will be directed to note system, by clciking the plus sign on the top you can write note after the experiment. The note will be stored locally",
-        FontAwesomeIcons.qrcode,
+        FontAwesomeIcons.notesMedical,
         Colors.purple,
       ],
     ];
