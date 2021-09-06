@@ -5,6 +5,8 @@ import 'package:ray_website/PhoneAppD/Feature/AppTools.dart';
 import 'package:ray_website/backgroundPic.dart';
 import 'package:ray_website/Button.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
+import 'GuideMode.dart';
+import 'EquipmentM.dart';
 import 'Safety.dart';
 
 class FeaturePhone extends StatefulWidget {
@@ -37,13 +39,13 @@ class _FeaturePhoneState extends State<FeaturePhone> {
       ],
       [
         "Equipment Managment",
-        AppTool(),
+        AppEquipMan(),
         Colors.lightGreenAccent.shade400,
         FontAwesomeIcons.microscope
       ],
       [
         "Guidence Mode",
-        AppTool(),
+        GuideMode(),
         Colors.lightBlueAccent,
         FontAwesomeIcons.map
       ],
