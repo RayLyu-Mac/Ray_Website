@@ -27,9 +27,42 @@ class _AppEquipManState extends State<AppEquipMan> {
           "You can find the equipment information in room layout, when you click a room and enter the layout in the room, you can find the information of the equipment by clicking the picture of the equipment",
           FontAwesomeIcons.restroom,
           Colors.lightGreenAccent
-        ]
+        ],
+        [
+          "assest/App/E1.png",
+          "Equipment Section ",
+          "You can find all equipment avaiable in MSE here, By clicking the equipment you are interested you can find the location and Specs for the equipment",
+          FontAwesomeIcons.info,
+          Colors.blueAccent
+        ],
+        [
+          "assest/App/E4.png",
+          "Equipment Main Page",
+          "You can see all the information we have for the equipment, this page can be reach by QR code scanning and find equipment on the app",
+          FontAwesomeIcons.chessBoard,
+          Colors.red.shade50
+        ],
+        [
+          "assest/App/E6.png",
+          "Equipment Main Page: Instruction I",
+          "You can view the instruction of the particular equipment by clicking the instruction tab on the page, before you getting into the actual instruction you need to read some safety note about the equipment",
+          FontAwesomeIcons.chessBoard,
+          Colors.redAccent.shade200
+        ],
+        [
+          "assest/App/E6.png",
+          "Equipment Main Page: Instruction II",
+          "You can view the instruction of the particular equipment by clicking the instruction tab on the page, after review the safety note, you shall see a list of video descriping each steps, by opening the side menu you can go to any step you want to check on",
+          FontAwesomeIcons.chessBoard,
+          Colors.redAccent.shade400
+        ],
       ]
     ];
-    return Scaffold();
+    return AppMode(
+        appTitle: "Equipment Managment",
+        backImg: "assest/background/back34.png",
+        con: con,
+        title: "Malts Eng Equipment",
+        themePic: "assest/App/E4.png");
   }
 }
