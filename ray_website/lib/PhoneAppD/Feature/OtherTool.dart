@@ -34,16 +34,26 @@ class _OtherToolState extends State<OtherTool> {
     ],
     [
       "assest/App/O4.png",
-      "MSE scoiety page",
-      "Quick check for MSE activity by visiting the MSE page on instagram",
-      FontAwesomeIcons.candyCane,
-      Colors.redAccent.shade400,
+      "Team info page",
+      "In this page you can find out who contribute to this app, and contact info for any suggestions and feedbacks",
+      FontAwesomeIcons.teamspeak,
+      Colors.purpleAccent,
+    ],
+    [
+      "assest/App/O5.png",
+      "Reference Page",
+      "In this page you can find out the web link used and picture link used in this app",
+      FontAwesomeIcons.info,
+      Colors.lightGreenAccent,
     ],
   ];
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: null,
-    );
+    return AppMode(
+        appTitle: "Other tools",
+        backImg: "assest/background/back26.png",
+        con: con,
+        title: "Other tool avaiable in MSE App",
+        themePic: "assest/App/O6.png");
   }
 }
