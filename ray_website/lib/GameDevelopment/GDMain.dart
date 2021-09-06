@@ -38,23 +38,32 @@ class _GameDesignState extends State<GameDesign> {
         children: [
           Text(
               "COVID-19 Simulation: How government policy affect socia-economic status",
+              textAlign: TextAlign.center,
               style: TextStyle(
                 color: Colors.grey.shade800,
                 fontFamily: "sw",
-                fontSize: _screenH / 8,
+                fontSize: _screenH / 15,
                 fontWeight: FontWeight.bold,
               )),
           Row(
             children: [
               Container(
-                width: _screenWidth / 3.5,
-                height: _screenH / 5,
-                child: ImageSlideshow(children: [
-                  for (var i = 0; i < pics.length; i++)
-                    Image(image: AssetImage(pics[i]))
-                ]),
+                width: _screenWidth / 2.5,
+                height: _screenH / 2.5,
+                child: ImageSlideshow(
+                    isLoop: true,
+                    indicatorColor: Colors.blue,
+                    initialPage: 0,
+                    autoPlayInterval: 3700,
+                    children: [
+                      for (var i = 0; i < pics.length; i++)
+                        Image(image: AssetImage(pics[i]))
+                    ]),
               ),
               Container(
+                decoration: BoxDecoration(color: Colors.grey.shade200),
+                height: _screenH / 2.5,
+                width: _screenWidth / 2,
                 child: SingleChildScrollView(
                   child: Column(
                     children: [
