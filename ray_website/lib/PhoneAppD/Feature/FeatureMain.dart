@@ -70,6 +70,8 @@ class _FeaturePhoneState extends State<FeaturePhone> {
       ),
       body: backGroundPic(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: AnimationConfiguration.toStaggeredList(
             duration: const Duration(milliseconds: 705),
             childAnimationBuilder: (widget) => SlideAnimation(
