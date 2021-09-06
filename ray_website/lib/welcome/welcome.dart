@@ -11,6 +11,7 @@ import 'hoverText.dart';
 import 'package:ray_website/CAD/CADCover.dart';
 import 'package:ray_website/Teacher/TeacherMain.dart';
 import 'package:ray_website/PhoneAppD/PhoneMain.dart';
+import 'package:ray_website/GameDevelopment/GDMain.dart';
 
 class welcome extends StatefulWidget {
   welcome({Key? key}) : super(key: key);
@@ -155,13 +156,12 @@ class _welcomeState extends State<welcome> {
                             fontSize: _screenH / fontSize,
                             fontWeight: FontWeight.w400),
                       ),
-                      Text(
-                        "   Gam  E  Designer",
-                        style: TextStyle(
-                            fontFamily: fontF,
-                            color: Colors.grey[fontC],
-                            fontSize: _screenH / fontSize,
-                            fontWeight: FontWeight.w400),
+                      hoverTextMode(
+                        pageTo: GameDesign(),
+                        font: fontF,
+                        fontsize: fontSize,
+                        title: "   Gam  E  Designer",
+                        fontC: Colors.grey[fontC],
                       ),
                       Text(
                         "Guita  R  Player     ",

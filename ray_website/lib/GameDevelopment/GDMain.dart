@@ -85,6 +85,63 @@ class _GameDesignState extends State<GameDesign> {
                       SizedBox(
                         height: _screenH / 25,
                       ),
+                      Text(
+                          "This simulation is insprired by Greg Winther, the graph code comes from his YouTube Video: https://www.youtube.com/watch?v=84njPYepKIU&t=7s"),
+                      SizedBox(
+                        height: _screenH / 15,
+                      ),
+                      Text("Platform & Resources",
+                          style: TextStyle(
+                            color: Colors.grey.shade800,
+                            fontFamily: "bank",
+                            fontSize: _screenH / 13,
+                            fontWeight: FontWeight.bold,
+                          )),
+                      SizedBox(
+                        height: _screenH / 25,
+                      ),
+                      Text(
+                          "This simulation is written using python and pygame library. The github link is: https://github.com/RayLyu-Mac/COVID-19-SImulation\n View Report of the result on: https://github.com/RayLyu-Mac/COVID-19-SImulation/blob/main/IBEHs%204C03%20DOE.pdf"),
+                      SizedBox(
+                        height: _screenH / 15,
+                      ),
+                      Text("Partial Result",
+                          style: TextStyle(
+                            color: Colors.grey.shade800,
+                            fontFamily: "bank",
+                            fontSize: _screenH / 13,
+                            fontWeight: FontWeight.bold,
+                          )),
+                      SizedBox(
+                        height: _screenH / 25,
+                      ),
+                      Row(
+                        children: [
+                          Image(image: AssetImage("assest/GameDesign/GD5.png")),
+                          SizedBox(
+                            width: _screenWidth / 35,
+                          ),
+                          Image(image: AssetImage("assest/GameDesign/GD6.png"))
+                        ],
+                      ),
+                      SizedBox(
+                        height: _screenH / 15,
+                      ),
+                      Text("Conclusion",
+                          style: TextStyle(
+                            color: Colors.grey.shade800,
+                            fontFamily: "bank",
+                            fontSize: _screenH / 13,
+                            fontWeight: FontWeight.bold,
+                          )),
+                      SizedBox(
+                        height: _screenH / 25,
+                      ),
+                      Text(
+                          "In this experiment, the relationship between regional GDP and the factors; population density & policy level, is investigated. Based on the result, when the regional population density is lower than 1353 ppl/km2, the GDP will increase as the population density increases and the GDP will increase as the policy level increases. Followed by this tendency, the maximum GDP is found when population density equals to 1353 ppl/km2 and policy level is restricted to 0.9. In following experiments, additional factors should be considered to provide a more realistic model and improve the generalizability of the results. For example, socioeconomic status could be incorporated into model to test how all three factors affect the regional GDP. "),
+                      SizedBox(
+                        height: _screenH / 15,
+                      ),
                     ],
                   ),
                 ),
