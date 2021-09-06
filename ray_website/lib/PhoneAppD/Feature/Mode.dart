@@ -80,7 +80,7 @@ class _AppModeState extends State<AppMode> {
                     ),
                     Container(
                       padding: EdgeInsets.symmetric(
-                          horizontal: _screenWidth / 25,
+                          horizontal: _screenWidth / 40,
                           vertical: _screenH / 25),
                       decoration: BoxDecoration(
                         color: Colors.grey.shade200
@@ -115,17 +115,17 @@ class _AppModeState extends State<AppMode> {
                             Button(
                                 buttonIcon: widget.con![i][3],
                                 titleColor: widget.con![i][4],
-                                fontSize: _screenH / 17,
+                                fontSize: _screenH / 22,
                                 pageTo: cadMode(
                                     fit: true,
                                     content: widget.con![i][2],
                                     date: "2021 Summer",
                                     showImg: widget.con![i][0],
                                     title: widget.con![i][1]),
-                                title: widget.con![i][1])
+                                title: widget.con![i][1]),
                         ],
                       ),
-                    )
+                    ),
                   ],
                 )
               ],
