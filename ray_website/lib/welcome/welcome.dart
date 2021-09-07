@@ -12,6 +12,7 @@ import 'package:ray_website/CAD/CADCover.dart';
 import 'package:ray_website/Teacher/TeacherMain.dart';
 import 'package:ray_website/PhoneAppD/PhoneMain.dart';
 import 'package:ray_website/GameDevelopment/GDMain.dart';
+import 'package:ray_website/DataA/DataAMain.dart';
 
 class welcome extends StatefulWidget {
   welcome({Key? key}) : super(key: key);
@@ -148,13 +149,12 @@ class _welcomeState extends State<welcome> {
                         title: "         Phone  A  pp Developer",
                         fontC: Colors.grey[fontC],
                       ),
-                      Text(
-                        "         Da  T  a Analyst",
-                        style: TextStyle(
-                            fontFamily: fontF,
-                            color: Colors.grey[fontC],
-                            fontSize: _screenH / fontSize,
-                            fontWeight: FontWeight.w400),
+                      hoverTextMode(
+                        pageTo: DataAnalysis(),
+                        font: fontF,
+                        fontsize: fontSize,
+                        title: "         Da  T  a Analyst",
+                        fontC: Colors.grey[fontC],
                       ),
                       hoverTextMode(
                         pageTo: GameDesign(),
