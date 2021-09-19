@@ -54,6 +54,8 @@ class _MyJournyState extends State<MyJourny> {
     "assest/Personal Pic/36.png",
     "assest/Personal Pic/37.png",
     "assest/Personal Pic/38.png",
+    "assest/Personal Pic/39.png",
+    "assest/Personal Pic/40.png",
   ];
   List<String> dates = [
     "Mar 2018",
@@ -99,6 +101,8 @@ class _MyJournyState extends State<MyJourny> {
     "Jul 2021",
     "Jul 2021",
     "Aug 2021",
+    "Sept 2021",
+    "Sept 2021",
   ];
   List<String> titles = [
     "生活•登峰",
@@ -143,7 +147,9 @@ class _MyJournyState extends State<MyJourny> {
     "生活•出游",
     "生活•瀑布",
     "生活•远眺",
-    "生活•玉米地"
+    "生活•玉米地",
+    "生活•迁徙",
+    "工作•图书馆"
   ];
   List<String> content = [
     "尖峰山，已不知被我征服了几回，无论山道是否完善。\n山腰买卖玉米的老妪，山顶买水的老翁，音容笑貌仿若眼前\n不过能和老父亲一起却是不常，不知今后还有多少机会呢。",
@@ -188,7 +194,9 @@ class _MyJournyState extends State<MyJourny> {
     "终于在疯狂他投简历和面试之后拿到了Offer,公司也挺合口，工作也还行。\n终于能安定下来了，于是他便叫上他的小伙伴去湖边兜兜风。\n‘我都憔悴了不少’他看着自己的照片说",
     "这天他来到了大瀑布，这是他第三次来这里。天气很晴朗，瀑布还是那么壮观。\n他脸上的笑容也更轻松了。",
     "登临高崖，远眺孤城。万山红遍，千山尽染。\n'这是朕为你打下的江山'",
-    "玉米在这边倒是很少见，可玉米地不是。这高挺的玉米都高过了我的个头，翠绿的玉米杆子映着他灿烂的笑容。\n‘生活很美好，他也很幸运’"
+    "玉米在这边倒是很少见，可玉米地不是。这高挺的玉米都高过了我的个头，翠绿的玉米杆子映着他灿烂的笑容。\n‘生活很美好，他也很幸运’",
+    "历经两年零四个月，他终于搬出了那个地下室，虽然说是地下室但环境还是挺不错的。\n满满当当的家当足足让一辆小轿车搬了两趟，当然也有不少东西不得不放弃。工作了以后终于能心安理得的住好一些了。",
+    "这是他工作第二周的周末，工作开始进入正规，他也接到了第一份要完成的报告。家里不得不说还是太热了，还是怀念图书馆的感觉。于是他便和他的舍友来到隔壁学院的图书馆开始一天的工作"
   ];
   PageController controller = PageController();
   @override

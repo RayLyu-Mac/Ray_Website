@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'welcome/welcome.dart';
-import 'PhoneAppD/PhoneMain.dart';
 
 void main() => runApp(mainp());
 
