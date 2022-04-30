@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'mode.dart';
 import 'city/cityAlbumMain.dart';
 import 'natureAlbum/NatureMain.dart';
+import 'picofmonth/monthMode.dart';
 
 class album extends StatefulWidget {
   album({Key? key}) : super(key: key);
@@ -58,12 +59,6 @@ class _albumState extends State<album> {
                     width: _screenWidth / 30,
                   ),
                   photoMode(
-                    title: "Cloud",
-                    pageTo: cityAlblumMain(),
-                    img: "assest/sky.png",
-                    content: "闲云无形\n火云炙空\n纤云随风\n彤云绵绵",
-                  ),
-                  photoMode(
                     title: "City",
                     pageTo: cityAlblumMain(),
                     img: "assest/city.png",
@@ -74,7 +69,13 @@ class _albumState extends State<album> {
                     pageTo: NatureAlb(),
                     img: "assest/nature.png",
                     content: "徐风盛夏行古道\n树影日光映微尘\n\n\n",
-                  )
+                  ),
+                  photoMode(
+                    pageTo: pmMode(),
+                    title: "Picture of the Month",
+                    img: "assest/nature.png",
+                    content: "Best Pic of the month",
+                  ),
                 ],
               ),
             ],

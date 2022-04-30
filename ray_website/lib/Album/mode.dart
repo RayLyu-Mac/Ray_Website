@@ -39,8 +39,8 @@ class _photoModeState extends State<photoMode> {
       child: Container(
         width: _screenWidth / 4.5,
         height: _screenH / 1.8,
-        margin: EdgeInsets.fromLTRB(_screenWidth / 18, _screenH / 6.5,
-            _screenWidth / 18, _screenH / 20),
+        margin: EdgeInsets.fromLTRB(_screenWidth / 22, _screenH / 6.5,
+            _screenWidth / 22, _screenH / 20),
         padding: EdgeInsets.symmetric(
             horizontal: _screenWidth / 40, vertical: _screenH / 30),
         decoration: BoxDecoration(

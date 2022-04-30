@@ -402,6 +402,9 @@ flutter:
     - family:          sw
       fonts:
       - asset:        font/sw.TTF
+    - family:          growth
+      fonts:
+      - asset:        font/Growth Period.TTF
 
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
