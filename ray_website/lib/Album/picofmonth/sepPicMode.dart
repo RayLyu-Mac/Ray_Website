@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:ray_website/fancyButton.dart';
+import 'package:ray_website/Album/city/xiangkuang.dart';
 
 class sepPicMode extends StatefulWidget {
   String? decoImg;
@@ -40,12 +42,20 @@ class _sepPicModeState extends State<sepPicMode> {
               image: NetworkImage(widget.decoImg!), fit: BoxFit.fitWidth),
           border: Border.all(color: Colors.white, width: 12),
           borderRadius: BorderRadius.circular(8)),
-      child: MouseRegion(
-        onEnter: (event) => _mouseEnter(true),
-        onExit: (event) => _mouseEnter(false),
-        child: AnimatedContainer(
-          duration: Duration(milliseconds: 300),
-          transform: _hovering ? hoverTransform : nonHoverTransform,
+      child: Center(
+        child: MouseRegion(
+          onEnter: (event) => _mouseEnter(true),
+          onExit: (event) => _mouseEnter(false),
+          child: AnimatedContainer(
+            color: Colors.grey.shade400.withOpacity(0.8),
+            child: Column(
+              children: [
+                Text("Snow and Life"),
+              ],
+            ),
+            duration: Duration(milliseconds: 300),
+            transform: _hovering ? hoverTransform : nonHoverTransform,
+          ),
         ),
       ),
     );
