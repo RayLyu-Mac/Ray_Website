@@ -28,6 +28,8 @@ class _pmModeState extends State<pmMode> {
             top: 0,
             left: 0,
             child: sepPicMode(
+              titleSize: _screenH / 20,
+              contentSize: _screenH / 30,
               decoImg:
                   "https://github.com/RayLyu-Mac/Ray_Website/blob/main/ray_website/assest/PictureOfTheYear/202204/IMG_20220418_185910_986.jpg?raw=true",
               decoPicHeight: _screenH / 1.7,
@@ -37,6 +39,8 @@ class _pmModeState extends State<pmMode> {
             top: 0,
             left: _screenWidth / 1.75,
             child: sepPicMode(
+              titleSize: _screenH / 20,
+              contentSize: _screenH / 30,
               decoImg:
                   "https://github.com/RayLyu-Mac/Ray_Website/blob/main/ray_website/assest/PictureOfTheYear/202204/IMG_20220418_185910_986.jpg?raw=true",
               decoPicHeight: _screenH / 1.7,
@@ -46,6 +50,8 @@ class _pmModeState extends State<pmMode> {
             top: _screenH / 2.05,
             left: _screenWidth / 2.2,
             child: sepPicMode(
+              titleSize: _screenH / 20,
+              contentSize: _screenH / 30,
               decoImg:
                   "https://github.com/RayLyu-Mac/Ray_Website/blob/main/ray_website/assest/PictureOfTheYear/202204/IMG_20220418_185910_986.jpg?raw=true",
               decoPicHeight: _screenH / 1.95,
