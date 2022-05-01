@@ -3,12 +3,11 @@ import 'package:ray_website/backgroundNetworkPic.dart';
 import 'package:lottie/lottie.dart';
 
 class mpMode1 extends StatefulWidget {
-  final String? secTitle, secContent, decoPic, lottie;
+  final String? secTitle, secContent, decoPic;
   mpMode1(
       {@required this.decoPic,
       @required this.secContent,
       @required this.secTitle,
-      @required this.lottie,
       Key? key})
       : super(key: key);
 
@@ -58,10 +57,6 @@ class _mpMode1State extends State<mpMode1> {
                             fontSize: _screenH / 22,
                             fontWeight: FontWeight.bold),
                       ),
-                      LottieBuilder.network(
-                        widget.lottie!,
-                        height: _screenH / contentSize / 2,
-                      )
                     ],
                   ),
                   width: _screenWidth / contentSize,

@@ -73,8 +73,6 @@ class _sepPicModeState extends State<sepPicMode> {
               ),
               fancyBut(
                   pageTo: mpMode1(
-                      lottie:
-                          "https://assets2.lottiefiles.com/private_files/lf30_n7en8fxl.json",
                       decoPic: widget.decoImg,
                       secContent: widget.sectionContaint,
                       secTitle: widget.sectionTitle),
