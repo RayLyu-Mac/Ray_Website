@@ -12,7 +12,7 @@ class mainp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Ray Personal Website',
-      home: pmMode(),
+      home: welcome(),
     );
   }
 }

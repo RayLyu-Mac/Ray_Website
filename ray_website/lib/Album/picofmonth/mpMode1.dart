@@ -31,7 +31,7 @@ class _mpMode1State extends State<mpMode1> {
       body: backGroundPic(
           child: Stack(children: [
             Positioned(
-                top: _screenH / 4.5,
+                top: _screenH / 5.5,
                 left: -_screenWidth / 20,
                 child: Container(
                   padding: EdgeInsets.symmetric(horizontal: _screenWidth / 15),
