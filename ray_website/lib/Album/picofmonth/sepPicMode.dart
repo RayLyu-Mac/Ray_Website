@@ -48,16 +48,21 @@ class _sepPicModeState extends State<sepPicMode> {
           image: DecorationImage(
               image: NetworkImage(widget.decoImg!), fit: BoxFit.cover),
           border: Border.all(color: Colors.white, width: 12),
-          borderRadius: BorderRadius.circular(8)),
+          borderRadius: BorderRadius.circular(12)),
       child: MouseRegion(
         onEnter: (event) => _mouseEnter(true),
         onExit: (event) => _mouseEnter(false),
         child: AnimatedContainer(
-          color: Colors.grey.shade400.withOpacity(0.8),
+          color: Colors.grey.shade200.withOpacity(0.8),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              SizedBox(
+                height: widget.titleSize,
+              ),
               Text(
-                "Snow and Life",
+                widget.sectionTitle!,
                 style: TextStyle(
                     fontFamily: "growth",
                     fontSize: widget.titleSize,
@@ -76,6 +81,7 @@ class _sepPicModeState extends State<sepPicMode> {
                   width: 300,
                   height: 60,
                   icon: Icons.abc,
+                  fontsize: widget.titleSize! / 1.5,
                   buttonName: "Dive In")
             ],
           ),

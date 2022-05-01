@@ -37,8 +37,9 @@ class _pmModeState extends State<pmMode> {
               detPicHeight: _screenH / detPicSize,
               contentSize: _screenH / contentSize,
               detPicWidth: _screenH / detPicWidth,
-              sectionTitle: "Snow life",
-              sectionContaint: "The snow convered the bud and become flower",
+              sectionTitle: "雪 花",
+              sectionContaint:
+                  "四月，本该是万物复苏的日子，后院的旧枝上，覆盖满了生长的旧疤，但深绿色的嫩芽已经迫不及待的冒出。可自然似乎想早一点见到白色的花朵，于是雪花便在这充满生机的季节不请自来。一朵朵还没来得及开放的花骨朵儿便覆上了银色的天空之花",
               decoImg:
                   "https://github.com/RayLyu-Mac/Ray_Website/blob/main/ray_website/assest/PictureOfTheYear/202204/IMG_20220418_185910_986.jpg?raw=true",
               decoPicHeight: _screenH / 1.7,
