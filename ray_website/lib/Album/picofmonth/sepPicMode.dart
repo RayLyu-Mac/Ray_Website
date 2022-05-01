@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:ray_website/fancyButton.dart';
+import 'mpMode1.dart';
 
 class sepPicMode extends StatefulWidget {
   String? decoImg, sectionTitle, sectionContaint;
@@ -64,35 +66,17 @@ class _sepPicModeState extends State<sepPicMode> {
               SizedBox(
                 height: widget.titleSize,
               ),
-              ElevatedButton(
-                  onPressed: () {
-                    showGeneralDialog(
-                        barrierColor: Colors.black.withOpacity(0.5),
-                        transitionDuration: const Duration(milliseconds: 300),
-                        barrierDismissible: true,
-                        barrierLabel: '',
-                        context: context,
-                        pageBuilder: (context, animation, secondaryAnimation) {
-                          return Container();
-                        },
-                        transitionBuilder: (context, a1, a2, widgets) {
-                          return Transform.scale(
-                              scale: a1.value,
-                              child: Opacity(
-                                  opacity: a1.value,
-                                  child: SimpleDialog(
-                                      shape: RoundedRectangleBorder(
-                                          side: BorderSide(
-                                            color: Colors.grey.shade300
-                                                .withOpacity(0.7),
-                                            width: 10,
-                                          ),
-                                          borderRadius:
-                                              BorderRadius.circular(10)),
-                                      children: [pmDetail()])));
-                        });
-                  },
-                  child: Text("Dive In"))
+              fancyBut(
+                  pageTo: mpMode1(
+                      lottie:
+                          "https://assets2.lottiefiles.com/private_files/lf30_n7en8fxl.json",
+                      decoPic: widget.decoImg,
+                      secContent: widget.sectionContaint,
+                      secTitle: widget.sectionTitle),
+                  width: 300,
+                  height: 60,
+                  icon: Icons.abc,
+                  buttonName: "Dive In")
             ],
           ),
           duration: Duration(milliseconds: 300),
