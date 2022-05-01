@@ -1,16 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:ray_website/fancyButton.dart';
-import 'package:ray_website/Album/city/xiangkuang.dart';
 
 class sepPicMode extends StatefulWidget {
-  String? decoImg;
-  double? decoPicWidth, decoPicHeight, titleSize, contentSize;
+  String? decoImg, sectionTitle, sectionContaint;
+  double? decoPicWidth,
+      decoPicHeight,
+      titleSize,
+      contentSize,
+      detPicHeight,
+      detPicWidth;
   sepPicMode(
       {@required this.decoImg,
       @required this.decoPicHeight,
       @required this.decoPicWidth,
       @required this.contentSize,
+      @required this.sectionContaint,
+      @required this.sectionTitle,
       @required this.titleSize,
+      @required this.detPicWidth,
+      @required this.detPicHeight,
       Key? key})
       : super(key: key);
 
@@ -28,7 +35,7 @@ class _sepPicModeState extends State<sepPicMode> {
 
   final nonHoverTransform = Matrix4.identity()..scale(0.001);
 
-  final hoverTransform = Matrix4.identity()..scale(0.5);
+  final hoverTransform = Matrix4.identity()..scale(1);
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +44,7 @@ class _sepPicModeState extends State<sepPicMode> {
       width: widget.decoPicWidth,
       decoration: BoxDecoration(
           image: DecorationImage(
-              image: NetworkImage(widget.decoImg!), fit: BoxFit.fitWidth),
+              image: NetworkImage(widget.decoImg!), fit: BoxFit.cover),
           border: Border.all(color: Colors.white, width: 12),
           borderRadius: BorderRadius.circular(8)),
       child: MouseRegion(
@@ -76,11 +83,13 @@ class _sepPicModeState extends State<sepPicMode> {
                                   child: SimpleDialog(
                                       shape: RoundedRectangleBorder(
                                           side: BorderSide(
-                                            width: 7,
+                                            color: Colors.grey.shade300
+                                                .withOpacity(0.7),
+                                            width: 10,
                                           ),
                                           borderRadius:
                                               BorderRadius.circular(10)),
-                                      children: [])));
+                                      children: [pmDetail()])));
                         });
                   },
                   child: Text("Dive In"))
@@ -90,6 +99,43 @@ class _sepPicModeState extends State<sepPicMode> {
           transform: _hovering ? hoverTransform : nonHoverTransform,
         ),
       ),
+    );
+  }
+
+  pmDetail() {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Text(
+          widget.sectionTitle!,
+          style: TextStyle(
+              fontFamily: "growth",
+              fontSize: widget.titleSize,
+              fontWeight: FontWeight.bold),
+        ),
+        Container(
+          width: widget.detPicWidth!,
+          height: widget.detPicHeight,
+          decoration: BoxDecoration(
+              image: DecorationImage(
+                  fit: BoxFit.cover, image: NetworkImage(widget.decoImg!))),
+          child: Container(
+            height: widget.detPicHeight! / 2.6,
+            width: widget.detPicWidth!,
+            color: Colors.white.withOpacity(0.7),
+            margin: EdgeInsets.fromLTRB(0, widget.detPicHeight! / 1.2, 0, 0),
+            padding: EdgeInsets.symmetric(horizontal: 10),
+            child: Center(
+              child: Text(
+                widget.sectionContaint!,
+                style: TextStyle(
+                    fontSize: widget.contentSize, fontWeight: FontWeight.bold),
+              ),
+            ),
+          ),
+        )
+      ],
     );
   }
 }

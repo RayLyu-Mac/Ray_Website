@@ -9,8 +9,13 @@ class pmMode extends StatefulWidget {
 }
 
 class _pmModeState extends State<pmMode> {
-  double _screenWidth = 0;
-  double _screenH = 0;
+  double _screenWidth = 0,
+      titleSize = 15,
+      _screenH = 0,
+      contentSize = 30,
+      detPicSize = 1.7,
+      detPicWidth = 1.3;
+
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
@@ -28,8 +33,12 @@ class _pmModeState extends State<pmMode> {
             top: 0,
             left: 0,
             child: sepPicMode(
-              titleSize: _screenH / 20,
-              contentSize: _screenH / 30,
+              titleSize: _screenH / titleSize,
+              detPicHeight: _screenH / detPicSize,
+              contentSize: _screenH / contentSize,
+              detPicWidth: _screenH / detPicWidth,
+              sectionTitle: "Snow life",
+              sectionContaint: "The snow convered the bud and become flower",
               decoImg:
                   "https://github.com/RayLyu-Mac/Ray_Website/blob/main/ray_website/assest/PictureOfTheYear/202204/IMG_20220418_185910_986.jpg?raw=true",
               decoPicHeight: _screenH / 1.7,
@@ -39,23 +48,31 @@ class _pmModeState extends State<pmMode> {
             top: 0,
             left: _screenWidth / 1.75,
             child: sepPicMode(
-              titleSize: _screenH / 20,
-              contentSize: _screenH / 30,
+              titleSize: _screenH / titleSize,
+              detPicHeight: _screenH / detPicSize,
+              contentSize: _screenH / contentSize,
+              detPicWidth: _screenH / detPicWidth,
+              sectionTitle: "Snow life",
+              sectionContaint: "The snow convered the bud and become flower",
               decoImg:
-                  "https://github.com/RayLyu-Mac/Ray_Website/blob/main/ray_website/assest/PictureOfTheYear/202204/IMG_20220418_185910_986.jpg?raw=true",
-              decoPicHeight: _screenH / 1.7,
-              decoPicWidth: _screenWidth / 2.1,
+                  "https://github.com/RayLyu-Mac/Ray_Website/blob/main/ray_website/assest/PictureOfTheYear/202204/uTools_1651351881168.png?raw=true",
+              decoPicHeight: _screenH / 2,
+              decoPicWidth: _screenWidth / 2.25,
             )),
         Positioned(
             top: _screenH / 2.05,
-            left: _screenWidth / 2.2,
+            left: _screenWidth / 2.4,
             child: sepPicMode(
-              titleSize: _screenH / 20,
-              contentSize: _screenH / 30,
+              titleSize: _screenH / titleSize,
+              detPicHeight: _screenH / detPicSize,
+              contentSize: _screenH / contentSize,
+              detPicWidth: _screenH / detPicWidth,
+              sectionTitle: "Snow life",
+              sectionContaint: "The snow convered the bud and become flower",
               decoImg:
                   "https://github.com/RayLyu-Mac/Ray_Website/blob/main/ray_website/assest/PictureOfTheYear/202204/IMG_20220418_185910_986.jpg?raw=true",
-              decoPicHeight: _screenH / 1.95,
-              decoPicWidth: _screenWidth / 1.8,
+              decoPicHeight: _screenH / 1.9,
+              decoPicWidth: _screenWidth / 1.65,
             )),
         Positioned(
             top: _screenH / 1.35,
